@@ -1,0 +1,23 @@
+﻿@model SimpleSocialNetwork.WebUI.ViewModels.SignupViewModel
+
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Auth.cshtml";
+}
+
+<h2>Create moderator</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.EditorForModel()
+    @Html.ValidationSummary(true)
+    <p>
+        <input type="submit" value="Save" />
+    </p>
+    @Html.ActionLink("Cancel", "Index")
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

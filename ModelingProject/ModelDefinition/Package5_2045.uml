@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="90611ffe-cbf5-405b-82c2-765f07c042aa"
+  name="Abstract"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="72bda30e-d90d-4d3b-8335-5498a852a0fa"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleSocialNetwork.WebUI.Authentication.Abstract"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="697ee45c-d814-4eec-b991-8ba7bf6da745"
+        name="IAuthProvider"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="32495fb1-9d49-4847-8891-67e876906047"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.Authentication.Abstract Type%3DIAuthProvider"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d0b58a78-235f-4137-b028-94227d19f8cc"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d4bd4909-eb58-43e8-9702-61161f5fc97f">
+                <propertyInstance
+                  Id="59103749-a731-482a-8922-bc945648b206"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="90ae5abe-d5aa-43e2-a9a0-8bff86701a0f">
+                <propertyInstance
+                  Id="caccae32-26ba-43da-a861-bdf072694587"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="598e1d9c-97d0-4094-8c5c-5497243bbfb0">
+                <propertyInstance
+                  Id="e5499878-538a-4d87-a783-343968f643ee"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="52f13710-7c3b-4532-931d-692407b5de84">
+                <propertyInstance
+                  Id="ce142d0f-b741-4be3-ae65-ce3f9547d278"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributes>
+          <property
+            Id="4efdeb38-3c15-4411-9ce6-72552b587bcc"
+            name="CurrentUserId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f31c1235-9b1c-40e9-b08a-1acccaf836ea"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.Authentication.Abstract Type%3DIAuthProvider Member%3DCurrentUserId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="2fd2ea31-1fd0-401e-b693-3243ce28f540"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bff975c1-e93d-42c3-8608-f3e7388efcfd">
+                    <propertyInstance
+                      Id="82ab0c06-99ac-48fb-b22d-b45348e48472"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f740250-abb8-4dfb-b7e5-71b8040641c2">
+                    <propertyInstance
+                      Id="53a783a3-7f75-40a6-97d5-2f0ca703fd5c"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb86efd6-841e-45b9-a959-a67bed46f9f8">
+                    <propertyInstance
+                      Id="24fba966-d980-42c6-bbfe-23a5e36b4b31"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="789b2259-fa49-4792-9b03-a25e6d98c0fe">
+                    <propertyInstance
+                      Id="31ddf082-0c6a-4765-a67c-f14ede44dfb4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8879bfed-5274-4f60-ad83-68600cc8a9b8">
+                    <propertyInstance
+                      Id="21916c41-e7f9-4434-9606-560218f87e39"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="386e0766-f904-428c-9839-bdd4270e080c">
+                    <propertyInstance
+                      Id="1328342c-55ca-4c85-8766-e9addd7b8aa4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="62d9cb7d-77aa-4eb6-a9c3-cbe613041d9f">
+                    <propertyInstance
+                      Id="c89dc273-1f5c-4232-bd37-5f9403ed86a3"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="1786ca38-795c-43e6-a688-d4c0fbeb8770"
+            name="CurrentUserRoleId"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="30767ab8-98fc-448c-a9fd-dd958b7312f4"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.Authentication.Abstract Type%3DIAuthProvider Member%3DCurrentUserRoleId"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="e7ab5b92-6100-4fcb-8d3c-5e64bb288c01"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2170dddf-d36b-437f-8b40-c57ded039977">
+                    <propertyInstance
+                      Id="70577f70-c641-48a7-9d8c-f885ba01b261"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="37f63002-e96b-4c3d-9a1a-22c28dda97fb">
+                    <propertyInstance
+                      Id="89bac69e-14d4-4a2f-b13e-680306c74314"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dfb59483-b92a-4502-b607-8daf33c64b98">
+                    <propertyInstance
+                      Id="cdf72297-89af-4f73-b0f7-064a88125697"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52b8c7df-fbca-49e3-a519-4642c2395f8d">
+                    <propertyInstance
+                      Id="2e6dd015-d5f7-4e48-840b-a123f089945a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17a90f0c-2a39-4813-96bd-bbff63e5416a">
+                    <propertyInstance
+                      Id="2ccbe20e-8638-4c9b-93aa-b0dc6a14582f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf2cb370-a823-4b90-ba2d-547e01b33934">
+                    <propertyInstance
+                      Id="bcc872f8-effe-4031-9f9c-4ff516dc6ad5"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d233002b-c884-4442-8260-34241f74c839">
+                    <propertyInstance
+                      Id="d46ecd6e-52bc-49d9-a44b-699e3b88eb80"
+                      name="Set"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributes>
+        <ownedOperations>
+          <operation
+            Id="edc879c1-a9a9-42c4-99cb-cdf7967b1a5f"
+            name="Authenticate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="3f40fa23-d69d-4923-afb1-00a85c74c55c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.Authentication.Abstract Type%3DIAuthProvider Member%3D(Name%3DAuthenticate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c8e2a9cd-4fd7-409c-8fc9-b71bb9c2ec05"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c5da8145-d61f-42fc-8ddf-83222fc1a080">
+                    <propertyInstance
+                      Id="4f728e83-6edb-4638-a578-09e55be8e147"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84fb6b49-a7e5-42dd-b7c7-f9aeb49395d9">
+                    <propertyInstance
+                      Id="1797357e-5f08-4181-a3b2-7246b6bbdfcd"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f8411514-bd1a-4f62-8627-fab7896db457">
+                    <propertyInstance
+                      Id="45e0a592-1b68-442e-9b76-8a2b0e35849e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bc0570b0-1c66-4024-8f65-868c48a9d096">
+                    <propertyInstance
+                      Id="5f25d04f-9c86-4555-b9a3-79f96e0f6a5f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8ab9f693-e996-43eb-bade-fdda4ed7a337">
+                    <propertyInstance
+                      Id="ed672526-8395-4df7-b80c-336e5841164f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6222d825-ca94-4f00-a7a3-1c3679d9ed92">
+                    <propertyInstance
+                      Id="83432fc9-5d60-448c-a8ba-74630766466e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="17321ddf-b267-4215-bd95-24f82b77d0e8"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="038126a3-59ba-4603-a211-e1355dd15b3a"
+                  name="userLogin"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="7b34e1ce-84f4-4a09-9f31-072258da38fe"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.Authentication.Abstract Type%3DIAuthProvider Member%3D(Name%3DAuthenticate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DuserLogin"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="820d9f4a-9456-4ea7-8d5d-eedd2d27447d"
+                  name="userPassword"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="65d2b245-afac-4c13-9e0f-e31d3e1e7f4a"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.Authentication.Abstract Type%3DIAuthProvider Member%3D(Name%3DAuthenticate OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DuserPassword"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ad6ae77d-f2c3-40ba-9f16-9071d3539384"
+            name="SignOut"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="677da30f-de54-438c-973d-2071e28cfe35"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.Authentication.Abstract Type%3DIAuthProvider Member%3DSignOut"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="04c51a06-443c-48b7-9526-4c5f0181cb26"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cedf2286-a665-4b85-b3ca-9125ec6d5716">
+                    <propertyInstance
+                      Id="4e886ec3-9735-49c5-b8c5-cd37d100b377"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0f8eece3-fbf6-498d-9be0-a7fbf45654b6">
+                    <propertyInstance
+                      Id="d0ce445e-1ada-4757-b322-960c09a563ca"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7198988e-57a6-4ff2-908e-99b7a51ec3f6">
+                    <propertyInstance
+                      Id="5d1f4218-ad8d-4197-9e8a-d620e34a17b5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b03e83cc-7a4f-4507-90ac-26c31617f24f">
+                    <propertyInstance
+                      Id="f343777f-8dfe-41e8-85c1-69ca9fd06357"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c3ef5d11-1cb1-4f4a-a0da-a3524b92ad01">
+                    <propertyInstance
+                      Id="9d086008-0430-4722-aaaf-148687a1f5ad"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5f48b24a-e1fa-43b2-aa20-eee7d19b3343">
+                    <propertyInstance
+                      Id="789a1ef8-06c1-4dac-93d1-1cde601f2003"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

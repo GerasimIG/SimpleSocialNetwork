@@ -1,0 +1,62 @@
+﻿body, html {
+    height: 100%;
+    width: 100%;
+}
+
+html {
+    display: table;
+}
+
+body {
+    background: #20b2aa;
+    display:table-cell;
+    vertical-align:middle;
+    text-align: center;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    background: #fff;
+    padding: 40px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+input {
+    margin-bottom: 25px;
+}
+
+
+a {
+    color: #404040;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.editor-field {
+    position: relative;
+}
+
+.field-validation-error {
+    position: absolute;
+    top: 35px;
+
+}
+
+input[type=text], input[type=password] {
+    width: 210px !important;
+}
+
+input[type=submit] {
+    margin-top: 14px;
+}

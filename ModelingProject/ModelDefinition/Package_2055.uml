@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="15f1e70a-0d04-4965-a8bd-b128939d7257"
+  name="App_Start"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="fd68743b-a7ac-4497-b41f-c9508606ad85"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleSocialNetwork.WebUI.App_Start"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="ba6c1bcf-1d7d-444d-a0a1-861d9228511c"
+        name="NinjectWebCommon"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="ae13dc8b-786d-4917-9ce5-d56a137e58c6"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.App_Start Type%3DNinjectWebCommon"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="6695fcb5-63f8-4a75-8060-5673d0a7cd34"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fdddccf7-4721-4a39-b9b7-cb66fc899cb6">
+                <propertyInstance
+                  Id="a73cc324-c57b-429b-8208-c2033b7a5d40"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c58d44df-b8af-4f2b-8324-e6812feda341">
+                <propertyInstance
+                  Id="085c728a-b489-47c4-ba4c-a5fa8ec88d5a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a4fcbf9e-0947-467e-9fbf-df8506e866ee">
+                <propertyInstance
+                  Id="105194f9-9c8f-4388-9b32-a1a6f98630ca"
+                  name="IsStatic"
+                  value="True" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="97dcbb0e-11fe-4425-b52e-8cb08c5bd320">
+                <propertyInstance
+                  Id="894e3280-2034-4852-8360-db70771024e6"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="483e8605-1ed3-4eed-83ba-8b0a61bb131f">
+                <propertyInstance
+                  Id="64a4a31d-2754-492c-bc49-e896526338da"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="b21a6cdb-5f7d-49ab-a7f2-f55ccc0d2c25"
+            name="bootstrapper"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="9d56ea08-1175-4bc5-801a-5f7b58ee331b"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.App_Start Type%3DNinjectWebCommon Member%3Dbootstrapper"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="99dd39fb-d60a-447d-943d-6bf73e6031c2"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="12de0610-1700-419e-8966-f29f31e330ef">
+                    <propertyInstance
+                      Id="06bcbffa-b694-4030-a126-5d10245af6cb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5c01662-adbd-44ea-80eb-0f59ddc94c38">
+                    <propertyInstance
+                      Id="802bb619-b42e-42c4-8395-0e60d24536de"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3578ab9e-dfe3-4af3-a04b-f7a6b5106458">
+                    <propertyInstance
+                      Id="77a02fb2-395a-4a0c-9c23-c781a956fb15"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3617dd0b-3995-40cc-a821-aedc4f324537">
+                    <propertyInstance
+                      Id="5272bac3-acb5-4d7a-bc64-a404ef3c7617"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d188d833-526a-4218-ac71-9222c9feeddd">
+                    <propertyInstance
+                      Id="d37e4d76-b00c-4279-8e51-096375abe082"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="7aefa8fd-d87e-4d6e-b3ba-26ab3bf7a701"
+                LastKnownName="Bootstrapper"
+                LastKnownLocation="Package3_2055.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="eca5dbe2-1788-4eb0-8e77-e9bc0d9c2ce1"
+            name="RegisterServices"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="9c659987-4344-4a77-9d77-ed51bdf052b0"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.App_Start Type%3DNinjectWebCommon Member%3D(Name%3DRegisterServices OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2Fpackages%2FNinject.3.2.0.0%2Flib%2Fnet45-full%2FNinject.dll Namespace%3DNinject Type%3DIKernel)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c54cbd74-320c-4866-882a-822e32e3b231"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="84f71c55-56be-470e-9eb1-5685335de1ac">
+                    <propertyInstance
+                      Id="866366a8-21f2-4703-809c-91fb03f35bb8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a7e85d74-6bbc-4246-b448-c50c147325f2">
+                    <propertyInstance
+                      Id="63b76120-ce81-4af3-99fb-32b59f66ae34"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b17c88c3-6bae-4a39-97f4-f91d24affdef">
+                    <propertyInstance
+                      Id="4ee5e199-8445-416a-a86c-227574091fc4"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="52dfba09-7116-4958-bcf2-86e085ba3655">
+                    <propertyInstance
+                      Id="10df55fe-3106-4f20-931a-6c8705d8ce36"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="650fa388-e672-4d0d-89d0-f24b9cd8c848">
+                    <propertyInstance
+                      Id="3f93bde8-a530-4528-a4a0-f04a32ee033e"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6fc9f1e6-2adc-4e01-9bf2-7619b974a2d2">
+                    <propertyInstance
+                      Id="3c55fb20-7b3d-48a6-924b-f3bdaf088051"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="63e3ee82-cf11-4d5a-9395-2b19d2e64298"
+                  name="kernel"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="e8e08b11-faa1-44ba-aa71-330211813087"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.App_Start Type%3DNinjectWebCommon Member%3D(Name%3DRegisterServices OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2Fpackages%2FNinject.3.2.0.0%2Flib%2Fnet45-full%2FNinject.dll Namespace%3DNinject Type%3DIKernel)]) ParameterIdentifier%3Dkernel"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="b078a91e-45b8-4085-9910-656c20047c27"
+                      LastKnownName="IKernel"
+                      LastKnownLocation="Package1_2055.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e7bbd5cf-f65e-4557-9d5b-f028696e6afe"
+            name="CreateKernel"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0879dc66-08f1-4c7a-b12f-9807cd4ed928"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.App_Start Type%3DNinjectWebCommon Member%3DCreateKernel"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="aa638d62-3c07-4190-a775-4351c17e0e05"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0004308a-197e-4fb0-92fb-4af6e84c1dcc">
+                    <propertyInstance
+                      Id="cc5c5ef8-01ba-4ae9-933b-111826ff5066"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="203fbf64-2c40-4f1d-80bd-aa75cb663e0d">
+                    <propertyInstance
+                      Id="eeb5aa0b-c1fb-48ae-8bed-62a80e0940a6"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="20c94119-fa7b-42ba-8c43-8f261cd28c98">
+                    <propertyInstance
+                      Id="96d56ff5-a7d6-4c0e-9ffb-af3f5214fa10"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d57950ac-3a52-4b89-b3c0-b4f68fec19a7">
+                    <propertyInstance
+                      Id="5f8f75dd-4c0a-46d6-9999-8b150629a413"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4a450781-5c95-4233-afe6-9664672ac9a4">
+                    <propertyInstance
+                      Id="2c0fd1ab-cd16-4d77-a920-b54784744682"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6e5457ef-35c1-4120-a00f-9a0efddcfc1a">
+                    <propertyInstance
+                      Id="451b04c0-a028-4166-ad61-1edbf6a112b8"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="56270703-0b91-4b3a-ad0d-2df9aba597c4"
+                  direction="Return">
+                  <type_NamedElement>
+                    <interfaceMoniker
+                      Id="b078a91e-45b8-4085-9910-656c20047c27"
+                      LastKnownName="IKernel"
+                      LastKnownLocation="Package1_2055.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="2e4482e4-6823-4dae-aba0-fd42219a33c9"
+            name="Start"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="e8d298d6-9928-4bba-98e9-8208d627197c"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.App_Start Type%3DNinjectWebCommon Member%3DStart"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="00141d5c-a713-45d2-8f20-b0ae9d0d689f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a57d639b-fe9b-48f2-898d-ba3c5a8bd000">
+                    <propertyInstance
+                      Id="86ca97ed-ee88-4aea-b9fa-862b5927f50c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b764f18c-eca6-4a59-be25-fd2c458bae7e">
+                    <propertyInstance
+                      Id="b14b54f7-358b-4482-ba40-d757b472759e"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b71703eb-2ec7-4774-af3b-0df8902e95bb">
+                    <propertyInstance
+                      Id="17583a0f-4829-4911-963b-d34cb8bd1932"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="66d2f8bb-314d-4c44-960c-c5cb705d0721">
+                    <propertyInstance
+                      Id="8a14ce29-d1a3-4d18-966c-0828b3fc4a14"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e287174-9fbf-4552-af40-053af1fbfeaf">
+                    <propertyInstance
+                      Id="f42785a8-c67b-4a9e-b2e4-191e73ec655d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6a4025e5-ea8d-4107-ae2f-3d2365289b2c">
+                    <propertyInstance
+                      Id="93137586-bd1f-4953-92ff-0030de976f07"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="1d31a55e-48f5-4045-af88-aab071b3d4b8"
+            name="Stop"
+            isLeaf="false"
+            isStatic="true"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="1c8b6aea-5c32-4af4-9164-c2f4820d4177"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.App_Start Type%3DNinjectWebCommon Member%3DStop"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="001e6e45-4f76-4e5e-a053-902657d9bbd1"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="83d34dc6-6405-491e-b403-ea66917a16bf">
+                    <propertyInstance
+                      Id="3300d127-4152-43aa-8fc8-d133cc8ca68c"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="de0f5f45-99a1-4336-8433-83c2820c8e53">
+                    <propertyInstance
+                      Id="a161d58e-710e-4d0c-9998-fe642e8390f1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="09d73475-de04-4ccd-921a-cc4f5e5db8c9">
+                    <propertyInstance
+                      Id="30222177-f31d-4771-bf01-57bfbfe6bb77"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4697164c-1feb-40ab-bfa3-d9cd25f6bd0d">
+                    <propertyInstance
+                      Id="fdb5f4dd-19bf-4bc2-9e93-6ae7fdd3353f"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e625851-ccb0-4d2b-a44d-43d8b55a628d">
+                    <propertyInstance
+                      Id="ab854e99-fc08-423d-8f63-11dc32870459"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6befe4ed-25f5-4b88-9f28-47aacc90da9b">
+                    <propertyInstance
+                      Id="44f2aa77-e134-440f-8a88-113a020c7e31"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,53 @@
+﻿@model SimpleSocialNetwork.WebUI.ViewModels.SettingsViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--
+    
+--><div id="content">
+    <h2>Settings</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true);
+    }
+    <div id="tabs">
+
+        <ul style="height : 3em">
+            <li><a href="#tabs-1">Update password</a></li>
+            <li><a href="#tabs-2">Update login</a></li>
+            <li><a href="#tabs-3">Update profile</a></li>
+            <li><a href="#tabs-4">Update image</a></li>
+        </ul>
+
+        <div id="tabs-1">
+            @{Html.RenderPartial("UpdatePasswordPartial", Model.UpdatePassword);}
+        </div>
+
+        <div id="tabs-2">
+            @{Html.RenderPartial("UpdateLoginPartial", Model.UpdateLogin);}
+        </div>
+
+        <div id="tabs-3">
+            @{Html.RenderPartial("UpdateProfilePartial", Model.UpdateProfile);}
+        </div>
+
+        <div id="tabs-4">
+            @{Html.RenderPartial("UpdateProfileImagePartial", Model.UpdateProfileImage);}
+        </div>
+
+
+        <script type="text/javascript">
+            $(function () {
+                $("#tabs").tabs();
+            });
+        </script>
+
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+} 

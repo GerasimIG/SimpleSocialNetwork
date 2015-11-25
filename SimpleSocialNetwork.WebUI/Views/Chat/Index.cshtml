@@ -1,0 +1,23 @@
+﻿@model List<SimpleSocialNetwork.WebUI.ViewModels.ChatViewModel>
+
+@{
+    ViewBag.Title = "Chats";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--
+
+
+--><div id="content">
+    <h2>Chats</h2>
+       <ul id="people">
+
+           @if (Model != null)
+           {
+               foreach (var chat in Model)
+               {
+                   Html.RenderPartial("ChatPartial", chat);
+               }
+           }
+      </ul>
+</div>

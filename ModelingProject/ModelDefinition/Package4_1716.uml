@@ -1,0 +1,1533 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="edaeb912-22e9-47f4-87d6-77e622ead361"
+  name="Generic"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="0621d0ce-5a18-4e55-a14f-d38084dc409d"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Collections.Generic"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="52f7f1d8-a529-420a-a890-6746fce3d66e"
+        name="ICollection&lt;User‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="cfc38737-1b00-4086-b70c-b61bdec45533"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d487f6b5-4ad8-4933-8a2e-a5da753ac5cb">
+                <propertyInstance
+                  Id="d4d90d5f-98ae-481d-8604-63f8a50f9b93"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="40c4763c-7a07-4926-a780-3fd7960d9655">
+                <propertyInstance
+                  Id="3ca52081-38a3-452d-bbf0-c83e51ce88f3"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6331e43e-11b1-4fb9-8ebc-7d03ac702d85">
+                <propertyInstance
+                  Id="618ace90-9649-4a5b-bdff-9d15d7a3a8d2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cff0330b-b942-4282-a62c-7c8f02f91aad">
+                <propertyInstance
+                  Id="a1d86cc8-8c59-4cea-a3b4-9181c5a1580a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="614536b0-fc1d-46be-b507-0d44ffffc3bd">
+            <redefinableTemplateSignatureMoniker
+              Id="11ae0e9c-7422-438b-b314-7d6ad6b05afa"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="1b2af9fa-e2b3-4c43-894a-7f50ccbcd808">
+                  <actuals>
+                    <classMoniker
+                      Id="387005c1-cf27-4639-a624-a5f4c6064013"
+                      LastKnownName="User"
+                      LastKnownLocation="Package1_1716.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="6ecbcb10-60f6-4127-8ee5-2ac30cbe8a22"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="a59c6e18-6ab7-4d47-9d68-b2c0a5a801fe"
+        name="ICollection"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="5b076feb-cd19-4df9-bd76-0a59ea2236da"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DICollection GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="5f20f62b-d3b2-4883-889d-c80fec8bf9c5"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1b859247-4ead-42af-a1b5-f78529a3ea8a">
+                <propertyInstance
+                  Id="324ec45a-e02b-4e36-a7e9-e7899f15add3"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ae49812c-6521-4644-a153-4b957098821e">
+                <propertyInstance
+                  Id="d811c662-ad69-47ae-8a59-564ad4cb9c2a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8edadaf5-ffd4-492b-851d-1136963d963b">
+                <propertyInstance
+                  Id="23b64f50-18df-4c25-a461-41d2bd740fce"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f9a6a8e7-1883-42f6-a53f-8e1f3d973aef">
+                <propertyInstance
+                  Id="6622fd96-bf56-4ddb-b124-8b2b068075b7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="11ae0e9c-7422-438b-b314-7d6ad6b05afa"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="6ecbcb10-60f6-4127-8ee5-2ac30cbe8a22">
+                <referencesInternal>
+                  <reference
+                    Id="b8e71f73-a635-4df0-b72b-2fe5abef8e2e"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DICollection GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="3cfa1633-d6c4-475c-a78e-c91680957c3e"
+                    name="T"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6c29d550-d4bd-4960-bd9f-6a29212820b2"
+        name="ICollection&lt;Comment‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="bd793503-3859-4f00-a4ea-b2c6b60e5f90"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bc9c144b-3b88-42db-8024-36de82174b95">
+                <propertyInstance
+                  Id="0cbaf77f-6aa9-44c2-95d5-7c92a64c54bc"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c71baa7e-6ab1-4cda-b109-9c7e1bd29b08">
+                <propertyInstance
+                  Id="f1571873-87bc-49de-bb50-6f4d38e59a3e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="393309e2-f3b9-46e5-8418-dd0a6f8742ef">
+                <propertyInstance
+                  Id="1a8f5c6a-697b-49ed-9540-562bd2ef187c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bb6f9416-ec39-452a-ad39-e71565bbf25c">
+                <propertyInstance
+                  Id="21939610-ccfb-42d1-8a1f-1ac79d171119"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="3911a087-1307-4d99-b49b-720c5a9576f8">
+            <redefinableTemplateSignatureMoniker
+              Id="11ae0e9c-7422-438b-b314-7d6ad6b05afa"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="5157dc6f-4514-4880-ab33-3af4130032f9">
+                  <actuals>
+                    <classMoniker
+                      Id="e74f52cf-19fc-4162-a198-105d9fdddf61"
+                      LastKnownName="Comment"
+                      LastKnownLocation="Package1_1716.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="6ecbcb10-60f6-4127-8ee5-2ac30cbe8a22"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="f8b730e3-b837-4953-8b98-c855190274db"
+        name="ICollection&lt;Friend‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="44b6d732-d3e9-42d6-ac22-ca7d4341fd3a"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e8a2c3df-2cd5-4ed5-a5d8-98cb13f9cac4">
+                <propertyInstance
+                  Id="1634a2b7-22d9-4ad2-a495-16fceb2f2e80"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2d7f3251-86d2-4e40-b23d-7102b5e19f47">
+                <propertyInstance
+                  Id="b5bffb9d-02ea-4e9e-9414-a240e466b63f"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="66bdf442-679b-4371-b9d0-c1be539c9612">
+                <propertyInstance
+                  Id="26410fb8-63b5-4741-a73f-f378b988e47a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7d2078e9-f30f-44b4-b8c2-4ee627cd07c5">
+                <propertyInstance
+                  Id="e6abe0e4-8b4e-448e-9ebc-d88c0acb1411"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="c2606416-3f07-430a-b365-36c84236ad95">
+            <redefinableTemplateSignatureMoniker
+              Id="11ae0e9c-7422-438b-b314-7d6ad6b05afa"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="0bc355e6-7d01-4bb4-9950-5650b2ec98b0">
+                  <actuals>
+                    <classMoniker
+                      Id="86d24fdb-69c9-479b-81af-6e0000fab3ee"
+                      LastKnownName="Friend"
+                      LastKnownLocation="Package1_1716.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="6ecbcb10-60f6-4127-8ee5-2ac30cbe8a22"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="f2d5da11-1cc4-4cca-aadc-7b056d70eaea"
+        name="ICollection&lt;Message‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="1349850a-af02-4cbf-8b8c-3744fa6ce911"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d001836a-2002-4a37-9718-00cc0d493385">
+                <propertyInstance
+                  Id="7b33ba6f-a4a0-407d-9e36-43dd5af9af2d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e860179f-2fd8-4dc7-ac0f-eaba249cf9dd">
+                <propertyInstance
+                  Id="21766f6f-7659-4013-adcb-d59c186b3a3e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="054d64f1-a5ee-46ad-9423-7091c1a57e02">
+                <propertyInstance
+                  Id="3158db58-d6b6-44a3-87eb-cb750edc6662"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e0e6b439-45a9-4387-855c-1801953d82d7">
+                <propertyInstance
+                  Id="b0b6318f-5018-46ad-9755-da75a07b8a89"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="9702ae97-1b5e-4e2a-8917-191858d708d2">
+            <redefinableTemplateSignatureMoniker
+              Id="11ae0e9c-7422-438b-b314-7d6ad6b05afa"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="e12a4ed9-96b9-41fb-9a22-657f999ab823">
+                  <actuals>
+                    <classMoniker
+                      Id="dc915851-e98b-4c17-9301-8d3c1ce72438"
+                      LastKnownName="Message"
+                      LastKnownLocation="Package1_1716.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="6ecbcb10-60f6-4127-8ee5-2ac30cbe8a22"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="5fefb349-4992-4394-8df6-d37b8e26e452"
+        name="ICollection&lt;Post‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="db5bab52-70a6-4959-95e9-c89d35d1942e"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5011612a-28c0-4502-8109-90cf919532cc">
+                <propertyInstance
+                  Id="3b8a7184-8ff2-474c-829d-7db4c5938a03"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c44e1bb9-5f49-4432-b4d6-b5010b36191e">
+                <propertyInstance
+                  Id="7d4bcc97-b0ad-405e-b49f-75e469a3baa9"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2f0aba97-f7be-4c9a-8363-5c072ac2528c">
+                <propertyInstance
+                  Id="869417e3-78a3-4201-a427-5d4639c0ea14"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ed2573e8-7109-42c9-8c38-8a997845d5fc">
+                <propertyInstance
+                  Id="de1e5f32-1ccd-408c-b819-96f48d1b2db4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="9f6f36ce-34a6-4ccf-9586-e3a47610f1d0">
+            <redefinableTemplateSignatureMoniker
+              Id="11ae0e9c-7422-438b-b314-7d6ad6b05afa"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="16a3b323-7a68-4a83-9601-63354691b222">
+                  <actuals>
+                    <classMoniker
+                      Id="eb7aac14-e39c-4d93-ba58-6da3f6cf75f4"
+                      LastKnownName="Post"
+                      LastKnownLocation="Package1_1716.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="6ecbcb10-60f6-4127-8ee5-2ac30cbe8a22"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="8bf0d82f-a935-4971-bbcb-48a6661e5dee"
+        name="IEnumerable&lt;Comment‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="dd21dca4-f0a3-463c-ac9b-78c8f33d402a"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="330c63a0-a577-4ece-8dcf-b67fc28ee2d2">
+                <propertyInstance
+                  Id="026318b5-a13e-4795-92da-01c5922c5630"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="92868738-a9ae-4ef5-8079-72a99df95d89">
+                <propertyInstance
+                  Id="99f697d2-fca7-43b7-b877-8eaa2977554a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d4deba50-5191-48ba-a4da-c8b7059826b2">
+                <propertyInstance
+                  Id="d716a63a-5cd3-44a5-9760-0bd2a9f69b9c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="acc4f7f1-4968-4fbd-b1d4-29d9dbc8c7cd">
+                <propertyInstance
+                  Id="9b24a99d-64cf-4d86-853a-47f634e33bd7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="90fee846-9dd4-4694-837c-21004dbcdfa0">
+            <redefinableTemplateSignatureMoniker
+              Id="2b5c595a-ff77-438f-a911-ba0f567f5d34"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="58c1a36b-1456-4cfa-953d-b5ec0d29aa2f">
+                  <actuals>
+                    <classMoniker
+                      Id="e74f52cf-19fc-4162-a198-105d9fdddf61"
+                      LastKnownName="Comment"
+                      LastKnownLocation="Package1_1716.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="7db2f34d-82ef-4175-80e5-cae3d09c6851"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="f4709269-1bc4-468f-ab32-a64e47ca2987"
+        name="IEnumerable"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="2f7ab6e8-96a3-4b89-8d8a-840123567c93"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8e175038-d4aa-4545-8b43-a38fc33b3769"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="213431d5-2614-4aff-9437-949b0cdd15ac">
+                <propertyInstance
+                  Id="84bd073a-0ef6-4f02-8471-4e26ad6fd13a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8c6b8a8f-acb7-494b-9146-561e9ee794f1">
+                <propertyInstance
+                  Id="e92c06e5-2e2b-4327-ba0f-91cebf4fcc99"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d9388d53-e010-41d0-948a-866af0325643">
+                <propertyInstance
+                  Id="65bb65d0-3112-4d29-9ee2-8c9fc8ad58d8"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="38cb4982-bc88-4bec-a1b4-8a6ff74bb2e0">
+                <propertyInstance
+                  Id="6203d4e5-e297-422e-b71a-4c67aedecc83"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="2b5c595a-ff77-438f-a911-ba0f567f5d34"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="7db2f34d-82ef-4175-80e5-cae3d09c6851">
+                <referencesInternal>
+                  <reference
+                    Id="89f2566d-8b70-47ed-b5e5-d29ebfe6c35d"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DIEnumerable GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="da246083-c1c6-45f4-90f3-530f27d3324a"
+                    name="T"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="4fc9e90b-1f5e-41cd-8a87-6e75cd892341"
+        name="IEnumerable&lt;User‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f80e6d62-80d5-448d-a25e-9e313b622642"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="77434705-ff5b-4bfc-a1d4-79d430a6b256">
+                <propertyInstance
+                  Id="be3e72b1-d1ff-4b01-ad93-7d8389ec0a9e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="781810af-2ae4-42bc-a39f-711157d7f69d">
+                <propertyInstance
+                  Id="ab8332a4-56e2-454c-96f8-624f8c376e4e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="20a17ae3-4aef-482a-a687-ba9e8ac31cf3">
+                <propertyInstance
+                  Id="8fa02e94-1bb7-45c7-9efd-7e6f5d54040a"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="16936b0a-1637-4bca-9ef3-1a985bff92e1">
+                <propertyInstance
+                  Id="c700069c-da57-4475-bc91-0fedc4bf04c6"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="ec19072c-7c69-44cf-b7c6-7fc5871b9cf2">
+            <redefinableTemplateSignatureMoniker
+              Id="2b5c595a-ff77-438f-a911-ba0f567f5d34"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="df1cd1c0-e93d-4525-8f41-b9647ac5fa93">
+                  <actuals>
+                    <classMoniker
+                      Id="387005c1-cf27-4639-a624-a5f4c6064013"
+                      LastKnownName="User"
+                      LastKnownLocation="Package1_1716.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="7db2f34d-82ef-4175-80e5-cae3d09c6851"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="6f5f77aa-34e0-4e4c-bf0f-b7b231655ccb"
+        name="IEnumerable&lt;String‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="18664a1c-a093-4089-9683-44713945ecea"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ce527e47-16c3-4781-839b-f563337066e2">
+                <propertyInstance
+                  Id="0aaa2d82-4beb-476d-b269-6c2cb5e5573c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c2ff43a6-05a8-47ac-9c9b-e372532db97a">
+                <propertyInstance
+                  Id="8cb84d79-e46e-4c50-8e88-ef741b655afe"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="336eb454-1fd1-4c40-b60b-579c53d86e84">
+                <propertyInstance
+                  Id="3c182307-fcbd-44a6-9750-a01e3523ff0b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1025e3be-ecaa-4487-9159-7e27ba41621f">
+                <propertyInstance
+                  Id="2173fd4b-0b19-449c-9d6a-0d3c619db7f2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="66f86fdd-41b6-478f-9951-f0ee6d0436bc">
+            <redefinableTemplateSignatureMoniker
+              Id="2b5c595a-ff77-438f-a911-ba0f567f5d34"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="33bdae1b-32a1-40da-82b8-21c3ee9667a8">
+                  <actuals>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="7db2f34d-82ef-4175-80e5-cae3d09c6851"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="b6c39123-8594-4760-a1bb-19c92f1f757d"
+        name="IEnumerable&lt;Location‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9df24962-510e-4e0d-9586-3d2dec771193"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e95ad979-db5f-4f20-90dd-9e53d8ada166">
+                <propertyInstance
+                  Id="3e77bc72-88ea-452c-8bd7-6d39ebab3c2d"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1fa9a369-d6f9-43f6-a8ce-1dee6aa56f68">
+                <propertyInstance
+                  Id="668f1dec-8777-448e-9e1b-9dc52197c357"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7d55976b-dbbd-42d8-a537-427430874297">
+                <propertyInstance
+                  Id="85bde0f3-ce86-4e3d-8f43-2ac27bf629e5"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f4731117-d46d-400a-8f6e-19c8ac160fc5">
+                <propertyInstance
+                  Id="6f0955b3-702b-4076-b155-8649f21e5849"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="580d2af9-5c5e-4ed3-b22f-f8e0b0f2c7cb">
+            <redefinableTemplateSignatureMoniker
+              Id="2b5c595a-ff77-438f-a911-ba0f567f5d34"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="62bf56db-4ff3-4d4c-9357-a72e8691430c">
+                  <actuals>
+                    <classMoniker
+                      Id="6db5d241-de21-4db4-a31a-0d062a57f0a7"
+                      LastKnownName="Location"
+                      LastKnownLocation="Package1_1716.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="7db2f34d-82ef-4175-80e5-cae3d09c6851"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="90f3dd27-14f2-4811-8739-39c6474ed57e"
+        name="IEnumerable&lt;Message‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="3b7c2c4c-0497-4741-ac9e-d51edf070186"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bb2f6592-712f-4d11-b4f7-0f1eaed6bbb8">
+                <propertyInstance
+                  Id="1a4b12f1-d1c0-4cf7-8c92-97feda16057f"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ec3b898d-c3a7-43ff-a1a0-6e58c70626b8">
+                <propertyInstance
+                  Id="8dfc8ce2-c2a6-4f48-8a2f-49f40fe387ae"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="480993bc-6eab-432a-8d16-05596eff1e82">
+                <propertyInstance
+                  Id="00a61694-36fb-4a14-99a7-db81b0943571"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8a0a1829-775e-4cc8-a2fd-09a77176a3fc">
+                <propertyInstance
+                  Id="86b17a00-6e9f-42e6-80aa-7011b8b89231"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="f3420246-efc0-4f24-92af-3417519a77b7">
+            <redefinableTemplateSignatureMoniker
+              Id="2b5c595a-ff77-438f-a911-ba0f567f5d34"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="ed26205f-9ba1-48f2-9b4d-a1be3f6720bc">
+                  <actuals>
+                    <classMoniker
+                      Id="dc915851-e98b-4c17-9301-8d3c1ce72438"
+                      LastKnownName="Message"
+                      LastKnownLocation="Package1_1716.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="7db2f34d-82ef-4175-80e5-cae3d09c6851"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="67c0230f-0f74-4d28-8f4b-482371b40ffc"
+        name="IEnumerable&lt;Post‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="dea60b8b-f9d3-4f37-9892-04aa1ea1656c"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e53efc6d-c45b-4eb4-8302-a6a8ee4c6e90">
+                <propertyInstance
+                  Id="7d934013-28b7-47bc-a824-338e11369df5"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c32bef56-659d-4a32-971a-33ce8911eb8f">
+                <propertyInstance
+                  Id="5ff169c4-5692-4af4-929a-29fe57426c61"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e514dd39-f356-4677-b15a-54fb5a850509">
+                <propertyInstance
+                  Id="86315e25-51d3-4a26-8f41-77b8ae0d894b"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1beefb57-20eb-4d4e-878b-5204d204012b">
+                <propertyInstance
+                  Id="e4dae9d6-73f8-42a5-8b45-e043949e2fe7"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="3d81e6ae-5d18-484e-806c-f41ee14b5012">
+            <redefinableTemplateSignatureMoniker
+              Id="2b5c595a-ff77-438f-a911-ba0f567f5d34"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="7db2157b-a054-4cb2-830f-92ba881ef5e8">
+                  <actuals>
+                    <classMoniker
+                      Id="eb7aac14-e39c-4d93-ba58-6da3f6cf75f4"
+                      LastKnownName="Post"
+                      LastKnownLocation="Package1_1716.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="7db2f34d-82ef-4175-80e5-cae3d09c6851"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ce36d372-65be-4eea-bd2f-d54692475b20"
+        name="List&lt;UserDetail‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="01651eba-5290-41c8-a5a7-c6abffcc4d2c"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e4bb6060-ecb1-40de-88e7-34c88b05dd0c">
+                <propertyInstance
+                  Id="91441185-abb7-4ef2-a9bb-5b69016271ca"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="45e50584-f48f-4065-be82-458e7f1943e4">
+                <propertyInstance
+                  Id="5df8c71f-f3d0-435b-ae44-97d6f95d0124"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b62c3607-a634-4a79-9ddf-34b4aec79673">
+                <propertyInstance
+                  Id="8f0f3422-e703-41d7-9a0b-392955d6c336"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1ab1bf76-5f5e-408f-8508-f780a6c071b6">
+                <propertyInstance
+                  Id="1a766dbc-0756-4d90-8884-212eab4b7327"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6fb29ca6-8789-403f-bb8b-f05a9598f5d5">
+                <propertyInstance
+                  Id="fe3543f4-c4e4-45f1-b330-94104e1194c1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="c4f4f7d3-720e-462a-acf7-a1650be86881">
+            <redefinableTemplateSignatureMoniker
+              Id="db31a4fd-5786-4288-810a-3b00ac0cb67c"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="e14464b7-8742-458b-a939-968ec863c618">
+                  <actuals>
+                    <classMoniker
+                      Id="b5808a3d-0171-451d-a029-d506e1854d1a"
+                      LastKnownName="UserDetail"
+                      LastKnownLocation="Package6_2055.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="d5a50f8b-db9d-47e0-b785-f3f2a6ef0dc3"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1f8375a9-0013-4671-a351-acdbf91aedca"
+        name="List"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="4ac8f3ce-c623-48a2-ad1a-3862909559ab"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="264bb42d-1dea-4bba-96ed-68b745f85ad5"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d1ee03ec-5722-4436-9efe-71701cca065e">
+                <propertyInstance
+                  Id="05fc750b-045b-4693-be29-dbd2c80573cf"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7bd8cfea-1c22-4950-988e-aa21ac5d9b30">
+                <propertyInstance
+                  Id="95c96667-0cd1-4bd7-9b6e-c40830034f07"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7167ea3c-4f6c-49f6-9868-68a8b831e368">
+                <propertyInstance
+                  Id="286e2060-299c-48f6-8179-350406394b1f"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a0f2d9c2-76c1-4eda-b398-3e8043cf98a8">
+                <propertyInstance
+                  Id="d9f728d7-33d5-4f8e-9ade-f188f01374e2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c640eeb2-b273-46ae-9108-b4a569df83ea">
+                <propertyInstance
+                  Id="14b67d2a-431a-4b68-91cf-6a79922c9ab4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="db31a4fd-5786-4288-810a-3b00ac0cb67c"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="d5a50f8b-db9d-47e0-b785-f3f2a6ef0dc3">
+                <referencesInternal>
+                  <reference
+                    Id="0ce652ac-3e3e-4933-9770-441b68db0aba"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem.Collections.Generic Type%3D(Name%3DList GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="d30c9794-bef2-4ad7-a828-fc5a2a563649"
+                    name="T"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1a01be7d-5a49-4537-8f44-fffbf0a48fb7"
+        name="List&lt;MessageDetail‎&gt;"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="353cada0-f296-4624-b010-2a9aaea7a750"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="94d05fcf-f0d1-4ca4-8cdf-8d45f54a3774">
+                <propertyInstance
+                  Id="579b54b1-83ac-4cca-890e-d2d4e8269483"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d29fd6c6-7a52-435c-8932-83308f61fe5f">
+                <propertyInstance
+                  Id="15e3893b-05fa-4aa7-8e71-6db38e3a33b2"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bdaa235b-a7b1-4a52-b363-62447cbdd529">
+                <propertyInstance
+                  Id="45bd383f-67fc-45ea-9792-83f47e81a3d9"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="69c10bf6-171b-448b-ac5d-622f7376df93">
+                <propertyInstance
+                  Id="c72cc471-a611-454e-819a-2616658250d2"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="188f7a73-f31b-4991-8e3a-fe0f7323836b">
+                <propertyInstance
+                  Id="83d5855f-d47f-475a-a1f1-b0130773f90f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="f67304b3-fd6e-4177-9705-19235b438f05">
+            <redefinableTemplateSignatureMoniker
+              Id="db31a4fd-5786-4288-810a-3b00ac0cb67c"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="3a35b434-c812-4c86-aee5-1d3e67092d6b">
+                  <actuals>
+                    <classMoniker
+                      Id="016670d4-6147-4d18-8e5c-dfc8a243eff3"
+                      LastKnownName="MessageDetail"
+                      LastKnownLocation="Package6_2055.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="d5a50f8b-db9d-47e0-b785-f3f2a6ef0dc3"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0589755e-d6b0-46fe-8cfc-b5345c25c794"
+        name="List&lt;Comment‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="42199f6e-cc12-465b-9143-f3e02d4669b5"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3ceb8e82-f224-407e-b2be-ccf27b2884e0">
+                <propertyInstance
+                  Id="b5f18cda-4cca-4de8-b7d4-1b35074cf335"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="07fc360a-d957-4c69-b2e0-cf1d98b0263b">
+                <propertyInstance
+                  Id="f6050921-e9cf-45e3-b8f7-80f894afe064"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="369b750a-b1e2-49e3-a518-3b28759bd5a0">
+                <propertyInstance
+                  Id="e4d8d13e-5817-4a0e-805f-ec415ad424f0"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e4b42b76-65e6-46b6-bd28-21cfaa36fa8e">
+                <propertyInstance
+                  Id="dc80a69a-cabb-4b44-b237-a26205135260"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ff0c2f84-3001-4e55-b457-56d262e9506d">
+                <propertyInstance
+                  Id="c57b89d9-191a-42b8-ba4f-3d092168cc9a"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="a30967b8-4a9e-487e-99e0-7ef8842c2f24">
+            <interfaceMoniker
+              Id="6c29d550-d4bd-4960-bd9f-6a29212820b2"
+              LastKnownName="ICollection&lt;Comment‎&gt;"
+              LastKnownLocation="Package4_1716.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="484c5779-7c0b-4c72-8b50-d26e1e4270d6">
+            <interfaceMoniker
+              Id="8bf0d82f-a935-4971-bbcb-48a6661e5dee"
+              LastKnownName="IEnumerable&lt;Comment‎&gt;"
+              LastKnownLocation="Package4_1716.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <signatures>
+          <templateBinding
+            Id="756d59ae-00f1-480f-b093-e46c6b6f0ef7">
+            <redefinableTemplateSignatureMoniker
+              Id="db31a4fd-5786-4288-810a-3b00ac0cb67c"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="1d5f1700-afa7-4f95-a454-a2e61ccf407e">
+                  <actuals>
+                    <classMoniker
+                      Id="e74f52cf-19fc-4162-a198-105d9fdddf61"
+                      LastKnownName="Comment"
+                      LastKnownLocation="Package1_1716.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="d5a50f8b-db9d-47e0-b785-f3f2a6ef0dc3"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="1aca3d22-faed-4a77-b97e-2ae7ea4cca48"
+        name="List&lt;User‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="7551cfac-4a77-4180-9ac2-6f8eca1856f1"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2de848f3-b0c7-413d-a9d5-597fdfc4863c">
+                <propertyInstance
+                  Id="380c364e-9652-405d-be06-cd5c955d66b1"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4bddebca-8915-4e62-a01e-8bb22995b49e">
+                <propertyInstance
+                  Id="02754cb4-c835-4c85-8557-29d9d9e2fe14"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f02fdb40-2cba-4f81-b422-4919f5fac134">
+                <propertyInstance
+                  Id="37be0519-2dd6-4265-8ca2-bdc3d3dc499b"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="da260399-4721-4b67-807b-de7b25a879f2">
+                <propertyInstance
+                  Id="09e898bf-2d34-41d9-99a8-dee17a0f0209"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a7e42a0b-41d8-44d1-9e60-53b1a3803a51">
+                <propertyInstance
+                  Id="d6894fb3-f4e7-4e50-965d-d58f4c9e99b1"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="ebb6d83e-e380-447f-998d-4e0551057d7c">
+            <interfaceMoniker
+              Id="52f7f1d8-a529-420a-a890-6746fce3d66e"
+              LastKnownName="ICollection&lt;User‎&gt;"
+              LastKnownLocation="Package4_1716.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="e0c3722c-433f-40c8-8213-47d4ab89abed">
+            <interfaceMoniker
+              Id="4fc9e90b-1f5e-41cd-8a87-6e75cd892341"
+              LastKnownName="IEnumerable&lt;User‎&gt;"
+              LastKnownLocation="Package4_1716.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <signatures>
+          <templateBinding
+            Id="cb4e3739-82ea-47da-a2e6-e4d651b97315">
+            <redefinableTemplateSignatureMoniker
+              Id="db31a4fd-5786-4288-810a-3b00ac0cb67c"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="da8e53aa-868c-4a18-8bf9-c27a6267e6c8">
+                  <actuals>
+                    <classMoniker
+                      Id="387005c1-cf27-4639-a624-a5f4c6064013"
+                      LastKnownName="User"
+                      LastKnownLocation="Package1_1716.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="d5a50f8b-db9d-47e0-b785-f3f2a6ef0dc3"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="2307d68a-407a-4a6b-b284-2f363b287bd7"
+        name="IEnumerable&lt;SelectListItem‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="de335409-5648-4c3b-877e-bb8676a7976c"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8c7ef315-2c84-4246-a520-8efb590cd59f">
+                <propertyInstance
+                  Id="cf85c418-4e91-4b68-9573-8bcb78e43e24"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7a74ce39-0980-4d8b-9b43-4ef642b970d9">
+                <propertyInstance
+                  Id="69b8be4e-6d75-48f4-801b-2b5969ed84d6"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e4ad26bd-ad45-4a40-a4f9-a87ab0d2453e">
+                <propertyInstance
+                  Id="e4c4ae69-5571-42a2-9132-73c3b79be7ef"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c4cdc7ab-c3e7-4bd6-b925-a4c8a0598083">
+                <propertyInstance
+                  Id="577b8d23-cf00-4d1c-93b8-3ee449875e40"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="472490ed-872d-4f24-8d6a-0e00dbab320b">
+            <redefinableTemplateSignatureMoniker
+              Id="2b5c595a-ff77-438f-a911-ba0f567f5d34"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="492c3b1c-8caa-4675-a9b5-b6a72e54d320">
+                  <actuals>
+                    <classMoniker
+                      Id="e732c936-b543-46be-b354-10b6b503fae1"
+                      LastKnownName="SelectListItem"
+                      LastKnownLocation="Package3_2045.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="7db2f34d-82ef-4175-80e5-cae3d09c6851"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="f6e6e217-be75-4756-8ead-2092d74d9583"
+        name="List&lt;Post‎&gt;"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d0885176-f421-49cf-bbd7-4e4591474358"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5a3115b6-ec59-4bf6-8dfc-67fd7ff40e35">
+                <propertyInstance
+                  Id="4019b47a-60af-4472-8c7b-859260e876e5"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="118aeded-0ba0-457b-a365-760d47af1770">
+                <propertyInstance
+                  Id="ead5b2c0-c640-4f1f-8662-2246e90a3a78"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a3a033a8-6547-417c-9992-6323913058e3">
+                <propertyInstance
+                  Id="587f5d18-8328-46b1-ab8e-58b99642bd61"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f288b4f7-e1c1-4f3d-8efc-a4836428e173">
+                <propertyInstance
+                  Id="7ec283b4-61ec-485e-89d3-98b0a762b5bb"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c731a498-eb09-4594-95cd-e8b8b86e9c30">
+                <propertyInstance
+                  Id="489c0425-60cc-46c4-86bc-d5641188e2f2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="0d1adb11-805a-4e64-a206-26b81d906644">
+            <interfaceMoniker
+              Id="5fefb349-4992-4394-8df6-d37b8e26e452"
+              LastKnownName="ICollection&lt;Post‎&gt;"
+              LastKnownLocation="Package4_1716.uml" />
+          </interfaceRealization>
+          <interfaceRealization
+            Id="9b4edf27-acf6-4b85-b6c1-434b6f424ee8">
+            <interfaceMoniker
+              Id="67c0230f-0f74-4d28-8f4b-482371b40ffc"
+              LastKnownName="IEnumerable&lt;Post‎&gt;"
+              LastKnownLocation="Package4_1716.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <signatures>
+          <templateBinding
+            Id="2ba6c474-232e-49a6-b101-55a1c7a1db23">
+            <redefinableTemplateSignatureMoniker
+              Id="db31a4fd-5786-4288-810a-3b00ac0cb67c"
+              LastKnownLocation="Package4_1716.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="b272b2e1-96e4-4f11-96fc-5718fe9d7c74">
+                  <actuals>
+                    <classMoniker
+                      Id="eb7aac14-e39c-4d93-ba58-6da3f6cf75f4"
+                      LastKnownName="Post"
+                      LastKnownLocation="Package1_1716.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="d5a50f8b-db9d-47e0-b785-f3f2a6ef0dc3"
+                      LastKnownLocation="Package4_1716.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

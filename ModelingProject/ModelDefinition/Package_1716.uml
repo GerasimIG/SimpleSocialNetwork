@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="7c70f7a3-6d0e-42d9-a801-06aa654bd4da"
+  name="SimpleSocialNetwork"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="b788e3cf-9c01-460c-81e2-2ff8326fc006"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleSocialNetwork"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="5b67fb54-8252-40aa-912a-f2c00c380444"
+        LastKnownName="Domain"
+        LastKnownLocation="Package1_1716.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="8ec2569c-77e8-4424-83bc-a5b814e619f0"
+        LastKnownName="Infrastructure"
+        LastKnownLocation="Package_2044.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="05b35c5d-f28b-47a7-bab2-552b4310bd74"
+        LastKnownName="WebUI"
+        LastKnownLocation="Package_2045.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

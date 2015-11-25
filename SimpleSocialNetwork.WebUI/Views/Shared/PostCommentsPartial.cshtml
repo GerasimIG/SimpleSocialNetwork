@@ -1,0 +1,25 @@
+﻿@model SimpleSocialNetwork.WebUI.ViewModels.PostCommentsViewModel
+
+
+<ul class="postComments">
+    @if (Model != null)
+    {
+        foreach (var comment in Model.PostComments)
+        {          
+            Html.RenderPartial("CommentPartial", comment);
+        }
+    }
+</ul>
+<div>        
+    <form method="post" class="commentForm"  action="@Url.Action("AddComment", "User", new { postId = Model.PostId }) ">
+        @if (User.IsInRole("ApprovedMember"))
+        {
+            @Html.TextArea("commentMessage", new { rows = 2, cols = 40 })
+            <br />
+            <input type="submit" value="Add comment" />
+        }
+    </form>
+</div>
+
+
+

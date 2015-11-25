@@ -1,0 +1,11 @@
+﻿@model List<SimpleSocialNetwork.Domain.Post>
+
+<ul id="posts">
+    @if (Model != null)
+    {
+        foreach (var post in Model.OrderByDescending(x => x.DatePosted))
+        {
+            Html.RenderPartial("PostPartial", post);
+        }
+    }
+</ul>

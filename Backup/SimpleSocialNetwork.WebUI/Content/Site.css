@@ -1,0 +1,390 @@
+﻿
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.clear {
+    clear: both;
+}
+
+#header {
+    height: 45px;
+    background: #404040;
+    margin-bottom: 25px;
+}
+
+#header a {
+    line-height: 41px;
+}
+
+#header > div, #header a {
+    height: 100%;
+}
+
+#logo {
+    background: #22afab;
+    float: left;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 0 12px;
+}
+
+#logo h1 {
+    display: inline;
+}
+
+#logout {
+    float: right;
+    color: #fff;
+    font-size: 0.9em;
+    text-decoration: none;
+}
+
+#logout:hover {
+    text-decoration: underline;
+}
+
+#mainNav li {
+    width: 186px;
+    margin-right: 50px;
+}
+
+#mainNav a {
+    background: #d1dfdf;
+    padding: 0 15px;
+    display: block;
+    line-height: 35px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#mainNav li:nth-child(even) a {
+    background: #e0e4e7;
+}
+
+#mainNav a:hover, #mainNav .active a {
+    opacity: 0.8;
+}
+
+#mainNav, #content {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#content {
+    max-width: 1044px;
+}
+
+.searchPage #content {
+    max-width: 744px;
+}
+
+#info {
+    margin-bottom: 50px;
+}
+
+#info img {
+    width: 175px;
+    margin-right: 20px;
+}
+
+#info h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#info > div {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#info textarea {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#posts {
+    max-width: 575px;
+}
+
+.author {
+    margin-bottom: 10px;
+    font-size: 0.8em;
+}
+
+.author a {
+    color: #404040;
+}
+
+.author a:hover {
+    text-decoration: none;
+}
+
+#posts time {
+    display: block;
+    margin-top: 1em;
+    color: #888;
+    float: right;
+}
+
+
+#posts .commentsLink {
+    display: block;
+    margin-top: 1em;
+    color: #404040;
+    float: left;
+}
+
+#posts .commentsLink:hover {
+    text-decoration: none;
+}
+
+#posts .hideCommentsLink {
+    display: block;
+    margin-top: 1em;
+    color: #404040;
+    float: left;
+}
+
+#posts .hideCommentsLink:hover {
+    text-decoration: none;
+}
+
+#posts li {
+    position: relative;
+}
+
+#posts > li {
+    margin-bottom: 50px;
+}
+
+#posts .comments {
+    margin: 30px 0 0 40px;
+}
+
+#posts .comments .remove {
+    font-size: 0.7em;
+}
+
+#posts .comments li {
+    margin-bottom: 30px;
+}
+
+#posts .comments time {
+    float: none;
+    margin-top: 0.6em;
+}
+
+#posts li .remove input {
+    background: none;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #b9b9b9;
+}
+
+#posts .comments textarea {
+    margin-bottom: 10px;
+}
+
+
+/* --------------------------- */
+
+#content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#searchForm {
+    margin-bottom: 40px;
+}
+
+#searchForm input, select {
+    margin-bottom: 20px;
+}
+
+#searchForm input[type=radio] {
+    margin-bottom: 0;
+}
+
+#searchForm input[type=text] {
+    margin-right: 10px;
+}
+
+#searchForm input[type=submit] {
+    padding: 5px 15px;
+}
+
+#UserName {
+    width: 400px;
+}
+
+#people li {
+    margin-bottom: 20px;
+}
+
+#people li:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#people img {
+    float: left;
+    margin-right: 10px;
+    border: 2px solid #dfe0e2;
+}
+
+#people a {
+    color: #404040;
+}
+
+#people a:hover {
+    text-decoration: none;
+}
+
+/* --------------------------- */
+
+.ui-tabs-nav {
+    margin-bottom: 20px;
+}
+
+.ui-tabs-nav li {
+    display: inline-block;
+    vertical-align: top;
+
+    margin-right: 20px;
+
+}
+
+.ui-tabs-nav li a {
+    padding: 10px;
+    display: block;
+    background: #404040;
+    color: #fff;
+    text-decoration: none;
+}
+
+.ui-tabs-nav li a:hover {
+    opacity: 0.8;
+}
+
+.ui-tabs-hide {
+    display: none;
+}
+
+.ui-tabs-nav .ui-tabs-selected a {
+    background: #008b8b;
+}
+
+#tabs h3 {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+#tabs input {
+    margin-bottom: 20px;
+}
+
+/* --------------------------- */
+
+#filters {
+    float: right;
+    background: #e0e4e7;
+    padding: 20px;
+   
+}
+
+/* --------------------------- */
+
+h1.e404 {
+    font-size: 2em;
+}
+
+h1.e404 strong {
+    font-size: 2em;
+    color: #20b2aa;
+}
+
+/* --------------------------- */
+
+.chattest #content #header {
+    display: none;
+}
+
+.chattest #content > br {
+    display: none;
+}
+
+#divChat {
+    width: 600px;
+}
+
+#divChat .title {
+    background: #404040;
+    color: #fff;
+    min-height: 45px;
+    line-height: 45px;
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+#divChat .content {
+    margin-bottom: 10px;
+
+}
+
+#divChat .message {
+    margin-bottom: 8px;
+    margin-left: 15px;
+}
+
+#divChat .userName {
+    font-weight: bold;
+}
+
+#divChat .messageBar input[type=text] {
+    width: 485px;
+    margin-right: 10px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+#divChat #divChatWindow {
+    height: 322px;
+    overflow-y: scroll;
+}
+
+/* --------------------------- */
+
+.Grid {
+    margin-bottom: 30px;
+}
+
+.Grid td, .Grid th {
+    padding: 10px;
+}
+
+.Grid th {
+    background: #008b8b;
+    color: #fff;
+    font-weight: bold;
+}
+
+.Grid tr:nth-child(odd) {
+    background: #d1e0de;
+}
+
+.Grid tr:nth-child(even) {
+    background: #e0e4e7;
+}
+
+.Grid form {
+    display: inline;
+    margin-left: 10px;
+}

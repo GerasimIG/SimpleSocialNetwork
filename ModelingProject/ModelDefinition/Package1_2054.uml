@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e57276ee-7e14-41f0-a193-60899ae95b20"
+  name="Http"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="0a5794d8-a8ff-47df-8342-cfe32011726a"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Web.Http"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="bf9f8ff4-a5e0-4375-9ad0-af515adbf9f5"
+        name="HttpConfiguration"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="d18d76c8-dc6b-4346-bf43-0d8076359ca3"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2Fpackages%2FMicrosoft.AspNet.WebApi.Core.4.0.30506.0%2Flib%2Fnet40%2FSystem.Web.Http.dll Namespace%3DSystem.Web.Http Type%3DHttpConfiguration"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e19e6e66-c992-439c-bc89-f2fb27be0ef6"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8282dc9b-9581-4263-80f8-71b99b7a72d6">
+                <propertyInstance
+                  Id="667e2b19-6b97-411d-8244-2b0cd2d2028e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cd7d5338-ded0-425b-94e1-a77ec3be7606">
+                <propertyInstance
+                  Id="e7719a3e-023b-4f16-be77-2b2e2aa4326a"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6522a030-5639-46a9-933e-ac9324db19a9">
+                <propertyInstance
+                  Id="6c58f33e-2435-4e14-a164-bd44f996d317"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="72088fc2-6b44-4a9c-97b1-25d60aafc640">
+                <propertyInstance
+                  Id="d62647b7-1720-4897-88d7-d94b8e9be2b0"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f8be667c-f4f7-4e61-8caa-826899752e12">
+                <propertyInstance
+                  Id="dbf2fed9-1402-48c6-baca-d3867c92123d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <interfaceRealization
+            Id="e50444c0-1405-4eaa-995f-38f45d66d405">
+            <interfaceMoniker
+              Id="efb42911-2579-489b-bcf0-53c80d03d469"
+              LastKnownName="IDisposable"
+              LastKnownLocation="Package2_1716.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

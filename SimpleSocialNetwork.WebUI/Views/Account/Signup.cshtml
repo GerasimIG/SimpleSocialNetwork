@@ -1,0 +1,23 @@
+﻿@model SimpleSocialNetwork.WebUI.ViewModels.SignupViewModel
+
+@{
+    ViewBag.Title = "Singup";
+    Layout = "~/Views/Shared/_Auth.cshtml";
+}
+
+<h2>Sign Up</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.EditorForModel()
+    @Html.ValidationSummary(true)
+    <p>
+        <input type="submit" value="Sign Up" />
+    </p>
+    @Html.ActionLink("Log In", "Login")
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,18 @@
+﻿@model SimpleSocialNetwork.WebUI.ViewModels.UpdateProfileImageViewModel
+
+<h3>Update image</h3>
+
+@if (Model.ImageData != null && Model.ImageMimeType != null)
+{
+    <img width="175" height="200" src='@Url.Action("GetUserImage", "User", new { userId = ViewBag.CurrentUserId })' />
+}
+
+else
+{
+    <img width="175" height="200" src="~/Content/Images/unknown-person.png" />
+}
+@using (Html.BeginForm("UpdateImage", "Settings", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <input type="file" name="UserImage" />
+    <input type="submit" value="Save" />
+}

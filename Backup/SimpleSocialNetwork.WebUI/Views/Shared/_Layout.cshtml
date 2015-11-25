@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Content/Reset.css" rel="stylesheet" />
+    <link href="~/Content/Common.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />  
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/x-icon" href="~/Content/Icons/favicon.ico" />
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="header">
+        <div class="wrapper">
+            <a id="logo" href="/"><h1>Simple social network</h1></a>
+            @Html.ActionLink("Sign out", "SignOut", "User", null, new { id = "logout"})
+        </div>
+    </div>
+
+    <div id="main" class="wrapper">
+        <ul id="mainNav">
+            @if (User.IsInRole("ApprovedMember"))
+            {
+                <li>@Html.ActionLink("My page", "UserProfile", "User", new { id = Convert.ToInt32(HttpContext.Current.User.Identity.Name) }, null)</li>
+                <li>@Html.ActionLink("Friends", "Index", "Friends")</li>
+                <li>@Html.ActionLink("Chats", "Index", "Chat")</li>
+                <li>@Html.ActionLink("News", "Index", "News")</li>
+                <li class="active">@Html.ActionLink("Search", "Index", "Search")</li>
+                <li>@Html.ActionLink("Settings", "Index", "Settings")</li>
+            }
+            else
+            {
+                <li>@Html.ActionLink("Search", "Index", "Search")</li>
+            }
+        </ul>
+        @RenderBody()
+        @RenderSection("scripts", required: false)
+    </div>
+</body>
+</html>

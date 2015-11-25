@@ -1,0 +1,23 @@
+﻿@model SimpleSocialNetwork.Domain.User
+
+<li>
+  <a href="@Url.Action("UserProfile", "User", new {id = Model.Id})">
+      @if (Model.ImageData != null && Model.ImageMimeType != null)
+      {
+           <img width="100" height="100" src='@Url.Action("GetUserImage", "User", new {userId = Model.Id})' />
+      }
+      else
+      {
+           <img width="100" height="100"  src="~/Content/Images/unknown-person.png" />
+      }
+      </a>
+      <a href="@Url.Action("UserProfile", "User", new {id = Model.Id})">
+            @Model.FirstName
+            @Model.LastName
+      </a>
+      <br /><br />
+      @if (Model.Id != Convert.ToInt32(User.Identity.Name) && User.IsInRole("ApprovedMember"))
+      {
+         @Html.ActionLink("Write a message", "Chat", "Chat", new { toId = Model.Id }, null)
+      }
+</li>

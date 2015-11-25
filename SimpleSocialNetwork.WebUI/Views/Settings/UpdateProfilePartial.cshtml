@@ -1,0 +1,37 @@
+﻿@model SimpleSocialNetwork.WebUI.ViewModels.UpdateProfileViewModel
+
+<h3>Update profile</h3>
+@using (Html.BeginForm("UpdateProfile", "Settings"))
+{
+    @Html.AntiForgeryToken()
+    <p>@Html.LabelFor(model => model.FirstName)</p>
+    <p>@Html.TextBoxFor(model => model.FirstName)</p>
+    <p>@Html.LabelFor(model => model.LastName)</p>
+    <p>@Html.TextBoxFor(model => model.LastName)</p>
+    <p>@Html.LabelFor(model => model.Birthday)</p>
+    <p>@Html.EditorFor(model => model.Birthday)</p>
+    <p>@Html.LabelFor(model => model.Skype)</p>
+    <p>@Html.TextBoxFor(model => model.Skype)</p>
+    <p>@Html.LabelFor(model => model.PhoneNumber)</p>
+    <p>@Html.TextBoxFor(model => model.PhoneNumber)</p>
+    <p>@Html.LabelFor(model => model.Gender)</p>
+    <p>@Html.DropDownListFor(model => model.Gender, ViewBag.Genders as IEnumerable<SelectListItem>)</p>
+    <p>@Html.LabelFor(model => model.FullLocation)</p>    
+       @Html.HiddenFor(model => model.LocationId)
+    <p>@Html.TextBoxFor(model => model.FullLocation, new { id = "locationSearch" })</p>
+
+    
+    <script>
+    $(function () {
+        $("#locationSearch").autocomplete({
+            source: '@Url.Action("GetLocations", "Settings")',
+            select: function(event,ui) {
+                document.getElementById("LocationId").value = ui.item.id;
+            }
+        });
+    })
+    </script>
+    <p>
+        <input type="submit" value="Update profile" />
+    </p>
+}

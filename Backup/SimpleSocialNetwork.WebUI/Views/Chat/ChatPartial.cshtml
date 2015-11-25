@@ -1,0 +1,19 @@
+﻿@model SimpleSocialNetwork.WebUI.ViewModels.ChatViewModel
+
+<li>
+    <a href="@Url.Action("Chat", "Chat", new { toId = Model.ChatWithUserId })">
+            @if (Model.ImageData != null)
+            {
+                <img width="100" height="100" src='@Url.Action("GetUserImage", "User", new {userId = Model.ChatWithUserId})' />
+            }
+            else
+            {
+                <img width="100" height="100" src="~/Content/Images/unknown-person.png" />
+            }
+       
+            @Model.FirstName
+            @Model.LastName
+            @Model.DateSent<br><br>
+            @Model.LastMessageAuthorName: @Model.LastMessage
+    </a>
+</li>

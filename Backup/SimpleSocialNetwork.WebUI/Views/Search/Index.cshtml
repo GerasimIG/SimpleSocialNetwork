@@ -1,0 +1,82 @@
+﻿@model SimpleSocialNetwork.WebUI.ViewModels.SearchViewModel
+
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--
+
+--><div id="content">
+    <h2>Search</h2>
+           @using (Html.BeginForm("Index", "Search", FormMethod.Get, new { id = "searchForm" }))
+           {
+            <div id="content">
+                @Html.TextBoxFor(model => model.UserName)
+                <input type="submit" value="Search" />
+
+                <ul id="people">
+                    @if (Model.SearchResults != null)
+                    {
+                        foreach (var user in Model.SearchResults)
+                        {
+                            Html.RenderPartial("UserPartial", user);
+                        }
+                    }
+                </ul>
+            </div><!--
+                
+               --><div id="filters">
+                    <div id="searchForm">
+                        <label>Location</label>
+                        <p>
+                            @Html.DropDownListFor(model => model.Country, ViewBag.Country as IEnumerable<SelectListItem>)
+                        </p>
+                        <p>
+                            @Html.DropDownListFor(model => model.Region, ViewBag.Region as IEnumerable<SelectListItem>)
+                        </p>
+                        <p>
+                            @Html.DropDownListFor(model => model.City, ViewBag.CIty as IEnumerable<SelectListItem>)
+                        </p>
+                        <label>Birthday from</label>
+                        <p>@Html.EditorFor(model => model.BirthDateFrom)</p>
+                        <label>Birthday to</label>
+                        <p>@Html.EditorFor(model => model.BirthDateTo)</p>
+
+                        <label>Gender</label>
+                        <label>@Html.RadioButton("Gender", "Male") Male </label>
+                        <label>@Html.RadioButton("Gender", "Female") Female</label>
+                        <label>@Html.RadioButton("Gender", "Any") Any</label>
+                    </div>
+                </div>
+              
+                }
+            </div>
+<script>
+    $(document).ready(function () {
+        $('#Country').on('change', function (e) {
+            var selectedCountryName = $(this).val();
+            $.getJSON('@Url.Action("GetRegions", "Search")',
+                { countryName: selectedCountryName }, function (data) {
+                    var items;
+                    $.each(data, function (i, region) {
+                        items += "<option>" + region + "</option>";
+                    });
+                    $('#Region').html(items);
+                    $('#Region').trigger('change');
+                });
+        });
+
+        $('#Region').on('change', function (e) {
+            var selectedRegionName = $(this).val();
+            $.getJSON('@Url.Action("GetCities", "Search")',
+                { regionName: selectedRegionName }, function (data) {
+                    var items;
+                    $.each(data, function (i, city) {
+                        items += "<option>" + city + "</option>";
+                    });
+                    $('#City').html(items);
+                });
+        });
+    });
+</script>

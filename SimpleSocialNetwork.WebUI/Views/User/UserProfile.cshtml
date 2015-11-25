@@ -1,0 +1,86 @@
+﻿@model SimpleSocialNetwork.WebUI.ViewModels.UserViewModel
+
+@{
+    ViewBag.Title = "My page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--
+
+        
+--><div id="content">
+    <div id="info">
+        @if (Model.ImageData.Length > 0)
+        {
+            <img width="175" height="200" src='@Url.Action("GetUserImage", "User", new {userId = Model.Id})' />
+        }
+
+        else
+        {
+            <img width="175" height="200" src="~/Content/Images/unknown-person.png" />
+        }
+        <div>
+            <h1>@Model.FirstName @Model.LastName</h1>
+            @if (@Model.Birthday != null)
+            {
+                <h3>Birthday: @String.Format("{0:MM/dd/yyyy}", Model.Birthday)</h3>
+                <br />
+            }
+            @if (@Model.FullLocation != null)
+            {
+                <h3>Location: @Model.FullLocation</h3>
+                <br />
+            }
+            @if (@Model.Skype != null)
+            {
+                <h3>Skype: @Model.Skype</h3>
+                <br />
+            }
+            @if (@Model.Birthday != null)
+            {
+                <h3>Phone number: @Model.PhoneNumber</h3>
+                <br />
+            }
+            <br />
+            
+        </div>
+    </div>
+    <p>
+        @if (Model.UserState != SimpleSocialNetwork.WebUI.ViewModels.UserState.CurrentUser && User.IsInRole("ApprovedMember"))
+        {
+
+            if (Model.UserState == SimpleSocialNetwork.WebUI.ViewModels.UserState.NotFriend)
+            {
+                using (Html.BeginForm("AddFriend", "Friends"))
+                {
+                    @Html.HiddenFor(x => x.Id)
+                    @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                    <input type="submit" value="Add to friends" />
+                }
+            }
+            else
+            {
+                using (Html.BeginForm("RemoveFriend", "Friends"))
+                {
+                    @Html.HiddenFor(x => x.Id)
+                    @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
+                    <input type="submit" value="Remove from friends" />
+                }
+            }
+        }
+    </p>
+    <br/>
+       @if (@Model.Id == Convert.ToInt32(User.Identity.Name) && User.IsInRole("ApprovedMember"))
+       {
+           <form method="post" id="postForm" action="@Url.Action("AddPost")">
+               @Html.TextArea("message", new { rows = 5, cols = 50 })
+               <br />
+               <input type="submit" value="Add post" />
+           </form>
+       }
+       <br/>
+    @{
+        Html.RenderPartial("UserPostsPartial", Model.Posts);
+    }
+</div>
+<script src="~/Scripts/postAndCommentsScript.js"></script>

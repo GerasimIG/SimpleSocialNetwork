@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="56100624-2897-4d49-b49c-19743f450a8d"
+  name="Abstract"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="8885495c-a0d4-418d-af0f-3e5c8ff2947b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSimpleSocialNetwork.WebUI.Security.Abstract"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="1742b857-6a17-4de8-9375-be34ead826b8"
+        name="IHash"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="86c5e23e-bb3f-4996-97ad-5bcf19fb4d08"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.Security.Abstract Type%3DIHash"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9d53dd20-d0f5-4e9a-8965-43cd7f345d3d"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="aa68cce2-7e83-48af-ba6c-acaaa2a902a0">
+                <propertyInstance
+                  Id="1f096d09-9e19-4bff-8504-4a58496ceb2a"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="750cc3e7-9c90-4858-a80b-1c0f3243230c">
+                <propertyInstance
+                  Id="a9dc6f20-172a-4171-8aa8-c3848f36d5d9"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="beffd060-f0e2-4fcf-a0ae-f4aa2fa752d8">
+                <propertyInstance
+                  Id="e7e32ec9-055a-4106-ae25-89c568f3c86e"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8791b26a-b976-46cf-82ee-42b3672ba2e3">
+                <propertyInstance
+                  Id="5187b24e-6059-494f-bb25-0924f5b1b7e9"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedOperations>
+          <operation
+            Id="a1c06822-243d-49f6-ae4a-2ece795903ca"
+            name="HashString"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="77af0cee-18ad-4723-846b-c99d9b1bc525"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.Security.Abstract Type%3DIHash Member%3D(Name%3DHashString OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fe06a539-c015-4d44-8648-8d7b920423d2"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="18645d4c-e88f-4fc3-99a8-30e74188ce7e">
+                    <propertyInstance
+                      Id="322a821d-e506-4d2f-b377-efd38e1afac6"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d9e48610-d8a6-4f68-bcdb-436f25757a84">
+                    <propertyInstance
+                      Id="dac60cc9-2adc-422f-86fe-4eadb9166fca"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1f312a76-5b91-4f2a-8138-41c5d930a2a0">
+                    <propertyInstance
+                      Id="bf797327-4533-47a4-bfe0-14dd77f320d3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46c4c530-abd5-4dc3-9ceb-c2d2c6c8a919">
+                    <propertyInstance
+                      Id="61840282-144c-4c4f-bba1-1f2287a225df"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f4e9ab97-a31e-4889-9a5d-e84deb18bee6">
+                    <propertyInstance
+                      Id="f3e607e6-8c3e-4598-a296-c25767e471ca"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7939a68e-9fca-4715-811d-4f2aa40f20d6">
+                    <propertyInstance
+                      Id="82d20e99-0a5d-4f4c-9e2f-3d365b374979"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fb02347f-b9a9-4afc-9f8b-33e334e7688e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="1328a1ac-98b4-45ef-b7e9-7a70a07fdb7f"
+                      LastKnownName="Guid"
+                      LastKnownLocation="Package2_1716.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6a83a9fa-a0cf-487c-aeaf-d988cdbadc59"
+                  name="text"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="2fec94d8-03c6-4fce-bb84-e1a5a03c6236"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FIgor%2FDocuments%2FSimpleSocialNetwork%2FSimpleSocialNetwork.WebUI%2Fbin%2FSimpleSocialNetwork.WebUI.dll Namespace%3DSimpleSocialNetwork.WebUI.Security.Abstract Type%3DIHash Member%3D(Name%3DHashString OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dtext"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

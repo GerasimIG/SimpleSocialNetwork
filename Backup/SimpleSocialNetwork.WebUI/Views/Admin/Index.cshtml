@@ -1,0 +1,56 @@
+﻿@model IEnumerable<SimpleSocialNetwork.Domain.User>
+
+
+@{
+    ViewBag.Title = "Administration";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+
+<div>
+    <div id="header">
+        <div class="wrapper">
+            <a id="logo" href="#"><h1>Simple social network</h1></a>
+            @Html.ActionLink("Sign out", "SignOut", "User", null, new { id = "logout" })
+        </div>
+    </div>
+    <div id="main" class="wrapper">
+        
+    
+    
+    <div id="content">
+        <h2>Administration</h2>
+
+        <table class="Grid">
+            <tr>
+                <th>ID</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Login</th>
+                <th>Actions</th>
+            </tr>
+            @if (Model != null)
+            {
+                foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.FirstName</td>
+                        <td>@item.LastName</td>
+                        <td>@item.Email</td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { userId = item.Id }, new { @class = "btn"}) |
+                            @using (Html.BeginForm("Delete", "Admin", new {userId = item.Id},FormMethod.Post))
+                            {
+                                <input type="submit" value="Delete" />
+                            }
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+        <p>@Html.ActionLink("Add moderator", "Add", null, new { @class = "btn"})</p>
+    </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+﻿@model SimpleSocialNetwork.WebUI.ViewModels.UpdateLoginViewModel
+
+<h3>Update login</h3>
+@using (Html.BeginForm("UpdateLogin", "Settings"))
+{
+   
+    @Html.AntiForgeryToken()
+    @Html.EditorForModel()
+
+    <p>
+        <input type="submit" value="Update login" />
+    </p>
+}
+
+
+

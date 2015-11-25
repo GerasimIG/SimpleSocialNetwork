@@ -1,0 +1,62 @@
+﻿body {
+    background: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    color: #404040;
+}
+
+input[type=text], input[type=password], input[type=date], input[type=submit], input[type=button], textarea, select, a.btn {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    vertical-align: middle;
+}
+
+input[type=text], input[type=password], input[type=date], select {
+    padding: 6px 10px;
+    width: 185px;
+}
+
+input[type=text], input[type=password], input[type=date], textarea, select {
+    border: 2px solid #dfe0e2;
+}
+
+input[type=text]:focus, textarea:focus, input[type=date]:focus, input[type=password]:focus, select:focus {
+    outline: none;
+    border-color: #20b2aa;
+}
+
+input[type=submit], input[type=button], a.btn {
+    text-decoration: none;
+    background: #008a89;
+    border: none;
+    color: #fff;
+    font-size: 1.2em;
+    padding: 5px 15px;
+}
+
+input[type=submit]:hover, input[type=button]:hover, a.btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+label {
+    font-size: 0.8em;
+    margin-bottom: 2px;
+    display: block;
+}
+
+.input-validation-error {
+    border: 2px solid #ff5737 !important;
+}
+
+.field-validation-error {
+    color: #ff5737;
+}
+
+.validation-summary-errors {
+    color: #ff5737;
+}
+
+.validation-summary-errors li {
+    margin-bottom: 3px;
+}

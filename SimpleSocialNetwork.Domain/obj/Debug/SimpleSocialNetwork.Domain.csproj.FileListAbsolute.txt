@@ -1,0 +1,10 @@
+C:\Users\Maria\Downloads\SimpleSocialNetwork\SimpleSocialNetwork\SimpleSocialNetwork.Domain\bin\Debug\SimpleSocialNetwork.Domain.dll
+C:\Users\Maria\Downloads\SimpleSocialNetwork\SimpleSocialNetwork\SimpleSocialNetwork.Domain\bin\Debug\SimpleSocialNetwork.Domain.pdb
+C:\Users\Maria\Downloads\SimpleSocialNetwork\SimpleSocialNetwork\SimpleSocialNetwork.Domain\obj\Debug\SimpleSocialNetwork.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Maria\Downloads\SimpleSocialNetwork\SimpleSocialNetwork\SimpleSocialNetwork.Domain\obj\Debug\SimpleSocialNetwork.Domain.dll
+C:\Users\Maria\Downloads\SimpleSocialNetwork\SimpleSocialNetwork\SimpleSocialNetwork.Domain\obj\Debug\SimpleSocialNetwork.Domain.pdb
+C:\Users\Maria\Desktop\SOA\SimpleSocialNetwork\SimpleSocialNetwork.Domain\bin\Debug\SimpleSocialNetwork.Domain.dll
+C:\Users\Maria\Desktop\SOA\SimpleSocialNetwork\SimpleSocialNetwork.Domain\bin\Debug\SimpleSocialNetwork.Domain.pdb
+C:\Users\Maria\Desktop\SOA\SimpleSocialNetwork\SimpleSocialNetwork.Domain\obj\Debug\SimpleSocialNetwork.Domain.csprojResolveAssemblyReference.cache
+C:\Users\Maria\Desktop\SOA\SimpleSocialNetwork\SimpleSocialNetwork.Domain\obj\Debug\SimpleSocialNetwork.Domain.dll
+C:\Users\Maria\Desktop\SOA\SimpleSocialNetwork\SimpleSocialNetwork.Domain\obj\Debug\SimpleSocialNetwork.Domain.pdb

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<SimpleSocialNetwork.Domain.User>
+
+@{
+    ViewBag.Title = "Friends";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--
+
+        -->
+<div id="content">
+    <h2>Friends</h2>
+
+    <ul id="people">
+        @if (Model != null)
+        {
+            foreach (var friend in Model)
+            {
+                Html.RenderPartial("UserPartial", friend);
+            }
+        }
+   </ul>
+</div>
