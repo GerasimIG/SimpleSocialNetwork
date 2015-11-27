@@ -8,7 +8,7 @@ namespace SimpleSocialNetwork.Infrastructure.Data.Context
 {
     public class SimpleSocialNetworkDbContext : DbContext
     {
-        public SimpleSocialNetworkDbContext()
+        public SimpleSocialNetworkDbContext() : base("name=DefaultConnection") 
         {
         }
 
