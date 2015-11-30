@@ -17,7 +17,7 @@ namespace SimpleSocialNetwork.BusinessServices
         public CommentService()
         {
             _commentRepository = new CommentRepository();
-            
+            _repository = _commentRepository;
         }
 
         public IEnumerable<Comment> GetByPostId(int postId)

@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.Mvc;
 using SimpleSocialNetwork.WebUI.Authentication.Abstract;
 using SimpleSocialNetwork.WebUI.ViewModels;
-using SimpleSocialNetwork.Domain.Interfaces;
 using SimpleSocialNetwork.Domain;
 using AutoMapper;
+using SimpleSocialNetwork.BusinessServices;
 using SimpleSocialNetwork.WebUI.Authorization.Concrete;
 using SimpleSocialNetwork.Domain.BL;
 

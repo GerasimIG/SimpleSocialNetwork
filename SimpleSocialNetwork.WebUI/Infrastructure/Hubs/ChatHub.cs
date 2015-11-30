@@ -5,12 +5,13 @@ using System.Web;
 using Microsoft.AspNet.SignalR;
 using SimpleSocialNetwork.WebUI.Authentication.Abstract;
 using SimpleSocialNetwork.Domain;
-using SimpleSocialNetwork.Domain.Services;
 using System.Collections.Concurrent;
-using SimpleSocialNetwork.Domain.Interfaces;
+using SimpleSocialNetwork.BusinessServices;
+using SimpleSocialNetwork.BusinessServices.Concrete;
 using SimpleSocialNetwork.WebUI.Authentication.Concrete;
 using SimpleSocialNetwork.Infrastructure.Data.Repositories;
 using SimpleSocialNetwork.Domain.BL;
+using SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete;
 
 namespace SignalRChat
 {
@@ -33,9 +34,9 @@ namespace SignalRChat
 
         private static readonly ConcurrentDictionary<string, string> _users = new ConcurrentDictionary<string, string>();
 
-        private  IAuthProvider _authProvider = new FormsAuthProvider(new UserService(new UserRepository()));
-        private  IUserService _userService = new UserService(new UserRepository());
-        private  IMessageService _messageService = new MessageService(new MessageRepository());
+        private  IAuthProvider _authProvider = new FormsAuthProvider(new UserService());
+        private  IUserService _userService = new UserService();
+        private  IMessageService _messageService = new MessageService();
         
         static List<UserDetail> ConnectedUsers = new List<UserDetail>();
         static List<MessageDetail> CurrentMessage = new List<MessageDetail>();

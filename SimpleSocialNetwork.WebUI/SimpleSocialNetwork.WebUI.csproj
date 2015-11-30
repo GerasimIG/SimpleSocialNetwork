@@ -336,6 +336,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SimpleSocialNetwork.BusinessServices\SimpleSocialNetwork.BusinessServices.csproj">
+      <Project>{6797af92-6453-43b3-be0b-fc6598858666}</Project>
+      <Name>SimpleSocialNetwork.BusinessServices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SimpleSocialNetwork.Domain\SimpleSocialNetwork.Domain.csproj">
       <Project>{4780e2d8-05d7-4def-a6a0-19dfea984b96}</Project>
       <Name>SimpleSocialNetwork.Domain</Name>

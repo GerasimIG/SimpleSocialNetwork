@@ -71,6 +71,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Concrete\CommentService.svc" />
+    <Content Include="Concrete\FriendService.svc" />
+    <Content Include="Concrete\LocationService.svc" />
+    <Content Include="Concrete\MessageService.svc" />
+    <Content Include="Concrete\PostService.svc" />
+    <Content Include="Concrete\UserService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -85,6 +90,21 @@
       <DependentUpon>CommentService.svc</DependentUpon>
     </Compile>
     <Compile Include="Abstract\ICommentService.cs" />
+    <Compile Include="Concrete\FriendService.svc.cs">
+      <DependentUpon>FriendService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Concrete\LocationService.svc.cs">
+      <DependentUpon>LocationService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Concrete\MessageService.svc.cs">
+      <DependentUpon>MessageService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Concrete\PostService.svc.cs">
+      <DependentUpon>PostService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Concrete\UserService.svc.cs">
+      <DependentUpon>UserService.svc</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -14,8 +14,6 @@ namespace SimpleSocialNetwork.WebUI.App_Start
 
     
     using SimpleSocialNetwork.Domain;
-    using SimpleSocialNetwork.Domain.Interfaces;
-    using SimpleSocialNetwork.Domain.Services;
     using SimpleSocialNetwork.Infrastructure.Data.Repositories;
     using SimpleSocialNetwork.WebUI.Authentication.Concrete;
     using SimpleSocialNetwork.WebUI.Authentication.Abstract;

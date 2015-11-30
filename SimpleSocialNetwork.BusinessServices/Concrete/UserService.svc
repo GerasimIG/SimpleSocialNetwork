@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="SimpleSocialNetwork.BusinessServices.Concrete.UserService" CodeBehind="UserService.svc.cs" %>

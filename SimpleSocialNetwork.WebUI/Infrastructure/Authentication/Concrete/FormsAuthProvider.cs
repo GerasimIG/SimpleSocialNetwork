@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
+using SimpleSocialNetwork.BusinessServices;
 using SimpleSocialNetwork.WebUI.Authentication.Abstract;
 using SimpleSocialNetwork.WebUI.Security.Abstract;
 using SimpleSocialNetwork.WebUI.Security.Concrete;
-using SimpleSocialNetwork.Domain.Interfaces;
 
 namespace SimpleSocialNetwork.WebUI.Authentication.Concrete
 {

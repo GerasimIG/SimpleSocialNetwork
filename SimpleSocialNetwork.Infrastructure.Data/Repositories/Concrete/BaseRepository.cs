@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using SimpleSocialNetwork.Domain.Interfaces;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.Infrastructure.Data.Context;
 using System.Data.Entity;

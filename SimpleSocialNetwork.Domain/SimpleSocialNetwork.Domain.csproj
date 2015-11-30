@@ -55,21 +55,7 @@
     <Compile Include="Entities\Post.cs" />
     <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Interfaces\Services\IBaseService.cs" />
-    <Compile Include="Interfaces\Services\ICommentService.cs" />
-    <Compile Include="Interfaces\Services\IFriendService.cs" />
-    <Compile Include="Interfaces\Services\ILocationService.cs" />
-    <Compile Include="Interfaces\Services\IMessageService.cs" />
-    <Compile Include="Interfaces\Services\IPostService.cs" />
-    <Compile Include="Interfaces\Services\IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\BaseService.cs" />
-    <Compile Include="Services\CommentService.cs" />
-    <Compile Include="Services\FriendService.cs" />
-    <Compile Include="Services\LocationService.cs" />
-    <Compile Include="Services\MessageService.cs" />
-    <Compile Include="Services\PostService.cs" />
-    <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
