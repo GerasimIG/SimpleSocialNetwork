@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.Domain.Interfaces;
 using SimpleSocialNetwork.Domain.BL;
+using SimpleSocialNetwork.Infrastructure.Data.Repositories.Abstract;
 
 namespace SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete
 {

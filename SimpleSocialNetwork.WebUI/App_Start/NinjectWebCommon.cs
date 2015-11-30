@@ -72,6 +72,7 @@ namespace SimpleSocialNetwork.WebUI.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            /*
             kernel.Bind(typeof(IBaseService<>)).To(typeof(BaseService<>));
             kernel.Bind<IUserService>().To<UserService>();
             kernel.Bind<IFriendService>().To<FriendService>();
@@ -79,8 +80,9 @@ namespace SimpleSocialNetwork.WebUI.App_Start
             kernel.Bind<ICommentService>().To<CommentService>();
             kernel.Bind<IMessageService>().To<MessageService>();
             kernel.Bind<ILocationService>().To<LocationService>();
+            */
 
-
+            /*
             kernel.Bind(typeof(IBaseRepository<>)).To(typeof(BaseRepository<>));
             kernel.Bind<IUserRepository>().To<UserRepository>();
             kernel.Bind<IFriendRepository>().To<FriendRepository>();
@@ -88,6 +90,7 @@ namespace SimpleSocialNetwork.WebUI.App_Start
             kernel.Bind<ICommentRepository>().To<CommentRepository>();
             kernel.Bind<IMessageRepository>().To<MessageRepository>();
             kernel.Bind<ILocationRepository>().To<LocationRepository>();
+            */
 
             kernel.Bind<IAuthProvider>().To<FormsAuthProvider>();
             kernel.Bind<IHash>().To<MD5Hash>();

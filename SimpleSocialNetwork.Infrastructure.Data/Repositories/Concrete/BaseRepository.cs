@@ -7,6 +7,7 @@ using SimpleSocialNetwork.Domain.Interfaces;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.Infrastructure.Data.Context;
 using System.Data.Entity;
+using SimpleSocialNetwork.Infrastructure.Data.Repositories.Abstract;
 
 namespace SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete
 {
