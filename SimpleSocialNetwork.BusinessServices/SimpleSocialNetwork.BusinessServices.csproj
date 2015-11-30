@@ -61,14 +61,20 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Service1.svc" />
+    <Content Include="Concrete\Service1.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service1.svc.cs">
+    <Compile Include="Abstract\IBaseService.cs" />
+    <Compile Include="Abstract\IFriendService.cs" />
+    <Compile Include="Abstract\ILocationService.cs" />
+    <Compile Include="Abstract\IMessageService.cs" />
+    <Compile Include="Abstract\IPostService.cs" />
+    <Compile Include="Abstract\IUserService.cs" />
+    <Compile Include="Concrete\Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>
-    <Compile Include="IService1.cs" />
+    <Compile Include="Abstract\ICommentService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -81,6 +87,16 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SimpleSocialNetwork.Domain\SimpleSocialNetwork.Domain.csproj">
+      <Project>{4780e2d8-05d7-4def-a6a0-19dfea984b96}</Project>
+      <Name>SimpleSocialNetwork.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleSocialNetwork.Infrastructure.Data\SimpleSocialNetwork.Data.csproj">
+      <Project>{d4a05030-e360-4a1f-a0c9-5fdc066a2da8}</Project>
+      <Name>SimpleSocialNetwork.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
