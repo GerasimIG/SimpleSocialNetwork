@@ -32,13 +32,20 @@
   <ItemGroup>
     <Compile Include="Context\SimpleSocialNetworkDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\BaseRepository.cs" />
-    <Compile Include="Repositories\CommentRepository.cs" />
-    <Compile Include="Repositories\FriendRepository.cs" />
-    <Compile Include="Repositories\LocationRepository.cs" />
-    <Compile Include="Repositories\MessageRepository.cs" />
-    <Compile Include="Repositories\PostRepository.cs" />
-    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Repositories\Abstract\IBaseRepository.cs" />
+    <Compile Include="Repositories\Abstract\ICommentRepository.cs" />
+    <Compile Include="Repositories\Abstract\IFriendRepository.cs" />
+    <Compile Include="Repositories\Abstract\ILocationRepository.cs" />
+    <Compile Include="Repositories\Abstract\IMessageRepository.cs" />
+    <Compile Include="Repositories\Abstract\IPostRepository.cs" />
+    <Compile Include="Repositories\Abstract\IUserRepository.cs" />
+    <Compile Include="Repositories\Concrete\BaseRepository.cs" />
+    <Compile Include="Repositories\Concrete\CommentRepository.cs" />
+    <Compile Include="Repositories\Concrete\FriendRepository.cs" />
+    <Compile Include="Repositories\Concrete\LocationRepository.cs" />
+    <Compile Include="Repositories\Concrete\MessageRepository.cs" />
+    <Compile Include="Repositories\Concrete\PostRepository.cs" />
+    <Compile Include="Repositories\Concrete\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

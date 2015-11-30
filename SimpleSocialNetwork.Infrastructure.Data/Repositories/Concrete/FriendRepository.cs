@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.Domain.Interfaces;
 
-namespace SimpleSocialNetwork.Infrastructure.Data.Repositories
+namespace SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete
 {
     public class FriendRepository : BaseRepository<Friend>, IFriendRepository
     {

@@ -8,7 +8,7 @@ using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.Infrastructure.Data.Context;
 using System.Data.Entity;
 
-namespace SimpleSocialNetwork.Infrastructure.Data.Repositories
+namespace SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete
 {
     public class BaseRepository<TEntity> : IDisposable, IBaseRepository<TEntity> where TEntity : class
     {

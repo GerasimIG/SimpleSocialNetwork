@@ -26,6 +26,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>12.0</OldToolsVersion>
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -339,9 +340,9 @@
       <Project>{4780e2d8-05d7-4def-a6a0-19dfea984b96}</Project>
       <Name>SimpleSocialNetwork.Domain</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SimpleSocialNetwork.Infrastructure.Data\SimpleSocialNetwork.Infrastructure.Data.csproj">
+    <ProjectReference Include="..\SimpleSocialNetwork.Infrastructure.Data\SimpleSocialNetwork.Data.csproj">
       <Project>{d4a05030-e360-4a1f-a0c9-5fdc066a2da8}</Project>
-      <Name>SimpleSocialNetwork.Infrastructure.Data</Name>
+      <Name>SimpleSocialNetwork.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

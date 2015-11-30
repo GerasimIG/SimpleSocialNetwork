@@ -55,13 +55,6 @@
     <Compile Include="Entities\Post.cs" />
     <Compile Include="Entities\Role.cs" />
     <Compile Include="Entities\User.cs" />
-    <Compile Include="Interfaces\Repositories\IBaseRepository.cs" />
-    <Compile Include="Interfaces\Repositories\ICommentRepository.cs" />
-    <Compile Include="Interfaces\Repositories\IFriendRepository.cs" />
-    <Compile Include="Interfaces\Repositories\ILocationRepository.cs" />
-    <Compile Include="Interfaces\Repositories\IMessageRepository.cs" />
-    <Compile Include="Interfaces\Repositories\IPostRepository.cs" />
-    <Compile Include="Interfaces\Repositories\IUserRepository.cs" />
     <Compile Include="Interfaces\Services\IBaseService.cs" />
     <Compile Include="Interfaces\Services\ICommentService.cs" />
     <Compile Include="Interfaces\Services\IFriendService.cs" />

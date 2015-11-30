@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleSocialNetwork.Domain.Interfaces
+namespace SimpleSocialNetwork.Infrastructure.Data.Repositories.Abstract
 {
     public interface IPostRepository : IBaseRepository<Post>
     {

@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSocialNetwork.WebUI",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSocialNetwork.Domain", "SimpleSocialNetwork.Domain\SimpleSocialNetwork.Domain.csproj", "{4780E2D8-05D7-4DEF-A6A0-19DFEA984B96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSocialNetwork.Infrastructure.Data", "SimpleSocialNetwork.Infrastructure.Data\SimpleSocialNetwork.Infrastructure.Data.csproj", "{D4A05030-E360-4A1F-A0C9-5FDC066A2DA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSocialNetwork.Data", "SimpleSocialNetwork.Infrastructure.Data\SimpleSocialNetwork.Data.csproj", "{D4A05030-E360-4A1F-A0C9-5FDC066A2DA8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
