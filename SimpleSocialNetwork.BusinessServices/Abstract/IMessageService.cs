@@ -5,15 +5,36 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using SimpleSocialNetwork.Domain;
+using System.Runtime.Serialization;
 
 namespace SimpleSocialNetwork.BusinessServices
 {
     [ServiceContract]
-    public interface IMessageService : IBaseService<Message>
+    public interface IMessageService : IBaseService<Message, MessageDto>
     {
         [OperationContract]
-        IEnumerable<Message> GetChatHistory(int fromUserId, int toUserId, int quantity);
+        List<MessageDto> GetChatHistory(int fromUserId, int toUserId, int quantity);
         [OperationContract]
-        IEnumerable<Message> GetConversations(int userId);
+        List<MessageDto> GetConversations(int userId);
+    }
+
+    [DataContract]
+    public class MessageDto
+    {
+        [DataMember]
+        public int Id { get; set; }
+        [DataMember]
+        public int FromUserId { get; set; }
+        [DataMember]
+        public int ToUserId { get; set; }
+        [DataMember]
+        public string MsgText { get; set; }
+        [DataMember]
+        public System.DateTime DateSent { get; set; }
+
+        [DataMember]
+        public UserDto User { get; set; }
+        [DataMember]
+        public UserDto User1 { get; set; }
     }
 }

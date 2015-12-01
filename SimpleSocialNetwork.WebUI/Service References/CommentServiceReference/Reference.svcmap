@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="19f71237-5a99-4189-be6d-cd3c9906b56f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50081/Concrete/CommentService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CommentService.xsd" MetadataType="Schema" ID="a12cd3ce-b473-4c73-9b90-35f1e857c47d" SourceId="1" SourceUrl="http://localhost:50081/Concrete/CommentService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CommentService.disco" MetadataType="Disco" ID="1f01ed69-cef2-4709-8c43-a140ab475d52" SourceId="1" SourceUrl="http://localhost:50081/Concrete/CommentService.svc?disco" />
+    <MetadataFile FileName="CommentService1.xsd" MetadataType="Schema" ID="54e44f83-5152-4a89-bb51-712705ee6f62" SourceId="1" SourceUrl="http://localhost:50081/Concrete/CommentService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CommentService.wsdl" MetadataType="Wsdl" ID="2cf3b439-1b81-430d-9791-17948139d433" SourceId="1" SourceUrl="http://localhost:50081/Concrete/CommentService.svc?wsdl" />
+    <MetadataFile FileName="CommentService2.xsd" MetadataType="Schema" ID="2980765f-2a2b-4265-a757-e07c1a84d172" SourceId="1" SourceUrl="http://localhost:50081/Concrete/CommentService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

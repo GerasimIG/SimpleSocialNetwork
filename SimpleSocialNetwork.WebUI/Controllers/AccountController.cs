@@ -4,21 +4,21 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
-using SimpleSocialNetwork.BusinessServices;
 using SimpleSocialNetwork.WebUI.Authentication.Abstract;
 using SimpleSocialNetwork.WebUI.ViewModels;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.Domain.BL;
+using SimpleSocialNetwork.WebUI.UserServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.Controllers
 {
     public class AccountController : Controller
     {
-        private readonly IUserService _userService;
+        private readonly UserServiceClient _userService;
         private readonly IAuthProvider _authProvider;
-        public AccountController(IAuthProvider authProvider, IUserService userService) 
+        public AccountController(IAuthProvider authProvider) 
         {
-            _userService = userService;
+            _userService = new UserServiceClient();
             _authProvider = authProvider;
         }
         public ActionResult Login()
@@ -60,7 +60,7 @@ namespace SimpleSocialNetwork.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var newUser = Mapper.Map<SimpleSocialNetwork.Domain.User> (model);
+                var newUser = Mapper.Map<UserDto> (model);
                 newUser.RoleId = (int) Roles.ApprovedMember;
 
                 bool result = _userService.CreateUser(newUser);

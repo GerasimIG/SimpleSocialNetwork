@@ -1,27 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Mvc;
-using SimpleSocialNetwork.BusinessServices;
 using SimpleSocialNetwork.WebUI.ViewModels;
 using SimpleSocialNetwork.WebUI.Authentication.Abstract;
-using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.Domain.BL;
+using SimpleSocialNetwork.WebUI.UserServiceReference;
+using SimpleSocialNetwork.WebUI.MessageServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.Controllers
 {
     [Authorize(Roles = "ApprovedMember")] 
     public class ChatController : Controller
     {
-        private readonly IUserService _userService;
+        private readonly UserServiceClient _userService;
         private readonly IAuthProvider _authProvider;
-        private readonly IMessageService _messageService;
-        public ChatController(IUserService userService, IAuthProvider authProvider, IMessageService messageService) 
+        private readonly MessageServiceClient _messageService;
+        public ChatController(IAuthProvider authProvider) 
         {
-            _userService = userService;
+            _userService = new UserServiceClient();
             _authProvider = authProvider;
-            _messageService = messageService;
+            _messageService = new MessageServiceClient();
         }
 
         public ActionResult Chat(int toId)

@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using Microsoft.AspNet.SignalR;
 using SimpleSocialNetwork.WebUI.Authentication.Abstract;
 using SimpleSocialNetwork.Domain;
 using System.Collections.Concurrent;
-using SimpleSocialNetwork.BusinessServices;
-using SimpleSocialNetwork.BusinessServices.Concrete;
 using SimpleSocialNetwork.WebUI.Authentication.Concrete;
-using SimpleSocialNetwork.Infrastructure.Data.Repositories;
 using SimpleSocialNetwork.Domain.BL;
-using SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete;
+using SimpleSocialNetwork.WebUI.UserServiceReference;
+using SimpleSocialNetwork.WebUI.MessageServiceReference;
 
 namespace SignalRChat
 {
@@ -34,9 +31,9 @@ namespace SignalRChat
 
         private static readonly ConcurrentDictionary<string, string> _users = new ConcurrentDictionary<string, string>();
 
-        private  IAuthProvider _authProvider = new FormsAuthProvider(new UserService());
-        private  IUserService _userService = new UserService();
-        private  IMessageService _messageService = new MessageService();
+        private  IAuthProvider _authProvider = new FormsAuthProvider();
+        private  UserServiceClient _userService = new UserServiceClient();
+        private  MessageServiceClient _messageService = new MessageServiceClient();
         
         static List<UserDetail> ConnectedUsers = new List<UserDetail>();
         static List<MessageDetail> CurrentMessage = new List<MessageDetail>();
@@ -57,7 +54,7 @@ namespace SignalRChat
                 _users[_authProvider.CurrentUserId.ToString()] = id.ToString();
 
                 var chatHistory = _messageService.GetChatHistory(_authProvider.CurrentUserId, Convert.ToInt32(toDbUserId), Config.MessagesHistory);
-                chatHistory = chatHistory.Reverse();
+                chatHistory.Reverse();
 
                 foreach (var item in chatHistory)
                 {
@@ -104,7 +101,7 @@ namespace SignalRChat
 
         private void _dbSave(string message, int toUserDbId)
         {
-            var msg = new Message();
+            var msg = new MessageDto();
             msg.FromUserId = _authProvider.CurrentUserId;
             msg.ToUserId = toUserDbId;
             msg.DateSent = DateTime.Now;

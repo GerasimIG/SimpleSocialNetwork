@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSocialNetwork.WebUI", "SimpleSocialNetwork.WebUI\SimpleSocialNetwork.WebUI.csproj", "{A29DD770-D3FC-4936-AB68-F88C75F183E5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6797AF92-6453-43B3-BE0B-FC6598858666} = {6797AF92-6453-43B3-BE0B-FC6598858666}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSocialNetwork.Domain", "SimpleSocialNetwork.Domain\SimpleSocialNetwork.Domain.csproj", "{4780E2D8-05D7-4DEF-A6A0-19DFEA984B96}"
 EndProject

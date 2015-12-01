@@ -7,19 +7,19 @@ using SimpleSocialNetwork.WebUI.Authentication.Abstract;
 using SimpleSocialNetwork.WebUI.ViewModels;
 using SimpleSocialNetwork.Domain;
 using AutoMapper;
-using SimpleSocialNetwork.BusinessServices;
 using SimpleSocialNetwork.Domain.BL;
+using SimpleSocialNetwork.WebUI.PostServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.Controllers
 {
     [Authorize(Roles = "ApprovedMember")] 
     public class NewsController : Controller
     {
-        private readonly IPostService _postService;
+        private readonly PostServiceClient _postService;
         private readonly IAuthProvider _authProvider;
-        public NewsController(IPostService postService, IAuthProvider authProvider) 
+        public NewsController(IAuthProvider authProvider) 
         {
-            _postService = postService;
+            _postService = new PostServiceClient();
             _authProvider = authProvider;
         }
         public ViewResult Index()

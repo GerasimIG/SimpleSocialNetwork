@@ -10,7 +10,6 @@ using SimpleSocialNetwork.Domain.EntitiesMetadata;
 namespace SimpleSocialNetwork.Domain
 {
     [MetadataType(typeof(LocationMetadata))]
-    [DataContract]
     public  class Location
     {
         public Location()
@@ -18,15 +17,10 @@ namespace SimpleSocialNetwork.Domain
             this.Users = new HashSet<User>();
         }
 
-        [DataMember]
         public int Id { get; set; }
-        [DataMember]
         public string CountryCode { get; set; }
-        [DataMember]
         public string CountryName { get; set; }
-        [DataMember]
         public string RegionName { get; set; }
-        [DataMember]
         public string CityName { get; set; }
 
         public virtual ICollection<User> Users { get; set; }

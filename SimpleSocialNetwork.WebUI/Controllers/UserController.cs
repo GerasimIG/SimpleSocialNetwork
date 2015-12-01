@@ -7,28 +7,29 @@ using SimpleSocialNetwork.WebUI.Authentication.Abstract;
 using SimpleSocialNetwork.WebUI.ViewModels;
 using SimpleSocialNetwork.Domain;
 using AutoMapper;
-using SimpleSocialNetwork.BusinessServices;
-using SimpleSocialNetwork.WebUI.Authorization.Concrete;
 using SimpleSocialNetwork.Domain.BL;
+using SimpleSocialNetwork.WebUI.UserServiceReference;
+using SimpleSocialNetwork.WebUI.FriendServiceReference;
+using SimpleSocialNetwork.WebUI.PostServiceReference;
+using SimpleSocialNetwork.WebUI.CommentServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.Controllers
 {
      
     public class UserController : Controller
     {   
-        private readonly IUserService _userService;
+        private readonly UserServiceClient _userService;
         private readonly IAuthProvider _authProvider;
-        private readonly IFriendService _friendService;
-        private readonly IPostService _postService;
-        private readonly ICommentService _commentService;
-        public UserController(IAuthProvider authProvider, IUserService userService, IFriendService friendService, 
-            IPostService postService, ICommentService commentService) 
+        private readonly FriendServiceClient _friendService;
+        private readonly PostServiceClient _postService;
+        private readonly CommentServiceClient _commentService;
+        public UserController(IAuthProvider authProvider) 
         {
-            _postService = postService;
-            _friendService = friendService;
-            _userService = userService;
+            _postService = new PostServiceClient();
+            _friendService = new FriendServiceClient();
+            _userService = new UserServiceClient();
             _authProvider = authProvider;
-            _commentService = commentService;
+            _commentService = new CommentServiceClient();
         }
         [Authorize(Roles = "ApprovedMember,Moderator")] 
         public ActionResult UserProfile(int? id)
@@ -76,14 +77,14 @@ namespace SimpleSocialNetwork.WebUI.Controllers
         [Authorize(Roles = "ApprovedMember")] 
         public ActionResult AddPost(string message)
         { 
-            var newPost = new Post();
+            var newPost = new PostServiceReference.PostDto();
             newPost.Message = message;
             newPost.AuthorId = _authProvider.CurrentUserId;
             newPost.DatePosted = DateTime.Now;
             _postService.Add(newPost);
 
-
-            var userPosts = _userService.GetById(_authProvider.CurrentUserId).Posts.Take(Config.PostsPerPage).ToList();
+            List<Domain.Post> userPosts = null;
+        //    var userPosts = _userService.GetById(_authProvider.CurrentUserId).Posts.Take(Config.PostsPerPage).ToList();
             if (Request.IsAjaxRequest())
             {
                 return PartialView("UserPostsPartial", userPosts);
@@ -95,7 +96,7 @@ namespace SimpleSocialNetwork.WebUI.Controllers
         public ActionResult GetPostComments(int postId)
         {        
             var postCommentsViewModel = new PostCommentsViewModel();
-            postCommentsViewModel.PostComments = _postService.GetById(postId).Comments.Take(Config.CommentsPerPage).ToList();
+        //    postCommentsViewModel.PostComments = _postService.GetById(postId).Comments.Take(Config.CommentsPerPage).ToList();
             postCommentsViewModel.PostId = postId;
 
             if (Request.IsAjaxRequest())
@@ -110,7 +111,7 @@ namespace SimpleSocialNetwork.WebUI.Controllers
         public ActionResult AddComment(string commentMessage, int postId)
         {
             //  можливо краще використати авто-маппер
-            var newComment = new Comment();
+            var newComment = new CommentServiceReference.CommentDto();
             newComment.Message = commentMessage;
             newComment.AuthorId = _authProvider.CurrentUserId;
             newComment.DatePosted = DateTime.Now;
@@ -118,7 +119,7 @@ namespace SimpleSocialNetwork.WebUI.Controllers
             _commentService.Add(newComment);
 
             var postCommentsViewModel = new PostCommentsViewModel();
-            postCommentsViewModel.PostComments = _postService.GetById(postId).Comments.Take(Config.CommentsPerPage).ToList();
+         //   postCommentsViewModel.PostComments = _postService.GetById(postId).Comments.Take(Config.CommentsPerPage).ToList();
             postCommentsViewModel.PostId = postId;
 
             if (Request.IsAjaxRequest())
@@ -143,7 +144,7 @@ namespace SimpleSocialNetwork.WebUI.Controllers
             _commentService.Remove(comment);
 
             var postCommentsViewModel = new PostCommentsViewModel();
-            postCommentsViewModel.PostComments = _postService.GetById(postId).Comments.Take(Config.CommentsPerPage).ToList();
+          //  postCommentsViewModel.PostComments = _postService.GetById(postId).Comments.Take(Config.CommentsPerPage).ToList();
             postCommentsViewModel.PostId = postId;
 
             if (Request.IsAjaxRequest())
@@ -160,9 +161,9 @@ namespace SimpleSocialNetwork.WebUI.Controllers
             var post = _postService.GetById(postId);
             int userId = post.AuthorId;
             _postService.Remove(post);
-            
 
-            var userPosts = _userService.GetById(userId).Posts.Take(Config.PostsPerPage).ToList();
+            List<Domain.Post> userPosts = null;
+            //     var userPosts = _userService.GetById(userId).Posts.Take(Config.PostsPerPage).ToList();
             if (Request.IsAjaxRequest())
             {
                 return PartialView("UserPostsPartial", userPosts);

@@ -7,8 +7,8 @@ using SimpleSocialNetwork.WebUI.Authentication.Abstract;
 using SimpleSocialNetwork.WebUI.ViewModels;
 using SimpleSocialNetwork.Domain;
 using AutoMapper;
-using SimpleSocialNetwork.BusinessServices;
 using SimpleSocialNetwork.Domain.BL;
+using SimpleSocialNetwork.WebUI.FriendServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.Controllers
 {
@@ -16,11 +16,11 @@ namespace SimpleSocialNetwork.WebUI.Controllers
     public class FriendsController : Controller
     {
         private readonly IAuthProvider _authProvider;
-        private readonly IFriendService _friendService;
+        private readonly FriendServiceClient _friendService;
 
-        public FriendsController(IAuthProvider authProvider, IFriendService friendService) 
+        public FriendsController(IAuthProvider authProvider) 
         {
-            _friendService = friendService;
+            _friendService = new FriendServiceClient();
             _authProvider = authProvider;
         }
         public ActionResult Index()

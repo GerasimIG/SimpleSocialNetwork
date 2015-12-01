@@ -15,9 +15,9 @@ namespace SimpleSocialNetwork.Sandbox.CommentServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Comment", Namespace="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.Domain")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CommentDto", Namespace="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices")]
     [System.SerializableAttribute()]
-    public partial class Comment : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class CommentDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -126,41 +126,47 @@ namespace SimpleSocialNetwork.Sandbox.CommentServiceReference {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CommentServiceReference.ICommentService")]
     public interface ICommentService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment/Add", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment/AddResponse")]
-        void Add(SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment entity);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/Add", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/AddResponse")]
+        void Add(SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment/Add", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment/AddResponse")]
-        System.Threading.Tasks.Task AddAsync(SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment entity);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/Add", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/AddResponse")]
+        System.Threading.Tasks.Task AddAsync(SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment/Remove", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment/RemoveResponse")]
-        void Remove(SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment entity);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/Remove", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/RemoveResponse")]
+        void Remove(SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment/Remove", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment/RemoveResponse")]
-        System.Threading.Tasks.Task RemoveAsync(SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment entity);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/Remove", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/RemoveResponse")]
+        System.Threading.Tasks.Task RemoveAsync(SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment/Update", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment/UpdateResponse")]
-        void Update(SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment entity);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/Update", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/UpdateResponse")]
+        void Update(SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment/Update", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment/UpdateResponse")]
-        System.Threading.Tasks.Task UpdateAsync(SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment entity);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/Update", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/UpdateResponse")]
+        System.Threading.Tasks.Task UpdateAsync(SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto entity);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment/GetById", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment/GetByIdResponse")]
-        SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment GetById(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/GetById", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/GetByIdResponse")]
+        SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto GetById(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment/GetById", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment/GetByIdResponse")]
-        System.Threading.Tasks.Task<SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment> GetByIdAsync(int id);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/GetById", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/GetByIdResponse")]
+        System.Threading.Tasks.Task<SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto> GetByIdAsync(int id);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment/GetAll", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment/GetAllResponse")]
-        System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment> GetAll();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/GetAll", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/GetAllResponse")]
+        System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto> GetAll();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment/GetAll", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment/GetAllResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment>> GetAllAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommentService/GetByPostId", ReplyAction="http://tempuri.org/ICommentService/GetByPostIdResponse")]
-        System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment> GetByPostId(int postId);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/GetAll", ReplyAction="http://tempuri.org/IBaseServiceOf_Comment_CommentDto/GetAllResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto>> GetAllAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommentService/GetByPostId", ReplyAction="http://tempuri.org/ICommentService/GetByPostIdResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment>> GetByPostIdAsync(int postId);
+        System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto> GetByPostId(int postId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommentService/GetByPostId", ReplyAction="http://tempuri.org/ICommentService/GetByPostIdResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto>> GetByPostIdAsync(int postId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommentService/GetCount", ReplyAction="http://tempuri.org/ICommentService/GetCountResponse")]
+        int GetCount();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommentService/GetCount", ReplyAction="http://tempuri.org/ICommentService/GetCountResponse")]
+        System.Threading.Tasks.Task<int> GetCountAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -190,52 +196,60 @@ namespace SimpleSocialNetwork.Sandbox.CommentServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public void Add(SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment entity) {
+        public void Add(SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto entity) {
             base.Channel.Add(entity);
         }
         
-        public System.Threading.Tasks.Task AddAsync(SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment entity) {
+        public System.Threading.Tasks.Task AddAsync(SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto entity) {
             return base.Channel.AddAsync(entity);
         }
         
-        public void Remove(SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment entity) {
+        public void Remove(SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto entity) {
             base.Channel.Remove(entity);
         }
         
-        public System.Threading.Tasks.Task RemoveAsync(SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment entity) {
+        public System.Threading.Tasks.Task RemoveAsync(SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto entity) {
             return base.Channel.RemoveAsync(entity);
         }
         
-        public void Update(SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment entity) {
+        public void Update(SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto entity) {
             base.Channel.Update(entity);
         }
         
-        public System.Threading.Tasks.Task UpdateAsync(SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment entity) {
+        public System.Threading.Tasks.Task UpdateAsync(SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto entity) {
             return base.Channel.UpdateAsync(entity);
         }
         
-        public SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment GetById(int id) {
+        public SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto GetById(int id) {
             return base.Channel.GetById(id);
         }
         
-        public System.Threading.Tasks.Task<SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment> GetByIdAsync(int id) {
+        public System.Threading.Tasks.Task<SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto> GetByIdAsync(int id) {
             return base.Channel.GetByIdAsync(id);
         }
         
-        public System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment> GetAll() {
+        public System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto> GetAll() {
             return base.Channel.GetAll();
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment>> GetAllAsync() {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto>> GetAllAsync() {
             return base.Channel.GetAllAsync();
         }
         
-        public System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment> GetByPostId(int postId) {
+        public System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto> GetByPostId(int postId) {
             return base.Channel.GetByPostId(postId);
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.Comment>> GetByPostIdAsync(int postId) {
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto>> GetByPostIdAsync(int postId) {
             return base.Channel.GetByPostIdAsync(postId);
+        }
+        
+        public int GetCount() {
+            return base.Channel.GetCount();
+        }
+        
+        public System.Threading.Tasks.Task<int> GetCountAsync() {
+            return base.Channel.GetCountAsync();
         }
     }
 }

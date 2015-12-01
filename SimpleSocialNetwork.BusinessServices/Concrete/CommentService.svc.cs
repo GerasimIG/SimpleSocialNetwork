@@ -8,10 +8,11 @@ using System.Text;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.Infrastructure.Data.Repositories.Abstract;
 using SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete;
+using AutoMapper;
 
 namespace SimpleSocialNetwork.BusinessServices
 {
-    public class CommentService : BaseService<Comment>, ICommentService
+    public class CommentService : BaseService<Comment, CommentDto>, ICommentService
     {
         private readonly ICommentRepository _commentRepository;
         public CommentService()
@@ -20,9 +21,28 @@ namespace SimpleSocialNetwork.BusinessServices
             _repository = _commentRepository;
         }
 
-        public IEnumerable<Comment> GetByPostId(int postId)
+        public List<CommentDto> GetByPostId(int postId)
         {
-            return _commentRepository.GetByPostId(postId);
+            var result = _commentRepository.GetByPostId(postId);
+
+            List<CommentDto> list = null;
+
+            if (result != null)
+            {
+                list = new List<CommentDto>();
+                foreach(var el in result)
+                {
+                    var commentDto = Mapper.Map<CommentDto>(el);
+                    list.Add(commentDto);
+                }
+            }
+
+            return list;
+        }
+
+        public int GetCount()
+        {
+            return 5;
         }
     }
 }

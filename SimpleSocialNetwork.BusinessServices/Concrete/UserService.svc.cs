@@ -7,10 +7,11 @@ using System.Text;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.Infrastructure.Data.Repositories.Abstract;
 using SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete;
+using AutoMapper;
 
 namespace SimpleSocialNetwork.BusinessServices.Concrete
 {
-    public class UserService : BaseService<User>, IUserService
+    public class UserService : BaseService<User, UserDto>, IUserService
     {
         private readonly IUserRepository _userRepository;
         public UserService()
@@ -19,11 +20,13 @@ namespace SimpleSocialNetwork.BusinessServices.Concrete
             _repository = _userRepository;
         }
 
-        public User GetUserByEmail(string email)
+        public UserDto GetUserByEmail(string email)
         {
-            return _userRepository.GetUserByEmail(email);
+            var entity = _userRepository.GetUserByEmail(email);
+            var entityDto = Mapper.Map<UserDto>(entity);
+            return entityDto;
         }
-        public bool CreateUser(User newUser)
+        public bool CreateUser(UserDto newUser)
         {
             var user = _userRepository.GetUserByEmail(newUser.Email);
             if (user == null)
@@ -39,10 +42,24 @@ namespace SimpleSocialNetwork.BusinessServices.Concrete
         }
 
 
-        public IEnumerable<User> GetUsersByParams(string userName, string country, string region,
+        public List<UserDto> GetUsersByParams(string userName, string country, string region,
             string city, int gender, Nullable<DateTime> birthDateFrom, Nullable<DateTime> birthDateTo)
         {
-            return _userRepository.GetUsersByParams(userName, country, region, city, gender, birthDateFrom, birthDateTo);
+            var result = _userRepository.GetUsersByParams(userName, country, region, city, gender, birthDateFrom, birthDateTo);
+
+            List<UserDto> list = null;
+
+            if (result != null)
+            {
+                list = new List<UserDto>();
+                foreach (var el in result)
+                {
+                    var userDto = Mapper.Map<UserDto>(el);
+                    list.Add(userDto);
+                }
+            }
+
+            return list;
         }
 
 
@@ -82,20 +99,49 @@ namespace SimpleSocialNetwork.BusinessServices.Concrete
             }
             return false;
         }
-        public IEnumerable<User> GetRandomUsers(int quantity)
+        public List<UserDto> GetRandomUsers(int quantity)
         {
-            return _userRepository.GetRandomUsers(quantity);
+            var result = _userRepository.GetRandomUsers(quantity);
+
+            List<UserDto> list = null;
+
+            if (result != null)
+            {
+                list = new List<UserDto>();
+                foreach (var el in result)
+                {
+                    var userDto = Mapper.Map<UserDto>(el);
+                    list.Add(userDto);
+                }
+            }
+
+            return list;
         }
 
 
-        public IEnumerable<User> GetUserByRoleId(int roleId)
+        public List<UserDto> GetUserByRoleId(int roleId)
         {
-            return _userRepository.GetUsersByRoleId(roleId);
+            var result = _userRepository.GetUsersByRoleId(roleId);
+
+            List<UserDto> list = null;
+
+            if (result != null)
+            {
+                list = new List<UserDto>();
+                foreach (var el in result)
+                {
+                    var userDto = Mapper.Map<UserDto>(el);
+                    list.Add(userDto);
+                }
+            }
+
+            return list;
         }
 
 
-        public bool UpdateUser(User user)
+        public bool UpdateUser(UserDto userDto)
         {
+            var user = Mapper.Map<User>(userDto);
             return _userRepository.UpdateUser(user);
         }
     }

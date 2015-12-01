@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using SimpleSocialNetwork.Domain;
 using System.ComponentModel.DataAnnotations;
+using SimpleSocialNetwork.WebUI.UserServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.ViewModels
 {
@@ -18,6 +19,6 @@ namespace SimpleSocialNetwork.WebUI.ViewModels
         public Nullable<DateTime> BirthDateFrom { get; set; }
         [DataType(DataType.Date)]
         public Nullable<DateTime> BirthDateTo  { get; set; }
-        public List<User> SearchResults { get; set; }
+        public List<UserDto> SearchResults { get; set; }
     }
 }

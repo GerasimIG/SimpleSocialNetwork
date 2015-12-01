@@ -7,10 +7,11 @@ using System.Text;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.Infrastructure.Data.Repositories.Abstract;
 using SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete;
+using AutoMapper;
 
 namespace SimpleSocialNetwork.BusinessServices.Concrete
 {
-    public class PostService : BaseService<Post>, IPostService
+    public class PostService : BaseService<Post, PostDto>, IPostService
     {
         private readonly IPostRepository _postRepository;
         public PostService()
@@ -19,9 +20,23 @@ namespace SimpleSocialNetwork.BusinessServices.Concrete
             _repository = _postRepository;
         }
 
-        public IEnumerable<Post> GetFriendsPostsByUserId(int userId)
+        public List<PostDto> GetFriendsPostsByUserId(int userId)
         {
-            return _postRepository.GetFriendsPostsByUserId(userId);
+            var result = _postRepository.GetFriendsPostsByUserId(userId);
+
+            List<PostDto> list = null;
+
+            if (result != null)
+            {
+                list = new List<PostDto>();
+                foreach (var el in result)
+                {
+                    var postDto = Mapper.Map<PostDto>(el);
+                    list.Add(postDto);
+                }
+            }
+
+            return list;
         }
     }
 }

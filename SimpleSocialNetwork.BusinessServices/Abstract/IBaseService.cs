@@ -8,18 +8,19 @@ using System.Threading.Tasks;
 namespace SimpleSocialNetwork.BusinessServices
 {
     [ServiceContract]
-    public interface IBaseService<TEntity> where TEntity : class
+    public interface IBaseService<TEntity, TEntityDto> where TEntity : class
+                                                       where TEntityDto : class
     {
         [OperationContract]
-        void Add(TEntity entity);
+        void Add(TEntityDto entity);
         [OperationContract]
-        void Remove(TEntity entity);
+        void Remove(TEntityDto entity);
         [OperationContract]
-        void Update(TEntity entity);
+        void Update(TEntityDto entity);
         [OperationContract]
-        TEntity GetById(int id);
+        TEntityDto GetById(int id);
         [OperationContract]
-        IQueryable<TEntity> GetAll();
+        List<TEntityDto> GetAll();
         void Dispose();
     }
 }

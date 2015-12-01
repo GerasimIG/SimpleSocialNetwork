@@ -7,7 +7,7 @@ using SimpleSocialNetwork.WebUI.ViewModels;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.WebUI.Security.Abstract;
 using SimpleSocialNetwork.WebUI.Security.Concrete;
-
+using SimpleSocialNetwork.WebUI.FriendServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.AutoMapper
 {
@@ -23,10 +23,10 @@ namespace SimpleSocialNetwork.WebUI.AutoMapper
         }
         protected override void Configure()
         {
-            Mapper.CreateMap<SignupViewModel, User>().ForMember(dest => dest.Password, 
+            Mapper.CreateMap<SignupViewModel, UserDto>().ForMember(dest => dest.Password, 
                 opt => opt.MapFrom(o => this._hash.HashString(o.Password)));
-            Mapper.CreateMap<UpdateProfileViewModel, User>();
-            Mapper.CreateMap<EditViewModel, User>();
+            Mapper.CreateMap<UpdateProfileViewModel, UserDto>();
+            Mapper.CreateMap<EditViewModel, UserDto>();
         }
     }
 }

@@ -5,8 +5,8 @@ using System.Web;
 using AutoMapper;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.WebUI.ViewModels;
-using SimpleSocialNetwork.WebUI.Security.Abstract;
-using SimpleSocialNetwork.WebUI.Security.Concrete;
+using SimpleSocialNetwork.WebUI.UserServiceReference;
+using SimpleSocialNetwork.WebUI.LocationServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.AutoMapper
 {
@@ -21,14 +21,14 @@ namespace SimpleSocialNetwork.WebUI.AutoMapper
         }
         protected override void Configure()
         {
-            Mapper.CreateMap<User, LoginViewModel>();
-            Mapper.CreateMap<User, UserViewModel>().ForMember(dest => dest.FullLocation,
+            Mapper.CreateMap<UserServiceReference.UserDto, LoginViewModel>();
+            Mapper.CreateMap<UserDto, UserViewModel>().ForMember(dest => dest.FullLocation,
                 opt => opt.MapFrom(o => o.Location.CityName + ", " + o.Location.RegionName + ", " + o.Location.CountryCode));
-            Mapper.CreateMap<User, UpdateLoginViewModel>();
-            Mapper.CreateMap<User, EditViewModel>();
-            Mapper.CreateMap<User, UpdateProfileViewModel>().ForMember(dest => dest.FullLocation,
+            Mapper.CreateMap<UserDto, UpdateLoginViewModel>();
+            Mapper.CreateMap<UserDto, EditViewModel>();
+            Mapper.CreateMap<UserDto, UpdateProfileViewModel>().ForMember(dest => dest.FullLocation,
                 opt => opt.MapFrom(o => o.Location.CityName + ", " + o.Location.RegionName + ", " + o.Location.CountryCode));
-            Mapper.CreateMap<User, UpdateProfileImageViewModel>();
+            Mapper.CreateMap<UserDto, UpdateProfileImageViewModel>();
         }
     }
 }

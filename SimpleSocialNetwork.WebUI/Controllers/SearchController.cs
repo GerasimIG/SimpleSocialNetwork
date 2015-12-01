@@ -6,20 +6,21 @@ using System.Web.Mvc;
 using SimpleSocialNetwork.WebUI.Authentication.Abstract;
 using SimpleSocialNetwork.WebUI.ViewModels;
 using AutoMapper;
-using SimpleSocialNetwork.BusinessServices;
 using SimpleSocialNetwork.Domain.BL;
+using SimpleSocialNetwork.WebUI.UserServiceReference;
+using SimpleSocialNetwork.WebUI.LocationServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.Controllers
 {
     [Authorize(Roles = "ApprovedMember,Moderator")] 
     public class SearchController : Controller
     {
-         private readonly IUserService _userService;
-         private readonly ILocationService _locationService;
-        public SearchController(IUserService userService,ILocationService locationService) 
+         private readonly UserServiceClient _userService;
+         private readonly LocationServiceClient _locationService;
+        public SearchController() 
         {
-            _locationService = locationService;
-            _userService = userService;
+            _locationService = new LocationServiceClient();
+            _userService = new UserServiceClient();
         }
         public ViewResult Index(SearchViewModel model)
         {

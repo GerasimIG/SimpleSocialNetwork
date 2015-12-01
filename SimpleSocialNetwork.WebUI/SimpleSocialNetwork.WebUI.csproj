@@ -89,6 +89,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -194,6 +196,36 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Infrastructure\Security\Abstract\IHash.cs" />
     <Compile Include="Infrastructure\Security\Concrete\MD5hash.cs" />
+    <Compile Include="Service References\CommentServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FriendServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LocationServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MessageServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PostServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\UserServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\ChatViewModel.cs" />
     <Compile Include="ViewModels\EditViewModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
@@ -290,6 +322,57 @@
     <Content Include="Scripts\chat.js" />
     <Content Include="Scripts\postAndCommentsScript.js" />
     <Content Include="Scripts\_references.js" />
+    <None Include="Service References\CommentServiceReference\CommentService.disco" />
+    <None Include="Service References\CommentServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\CommentServiceReference\configuration.svcinfo" />
+    <None Include="Service References\CommentServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FriendServiceReference\FriendService.disco" />
+    <None Include="Service References\FriendServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\FriendServiceReference\configuration.svcinfo" />
+    <None Include="Service References\FriendServiceReference\FriendService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FriendServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\LocationServiceReference\LocationService.disco" />
+    <None Include="Service References\LocationServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\LocationServiceReference\configuration.svcinfo" />
+    <None Include="Service References\LocationServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\MessageServiceReference\MessageService.disco" />
+    <None Include="Service References\MessageServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\MessageServiceReference\configuration.svcinfo" />
+    <None Include="Service References\MessageServiceReference\MessageService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PostServiceReference\PostService.disco" />
+    <None Include="Service References\PostServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\PostServiceReference\configuration.svcinfo" />
+    <None Include="Service References\PostServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\UserServiceReference\SimpleSocialNetwork.WebUI.UserServiceReference.UserDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UserServiceReference\UserService.disco" />
+    <None Include="Service References\UserServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\UserServiceReference\configuration.svcinfo" />
+    <None Include="Service References\UserServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -328,6 +411,90 @@
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Admin\Add.cshtml" />
     <Content Include="Views\Shared\NotFound.cshtml" />
+    <None Include="Service References\CommentServiceReference\CommentService.wsdl" />
+    <None Include="Service References\CommentServiceReference\CommentService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommentServiceReference\CommentService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommentServiceReference\CommentService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\CommentServiceReference\SimpleSocialNetwork.WebUI.CommentServiceReference.CommentDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\FriendServiceReference\FriendService.wsdl" />
+    <None Include="Service References\FriendServiceReference\FriendService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FriendServiceReference\FriendService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FriendServiceReference\FriendService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\FriendServiceReference\SimpleSocialNetwork.WebUI.FriendServiceReference.FriendDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\FriendServiceReference\SimpleSocialNetwork.WebUI.FriendServiceReference.UserDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\LocationServiceReference\LocationService.wsdl" />
+    <None Include="Service References\LocationServiceReference\LocationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocationServiceReference\LocationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocationServiceReference\LocationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LocationServiceReference\LocationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\LocationServiceReference\SimpleSocialNetwork.WebUI.LocationServiceReference.LocationDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\MessageServiceReference\MessageService.wsdl" />
+    <None Include="Service References\MessageServiceReference\MessageService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceReference\MessageService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceReference\MessageService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\MessageServiceReference\SimpleSocialNetwork.WebUI.MessageServiceReference.MessageDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\PostServiceReference\PostService.wsdl" />
+    <None Include="Service References\PostServiceReference\PostService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostServiceReference\PostService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PostServiceReference\PostService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\PostServiceReference\SimpleSocialNetwork.WebUI.PostServiceReference.PostDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UserServiceReference\UserService.wsdl" />
+    <None Include="Service References\UserServiceReference\UserService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServiceReference\UserService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServiceReference\UserService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\UserServiceReference\UserService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -336,10 +503,6 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SimpleSocialNetwork.BusinessServices\SimpleSocialNetwork.BusinessServices.csproj">
-      <Project>{6797af92-6453-43b3-be0b-fc6598858666}</Project>
-      <Name>SimpleSocialNetwork.BusinessServices</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SimpleSocialNetwork.Domain\SimpleSocialNetwork.Domain.csproj">
       <Project>{4780e2d8-05d7-4def-a6a0-19dfea984b96}</Project>
       <Name>SimpleSocialNetwork.Domain</Name>
@@ -351,6 +514,14 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\CommentServiceReference\" />
+    <WCFMetadataStorage Include="Service References\FriendServiceReference\" />
+    <WCFMetadataStorage Include="Service References\LocationServiceReference\" />
+    <WCFMetadataStorage Include="Service References\MessageServiceReference\" />
+    <WCFMetadataStorage Include="Service References\PostServiceReference\" />
+    <WCFMetadataStorage Include="Service References\UserServiceReference\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

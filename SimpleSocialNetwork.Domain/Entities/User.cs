@@ -10,7 +10,6 @@ using SimpleSocialNetwork.Domain.EntitiesMetadata;
 namespace SimpleSocialNetwork.Domain
 {
     [MetadataType(typeof(UserMetadata))]
-    [DataContract]
     public class User
     {
         public User()
@@ -23,31 +22,18 @@ namespace SimpleSocialNetwork.Domain
             this.Posts = new HashSet<Post>();
         }
 
-        [DataMember]
         public int Id { get; set; }
-        [DataMember]
         public string FirstName { get; set; }
-        [DataMember]
         public string LastName { get; set; }
-        [DataMember]
         public string Email { get; set; }
-        [DataMember]
         public System.Guid Password { get; set; }
-        [DataMember]
         public byte[] ImageData { get; set; }
-        [DataMember]
         public string ImageMimeType { get; set; }
-        [DataMember]
         public Nullable<int> LocationId { get; set; }
-        [DataMember]
         public byte Gender { get; set; }
-        [DataMember]
         public Nullable<System.DateTime> Birthday { get; set; }
-        [DataMember]
         public string Skype { get; set; }
-        [DataMember]
         public string PhoneNumber { get; set; }
-        [DataMember]
         public int RoleId { get; set; }
 
         public virtual ICollection<Comment> Comments { get; set; }

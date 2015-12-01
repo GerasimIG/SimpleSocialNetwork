@@ -33,7 +33,8 @@ namespace SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete
 
         public TEntity GetById(int id)
         {
-            return dbContext.Set<TEntity>().Find(id);
+            var a = dbContext.Set<TEntity>().Find(id);
+            return a;
         }
 
         public IQueryable<TEntity> GetAll()

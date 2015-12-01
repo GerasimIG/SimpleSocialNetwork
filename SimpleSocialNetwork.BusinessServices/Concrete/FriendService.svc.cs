@@ -7,10 +7,11 @@ using System.Text;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.Infrastructure.Data.Repositories.Abstract;
 using SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete;
+using AutoMapper;
 
 namespace SimpleSocialNetwork.BusinessServices.Concrete
 {
-    public class FriendService : BaseService<Friend>, IFriendService
+    public class FriendService : BaseService<Friend, FriendDto>, IFriendService
     {
         private readonly IFriendRepository _friendRepository;
         public FriendService()
@@ -25,9 +26,23 @@ namespace SimpleSocialNetwork.BusinessServices.Concrete
         }
 
 
-        public IEnumerable<User> GetFriendsByUserId(int userId)
+        public List<UserDto> GetFriendsByUserId(int userId)
         {
-            return _friendRepository.GetFriendsByUserId(userId);
+            var result = _friendRepository.GetFriendsByUserId(userId);
+
+            List<UserDto> list = null;
+
+            if (result != null)
+            {
+                list = new List<UserDto>();
+                foreach (var el in result)
+                {
+                    var friendDto = Mapper.Map<UserDto>(el);
+                    list.Add(friendDto);
+                }
+            }
+
+            return list;
         }
 
 
@@ -50,9 +65,11 @@ namespace SimpleSocialNetwork.BusinessServices.Concrete
             var friendship = new Friend();
             friendship.FirstUserId = firstUserId;
             friendship.SecondUserId = secondUserId;
-            if (friendship.Id == 0)
+
+            var friendshipDto = Mapper.Map<FriendDto>(friendship);
+            if (friendshipDto.Id == 0)
             {
-                this.Add(friendship);
+                this.Add(friendshipDto);
             }
         }
     }

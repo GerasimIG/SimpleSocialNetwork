@@ -7,10 +7,11 @@ using System.Text;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.Infrastructure.Data.Repositories.Abstract;
 using SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete;
+using AutoMapper;
 
 namespace SimpleSocialNetwork.BusinessServices.Concrete
 {
-    public class LocationService : BaseService<Location>, ILocationService
+    public class LocationService : BaseService<Location, LocationDto>, ILocationService
     {
         private readonly ILocationRepository _locationRepository;
         public LocationService()
@@ -19,24 +20,37 @@ namespace SimpleSocialNetwork.BusinessServices.Concrete
             _repository = _locationRepository;
         }
 
-        public IEnumerable<Location> GetLocationsByCityTerm(string term, int quantity)
+        public List<LocationDto> GetLocationsByCityTerm(string term, int quantity)
         {
-            return _locationRepository.GetLocationsByCityTerm(term, quantity);
+            var result = _locationRepository.GetLocationsByCityTerm(term, quantity);
+
+            List<LocationDto> list = null;
+
+            if (result != null)
+            {
+                list = new List<LocationDto>();
+                foreach (var el in result)
+                {
+                    var locationDto = Mapper.Map<LocationDto>(el);
+                    list.Add(locationDto);
+                }
+            }
+
+            return list;
+        }
+        public List<string> GetCountries()
+        {
+            return _locationRepository.GetCountries().ToList();
         }
 
-        public IEnumerable<string> GetCountries()
+        public List<string> GetRegionsByCountryName(string countryName)
         {
-            return _locationRepository.GetCountries();
+            return _locationRepository.GetRegionsByCountryName(countryName).ToList();
         }
 
-        public IEnumerable<string> GetRegionsByCountryName(string countryName)
+        public List<string> GetCitiesByRegionName(string regionName)
         {
-            return _locationRepository.GetRegionsByCountryName(countryName);
-        }
-
-        public IEnumerable<string> GetCitiesByRegionName(string regionName)
-        {
-            return _locationRepository.GetCitiesByRegionName(regionName);
+            return _locationRepository.GetCitiesByRegionName(regionName).ToList();
         }
     }
 }

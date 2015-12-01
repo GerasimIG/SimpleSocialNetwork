@@ -8,24 +8,25 @@ using SimpleSocialNetwork.WebUI.Authentication.Abstract;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.WebUI.Security.Abstract;
 using AutoMapper;
-using SimpleSocialNetwork.BusinessServices;
 using SimpleSocialNetwork.Domain.BL;
+using SimpleSocialNetwork.WebUI.UserServiceReference;
+using SimpleSocialNetwork.WebUI.LocationServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.Controllers
 {
     [Authorize(Roles = "ApprovedMember")] 
     public class SettingsController : Controller
     {
-        private readonly IUserService _userService;
+        private readonly UserServiceClient _userService;
         private readonly IAuthProvider _authProvider;
-        private readonly ILocationService _locationService;
+        private readonly LocationServiceClient _locationService;
         private readonly IHash _hash;
         public SettingsController(IUserService userService, IAuthProvider authProvider, 
             ILocationService locationService, IHash hash) 
         {
-            _userService = userService;
+            _userService = new UserServiceClient();
             _authProvider = authProvider;
-            _locationService = locationService;
+            _locationService = new LocationServiceClient();
             _hash = hash;
         }
         public ViewResult Index()
@@ -127,7 +128,7 @@ namespace SimpleSocialNetwork.WebUI.Controllers
 
                 var user = _userService.GetById(_authProvider.CurrentUserId);
 
-                Mapper.Map<UpdateProfileViewModel,SimpleSocialNetwork.Domain.User>(model, user);
+                Mapper.Map<UpdateProfileViewModel, UserDto>(model, user);
                 if (user.LocationId == 0) user.LocationId = null;
                 _userService.Update(user);
             }

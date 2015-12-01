@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Security;
-using SimpleSocialNetwork.BusinessServices;
 using SimpleSocialNetwork.WebUI.Authentication.Abstract;
 using SimpleSocialNetwork.WebUI.Security.Abstract;
 using SimpleSocialNetwork.WebUI.Security.Concrete;
+using SimpleSocialNetwork.WebUI.UserServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.Authentication.Concrete
 {
     public class FormsAuthProvider : IAuthProvider
     {
         private readonly IHash _hash;
-        private readonly IUserService _appUserService;
+        private readonly UserServiceClient _appUserService;
         private int _currentUserRoleId;
-        public FormsAuthProvider(IUserService appUserService)
+        public FormsAuthProvider()
         {
             _hash = new MD5Hash();
-            _appUserService = appUserService;
+            _appUserService = new UserServiceClient();
         }
         public bool Authenticate(string userLogin, string userPassword)
         {
@@ -30,8 +30,7 @@ namespace SimpleSocialNetwork.WebUI.Authentication.Concrete
                 if (hashedPassword == user.Password)
                 {
                     FormsAuthentication.SetAuthCookie(user.Id.ToString(), false);
-                    _currentUserRoleId = user.Role.Id;
-                    _appUserService.Dispose();
+                    _currentUserRoleId = user.RoleId;
                     return true;
                 }
                 return false;

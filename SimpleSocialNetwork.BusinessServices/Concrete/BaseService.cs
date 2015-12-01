@@ -4,36 +4,57 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SimpleSocialNetwork.Infrastructure.Data.Repositories.Abstract;
+using AutoMapper;
 
 namespace SimpleSocialNetwork.BusinessServices
 {
-    public class BaseService<TEntity> : IDisposable, IBaseService<TEntity> where TEntity : class
+    public class BaseService<TEntity, TEntityDto> : IDisposable, IBaseService<TEntity, TEntityDto> where TEntity : class
+                                                                                                   where TEntityDto : class
     {
         protected IBaseRepository<TEntity> _repository;
 
-        public void Add(TEntity entity)
+        public void Add(TEntityDto entityDto)
         {
+            var entity = Mapper.Map<TEntity>(entityDto);
             _repository.Add(entity);
         }
 
-        public void Remove(TEntity entity)
+        public void Remove(TEntityDto entityDto)
         {
+            var entity = Mapper.Map<TEntity>(entityDto);
             _repository.Remove(entity);
         }
 
-        public void Update(TEntity entity)
+        public void Update(TEntityDto entityDto)
         {
+            var entity = Mapper.Map<TEntity>(entityDto);
             _repository.Update(entity);
         }
 
-        public TEntity GetById(int id)
+        public TEntityDto GetById(int id)
         {
-            return _repository.GetById(id);
+            var entity = _repository.GetById(id);
+            var entityDto = Mapper.Map<TEntityDto>(entity);
+            return entityDto;
         }
 
-        public IQueryable<TEntity> GetAll()
+        public List<TEntityDto> GetAll()
         {
-            return _repository.GetAll();
+            var result = _repository.GetAll();
+
+            List<TEntityDto> list = null;
+
+            if (result != null)
+            {
+                list = new List<TEntityDto>();
+                foreach (var el in result)
+                {
+                    var entityDto = Mapper.Map<TEntityDto>(el);
+                    list.Add(entityDto);
+                }
+            }
+
+            return list;
         }
 
         public void Dispose()

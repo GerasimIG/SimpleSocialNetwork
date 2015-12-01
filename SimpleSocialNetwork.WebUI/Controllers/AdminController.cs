@@ -4,25 +4,24 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
-using SimpleSocialNetwork.BusinessServices;
 using SimpleSocialNetwork.WebUI.Authentication.Abstract;
 using SimpleSocialNetwork.WebUI.Authorization.Concrete;
 using SimpleSocialNetwork.WebUI.ViewModels;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.WebUI.Security.Abstract;
 using SimpleSocialNetwork.Domain.BL;
-
+using SimpleSocialNetwork.WebUI.UserServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.Controllers
 {
     [Authorize(Roles = "Administrator")]
     public class AdminController : Controller
     {
-        private readonly IUserService _userService;
+        private readonly UserServiceClient _userService;
         private readonly IHash _hash;
-        public AdminController(IUserService userService,IHash hash)
+        public AdminController(IHash hash)
         {
-            _userService = userService;
+            _userService = new UserServiceClient();
             _hash = hash;
         }
         public ViewResult Index()
@@ -45,7 +44,7 @@ namespace SimpleSocialNetwork.WebUI.Controllers
             if(ModelState.IsValid)
             {
                 var user = _userService.GetById(model.Id);
-                Mapper.Map<EditViewModel, SimpleSocialNetwork.Domain.User>(model, user);
+                Mapper.Map<EditViewModel, UserDto>(model, user);
                 
                 if(!String.IsNullOrWhiteSpace(model.UserPassword) )
                 {
@@ -70,7 +69,7 @@ namespace SimpleSocialNetwork.WebUI.Controllers
         {
             if (ModelState.IsValid)
             {
-                var newUser = Mapper.Map<SimpleSocialNetwork.Domain.User>(model);
+                var newUser = Mapper.Map<UserDto>(model);
                 newUser.RoleId = (int) Roles.Moderator;
 
                 bool result = _userService.CreateUser(newUser);
