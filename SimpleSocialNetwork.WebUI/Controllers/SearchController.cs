@@ -25,9 +25,9 @@ namespace SimpleSocialNetwork.WebUI.Controllers
         public ViewResult Index(SearchViewModel model)
         {
             // Подумати над оптимальнішим варіантом
-            List<string> CountriesList = _locationService.GetCountries().ToList();
-            List<string> RegionsList = _locationService.GetRegionsByCountryName(model.Country).ToList();
-            List<string> CitiesList = _locationService.GetCitiesByRegionName(model.Region).ToList();
+            List<string> CountriesList = _locationService.GetCountries().OrderBy(x => x).ToList();
+            List<string> RegionsList = _locationService.GetRegionsByCountryName(model.Country).OrderBy(x => x).ToList();
+            List<string> CitiesList = _locationService.GetCitiesByRegionName(model.Region).OrderBy(x => x).ToList();
             
             CountriesList.Insert(0, "Choose a country");
             RegionsList.Insert(0, "Choose a region");

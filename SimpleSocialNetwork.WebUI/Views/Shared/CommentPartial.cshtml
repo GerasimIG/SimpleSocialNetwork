@@ -1,9 +1,9 @@
-﻿@model SimpleSocialNetwork.Domain.Comment
+﻿@model SimpleSocialNetwork.WebUI.CommentServiceReference.CommentDto
 
 <li>
     @if (Model.User != null)
     {
-        <div class="author">By <a href="#">@Model.User.FirstName @Model.User.LastName</a></div>
+        <div class="author">By <a href="@Url.Action("UserProfile", "User", new { postId = Model.AuthorId })">@Model.AuthorFirstName @Model.AuthorLastName</a></div>
     }
     @MvcHtmlString.Create(Model.Message.Replace(Environment.NewLine, "<br />"))
     <time>@Model.DatePosted</time> 

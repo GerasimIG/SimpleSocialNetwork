@@ -32,6 +32,9 @@ namespace SimpleSocialNetwork.WebUI.UserServiceReference {
         private string FirstNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FullLocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private byte GenderField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -109,6 +112,19 @@ namespace SimpleSocialNetwork.WebUI.UserServiceReference {
                 if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
                     this.FirstNameField = value;
                     this.RaisePropertyChanged("FirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FullLocation {
+            get {
+                return this.FullLocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FullLocationField, value) != true)) {
+                    this.FullLocationField = value;
+                    this.RaisePropertyChanged("FullLocation");
                 }
             }
         }

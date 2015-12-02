@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using SimpleSocialNetwork.Domain;
 using System.ComponentModel.DataAnnotations;
+using SimpleSocialNetwork.WebUI.PostServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.ViewModels
 {
@@ -21,7 +22,7 @@ namespace SimpleSocialNetwork.WebUI.ViewModels
         
         public string LastName { get; set; }
         public UserState UserState { get; set; }
-        public List<Post> Posts { get; set; }
+        public List<PostDto> Posts { get; set; }
         [DataType(DataType.Date)]
         public DateTime? Birthday {get; set;}
         [Display(Name="Phone")]

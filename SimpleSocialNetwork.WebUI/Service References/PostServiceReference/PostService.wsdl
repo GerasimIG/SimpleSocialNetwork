@@ -43,6 +43,12 @@
   <wsdl:message name="IPostService_GetFriendsPostsByUserId_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetFriendsPostsByUserIdResponse" />
   </wsdl:message>
+  <wsdl:message name="IPostService_GetPosts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPosts" />
+  </wsdl:message>
+  <wsdl:message name="IPostService_GetPosts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPostsResponse" />
+  </wsdl:message>
   <wsdl:portType name="IPostService">
     <wsdl:operation name="Add">
       <wsdl:input wsaw:Action="http://tempuri.org/IBaseServiceOf_Post_PostDto/Add" message="tns:IPostService_Add_InputMessage" />
@@ -67,6 +73,10 @@
     <wsdl:operation name="GetFriendsPostsByUserId">
       <wsdl:input wsaw:Action="http://tempuri.org/IPostService/GetFriendsPostsByUserId" message="tns:IPostService_GetFriendsPostsByUserId_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IPostService/GetFriendsPostsByUserIdResponse" message="tns:IPostService_GetFriendsPostsByUserId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPosts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPostService/GetPosts" message="tns:IPostService_GetPosts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPostService/GetPostsResponse" message="tns:IPostService_GetPosts_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IPostService" type="tns:IPostService">
@@ -118,6 +128,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetFriendsPostsByUserId">
       <soap:operation soapAction="http://tempuri.org/IPostService/GetFriendsPostsByUserId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPosts">
+      <soap:operation soapAction="http://tempuri.org/IPostService/GetPosts" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

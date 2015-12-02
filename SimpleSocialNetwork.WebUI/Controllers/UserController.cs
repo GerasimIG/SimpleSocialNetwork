@@ -40,6 +40,8 @@ namespace SimpleSocialNetwork.WebUI.Controllers
             if (user != null && user.RoleId == (int) Roles.ApprovedMember)
             {
                 var viewUser = Mapper.Map<SimpleSocialNetwork.WebUI.ViewModels.UserViewModel>(user);
+                viewUser.Posts = _postService.GetPosts(userId);
+
                 viewUser.UserState = UserState.CurrentUser;
 
                 if (userId != _authProvider.CurrentUserId)
@@ -59,7 +61,6 @@ namespace SimpleSocialNetwork.WebUI.Controllers
             try
             {
                 var user = userId != 0 ? _userService.GetById(userId) : _userService.GetById(_authProvider.CurrentUserId);
-
             
                 if (user != null)
                 {

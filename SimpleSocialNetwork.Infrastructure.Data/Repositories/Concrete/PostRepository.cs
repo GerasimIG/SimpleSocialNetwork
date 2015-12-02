@@ -31,5 +31,10 @@ namespace SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete
                                 select p).ToList();
             return friendsPosts;
         }
+
+        public IEnumerable<Post> GetPosts(int authorId)
+        {
+            return dbContext.Posts.Where(x => x.AuthorId == authorId).ToList();
+        }
     }
 }

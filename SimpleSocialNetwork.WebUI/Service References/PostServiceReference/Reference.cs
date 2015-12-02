@@ -23,7 +23,13 @@ namespace SimpleSocialNetwork.WebUI.PostServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AuthorFirstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int AuthorIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AuthorLastNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime DatePostedField;
@@ -45,6 +51,19 @@ namespace SimpleSocialNetwork.WebUI.PostServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AuthorFirstName {
+            get {
+                return this.AuthorFirstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AuthorFirstNameField, value) != true)) {
+                    this.AuthorFirstNameField = value;
+                    this.RaisePropertyChanged("AuthorFirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int AuthorId {
             get {
                 return this.AuthorIdField;
@@ -53,6 +72,19 @@ namespace SimpleSocialNetwork.WebUI.PostServiceReference {
                 if ((this.AuthorIdField.Equals(value) != true)) {
                     this.AuthorIdField = value;
                     this.RaisePropertyChanged("AuthorId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AuthorLastName {
+            get {
+                return this.AuthorLastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AuthorLastNameField, value) != true)) {
+                    this.AuthorLastNameField = value;
+                    this.RaisePropertyChanged("AuthorLastName");
                 }
             }
         }
@@ -145,6 +177,12 @@ namespace SimpleSocialNetwork.WebUI.PostServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPostService/GetFriendsPostsByUserId", ReplyAction="http://tempuri.org/IPostService/GetFriendsPostsByUserIdResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<SimpleSocialNetwork.WebUI.PostServiceReference.PostDto>> GetFriendsPostsByUserIdAsync(int userId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPostService/GetPosts", ReplyAction="http://tempuri.org/IPostService/GetPostsResponse")]
+        System.Collections.Generic.List<SimpleSocialNetwork.WebUI.PostServiceReference.PostDto> GetPosts(int authorId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPostService/GetPosts", ReplyAction="http://tempuri.org/IPostService/GetPostsResponse")]
+        System.Threading.Tasks.Task<System.Collections.Generic.List<SimpleSocialNetwork.WebUI.PostServiceReference.PostDto>> GetPostsAsync(int authorId);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -220,6 +258,14 @@ namespace SimpleSocialNetwork.WebUI.PostServiceReference {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<SimpleSocialNetwork.WebUI.PostServiceReference.PostDto>> GetFriendsPostsByUserIdAsync(int userId) {
             return base.Channel.GetFriendsPostsByUserIdAsync(userId);
+        }
+        
+        public System.Collections.Generic.List<SimpleSocialNetwork.WebUI.PostServiceReference.PostDto> GetPosts(int authorId) {
+            return base.Channel.GetPosts(authorId);
+        }
+        
+        public System.Threading.Tasks.Task<System.Collections.Generic.List<SimpleSocialNetwork.WebUI.PostServiceReference.PostDto>> GetPostsAsync(int authorId) {
+            return base.Channel.GetPostsAsync(authorId);
         }
     }
 }

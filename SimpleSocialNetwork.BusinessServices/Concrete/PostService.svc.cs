@@ -38,5 +38,24 @@ namespace SimpleSocialNetwork.BusinessServices.Concrete
 
             return list;
         }
+
+        public List<PostDto> GetPosts(int authorId)
+        {
+            var  result = _postRepository.GetPosts(authorId);
+
+            List<PostDto> list = null;
+
+            if (result != null)
+            {
+                list = new List<PostDto>();
+                foreach (var el in result)
+                {
+                    var postDto = Mapper.Map<PostDto>(el);
+                    list.Add(postDto);
+                }
+            }
+
+            return list;
+        }
     }
 }

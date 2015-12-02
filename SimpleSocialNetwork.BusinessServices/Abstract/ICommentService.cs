@@ -29,5 +29,9 @@ namespace SimpleSocialNetwork.BusinessServices
         public int AuthorId { get; set; }
         [DataMember]
         public int PostId { get; set; }
+        [DataMember]
+        public string AuthorFirstName { get; set; }
+        [DataMember]
+        public string AuthorLastName { get; set; }
     }
 }

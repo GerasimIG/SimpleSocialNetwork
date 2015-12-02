@@ -23,7 +23,13 @@ namespace SimpleSocialNetwork.Sandbox.CommentServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AuthorFirstNameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int AuthorIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string AuthorLastNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime DatePostedField;
@@ -48,6 +54,19 @@ namespace SimpleSocialNetwork.Sandbox.CommentServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AuthorFirstName {
+            get {
+                return this.AuthorFirstNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AuthorFirstNameField, value) != true)) {
+                    this.AuthorFirstNameField = value;
+                    this.RaisePropertyChanged("AuthorFirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int AuthorId {
             get {
                 return this.AuthorIdField;
@@ -56,6 +75,19 @@ namespace SimpleSocialNetwork.Sandbox.CommentServiceReference {
                 if ((this.AuthorIdField.Equals(value) != true)) {
                     this.AuthorIdField = value;
                     this.RaisePropertyChanged("AuthorId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string AuthorLastName {
+            get {
+                return this.AuthorLastNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.AuthorLastNameField, value) != true)) {
+                    this.AuthorLastNameField = value;
+                    this.RaisePropertyChanged("AuthorLastName");
                 }
             }
         }

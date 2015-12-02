@@ -14,6 +14,9 @@ namespace SimpleSocialNetwork.BusinessServices
     {
         [OperationContract]
         List<PostDto> GetFriendsPostsByUserId(int userId);
+
+        [OperationContract]
+        List<PostDto> GetPosts(int authorId);
     }
 
     [DataContract]
@@ -27,5 +30,9 @@ namespace SimpleSocialNetwork.BusinessServices
         public System.DateTime DatePosted { get; set; }
         [DataMember]
         public int AuthorId { get; set; }
+        [DataMember]
+        public string AuthorFirstName { get; set; }
+        [DataMember]
+        public string AuthorLastName { get; set; }
     }
 }
