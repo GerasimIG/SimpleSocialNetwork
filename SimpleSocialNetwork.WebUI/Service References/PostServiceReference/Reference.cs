@@ -26,9 +26,6 @@ namespace SimpleSocialNetwork.WebUI.PostServiceReference {
         private int AuthorIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Collections.Generic.List<SimpleSocialNetwork.WebUI.PostServiceReference.CommentDto> CommentsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime DatePostedField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -36,115 +33,6 @@ namespace SimpleSocialNetwork.WebUI.PostServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string MessageField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int AuthorId {
-            get {
-                return this.AuthorIdField;
-            }
-            set {
-                if ((this.AuthorIdField.Equals(value) != true)) {
-                    this.AuthorIdField = value;
-                    this.RaisePropertyChanged("AuthorId");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Collections.Generic.List<SimpleSocialNetwork.WebUI.PostServiceReference.CommentDto> Comments {
-            get {
-                return this.CommentsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CommentsField, value) != true)) {
-                    this.CommentsField = value;
-                    this.RaisePropertyChanged("Comments");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime DatePosted {
-            get {
-                return this.DatePostedField;
-            }
-            set {
-                if ((this.DatePostedField.Equals(value) != true)) {
-                    this.DatePostedField = value;
-                    this.RaisePropertyChanged("DatePosted");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int Id {
-            get {
-                return this.IdField;
-            }
-            set {
-                if ((this.IdField.Equals(value) != true)) {
-                    this.IdField = value;
-                    this.RaisePropertyChanged("Id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Message {
-            get {
-                return this.MessageField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.MessageField, value) != true)) {
-                    this.MessageField = value;
-                    this.RaisePropertyChanged("Message");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="CommentDto", Namespace="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices")]
-    [System.SerializableAttribute()]
-    public partial class CommentDto : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int AuthorIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime DatePostedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int IdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string MessageField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int PostIdField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -204,19 +92,6 @@ namespace SimpleSocialNetwork.WebUI.PostServiceReference {
                 if ((object.ReferenceEquals(this.MessageField, value) != true)) {
                     this.MessageField = value;
                     this.RaisePropertyChanged("Message");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int PostId {
-            get {
-                return this.PostIdField;
-            }
-            set {
-                if ((this.PostIdField.Equals(value) != true)) {
-                    this.PostIdField = value;
-                    this.RaisePropertyChanged("PostId");
                 }
             }
         }

@@ -63,12 +63,9 @@ namespace SimpleSocialNetwork.BusinessServices
         public string PhoneNumber { get; set; }
         [DataMember]
         public int RoleId { get; set; }
-  /*      [DataMember]
-        public LocationDto Location { get; set; }
         [DataMember]
-        public Role Role { get; set; }
+        public string RoleName { get; set; }
         [DataMember]
-        public  List<PostDto> Posts { get; set; }*/
-
+        public string FullLocation { get; set; }
     }
 }

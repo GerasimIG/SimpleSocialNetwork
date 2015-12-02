@@ -31,9 +31,5 @@ namespace SimpleSocialNetwork.BusinessServices
         public int FirstUserId { get; set; }
         [DataMember]
         public int SecondUserId { get; set; }
-        [DataMember]
-        public UserDto User { get; set; }
-        [DataMember]
-        public UserDto User1 { get; set; }
     }
 }

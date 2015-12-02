@@ -50,7 +50,7 @@ namespace SimpleSocialNetwork.WebUI.Authorization.Concrete
 
         public override string[] GetRolesForUser(string username)
         {
-            string userRole = _userService.GetById(Convert.ToInt32(username)).Role.Name;
+            string userRole = _userService.GetById(Convert.ToInt32(username)).RoleName;
             return new string[] {userRole};
         }
 

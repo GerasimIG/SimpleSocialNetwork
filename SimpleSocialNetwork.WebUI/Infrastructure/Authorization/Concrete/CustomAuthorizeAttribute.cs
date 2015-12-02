@@ -29,7 +29,7 @@ namespace SimpleSocialNetwork.WebUI.Authorization.Concrete
                 string userRole = string.Empty;
                 try
                 {
-                    userRole = _userService.GetById(_authProvider.CurrentUserId).Role.Name;
+                    userRole = _userService.GetById(_authProvider.CurrentUserId).RoleName;
                 }
                 catch(FormatException)
                 {

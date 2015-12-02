@@ -48,7 +48,7 @@ namespace SimpleSocialNetwork.WebUI.Controllers
             var userChatsViewModel = new List<ChatViewModel>();
 
             //реалізувати через автомаппер
-            foreach(var element in userChats)
+/*            foreach(var element in userChats)
             {
                 var userChat = new ChatViewModel();
              
@@ -70,7 +70,7 @@ namespace SimpleSocialNetwork.WebUI.Controllers
                 userChat.DateSent = element.DateSent;
                 userChatsViewModel.Add(userChat);
             }
-
+            */
             return View(userChatsViewModel);
         }
 

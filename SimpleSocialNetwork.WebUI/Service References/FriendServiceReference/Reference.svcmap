@@ -24,12 +24,11 @@
     <MetadataSource Address="http://localhost:50081/Concrete/FriendService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="FriendService3.xsd" MetadataType="Schema" ID="e525f772-f905-407b-b885-c85aa4932ab6" SourceId="1" SourceUrl="http://localhost:50081/Concrete/FriendService.svc?xsd=xsd3" />
-    <MetadataFile FileName="FriendService2.xsd" MetadataType="Schema" ID="b2b81275-bb0b-4364-a9e2-71b5f3894cfa" SourceId="1" SourceUrl="http://localhost:50081/Concrete/FriendService.svc?xsd=xsd1" />
-    <MetadataFile FileName="FriendService.xsd" MetadataType="Schema" ID="5ab2844f-5478-4ecc-aaea-dfed1cbdc9e1" SourceId="1" SourceUrl="http://localhost:50081/Concrete/FriendService.svc?xsd=xsd0" />
     <MetadataFile FileName="FriendService.disco" MetadataType="Disco" ID="bee7947a-f2aa-4555-a6d1-0c1ac2c9c8cd" SourceId="1" SourceUrl="http://localhost:50081/Concrete/FriendService.svc?disco" />
-    <MetadataFile FileName="FriendService1.xsd" MetadataType="Schema" ID="e08855b6-c8f4-44c6-9806-2e9269aad748" SourceId="1" SourceUrl="http://localhost:50081/Concrete/FriendService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FriendService.xsd" MetadataType="Schema" ID="5ab2844f-5478-4ecc-aaea-dfed1cbdc9e1" SourceId="1" SourceUrl="http://localhost:50081/Concrete/FriendService.svc?xsd=xsd0" />
     <MetadataFile FileName="FriendService.wsdl" MetadataType="Wsdl" ID="eb506d39-d8fb-4517-a4c6-8e924a42fd83" SourceId="1" SourceUrl="http://localhost:50081/Concrete/FriendService.svc?wsdl" />
+    <MetadataFile FileName="FriendService1.xsd" MetadataType="Schema" ID="e08855b6-c8f4-44c6-9806-2e9269aad748" SourceId="1" SourceUrl="http://localhost:50081/Concrete/FriendService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FriendService2.xsd" MetadataType="Schema" ID="b2b81275-bb0b-4364-a9e2-71b5f3894cfa" SourceId="1" SourceUrl="http://localhost:50081/Concrete/FriendService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

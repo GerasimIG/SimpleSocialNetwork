@@ -27,7 +27,5 @@ namespace SimpleSocialNetwork.BusinessServices
         public System.DateTime DatePosted { get; set; }
         [DataMember]
         public int AuthorId { get; set; }
-        [DataMember]
-        public List<CommentDto> Comments { get; set; }
     }
 }

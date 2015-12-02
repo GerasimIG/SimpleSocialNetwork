@@ -31,10 +31,5 @@ namespace SimpleSocialNetwork.BusinessServices
         public string MsgText { get; set; }
         [DataMember]
         public System.DateTime DateSent { get; set; }
-
-        [DataMember]
-        public UserDto User { get; set; }
-        [DataMember]
-        public UserDto User1 { get; set; }
     }
 }

@@ -22,12 +22,10 @@ namespace SimpleSocialNetwork.WebUI.AutoMapper
         protected override void Configure()
         {
             Mapper.CreateMap<UserServiceReference.UserDto, LoginViewModel>();
-            Mapper.CreateMap<UserDto, UserViewModel>().ForMember(dest => dest.FullLocation,
-                opt => opt.MapFrom(o => o.Location.CityName + ", " + o.Location.RegionName + ", " + o.Location.CountryCode));
+            Mapper.CreateMap<UserDto, UserViewModel>();
             Mapper.CreateMap<UserDto, UpdateLoginViewModel>();
             Mapper.CreateMap<UserDto, EditViewModel>();
-            Mapper.CreateMap<UserDto, UpdateProfileViewModel>().ForMember(dest => dest.FullLocation,
-                opt => opt.MapFrom(o => o.Location.CityName + ", " + o.Location.RegionName + ", " + o.Location.CountryCode));
+            Mapper.CreateMap<UserDto, UpdateProfileViewModel>();
             Mapper.CreateMap<UserDto, UpdateProfileImageViewModel>();
         }
     }

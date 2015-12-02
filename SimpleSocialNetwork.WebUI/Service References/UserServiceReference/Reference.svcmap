@@ -27,7 +27,6 @@
     <MetadataFile FileName="UserService.xsd" MetadataType="Schema" ID="f4b52188-9a05-4f3e-a931-b0c8deea920c" SourceId="1" SourceUrl="http://localhost:50081/Concrete/UserService.svc?xsd=xsd1" />
     <MetadataFile FileName="UserService.wsdl" MetadataType="Wsdl" ID="f2a6d0ad-b638-4568-96ad-4354ae8e912d" SourceId="1" SourceUrl="http://localhost:50081/Concrete/UserService.svc?wsdl" />
     <MetadataFile FileName="UserService1.xsd" MetadataType="Schema" ID="a5cc7197-234e-4f96-9f61-bd1693a07575" SourceId="1" SourceUrl="http://localhost:50081/Concrete/UserService.svc?xsd=xsd2" />
-    <MetadataFile FileName="UserService3.xsd" MetadataType="Schema" ID="9e2c68b9-2625-4e9b-8623-4cdaa29a0246" SourceId="1" SourceUrl="http://localhost:50081/Concrete/UserService.svc?xsd=xsd3" />
     <MetadataFile FileName="UserService2.xsd" MetadataType="Schema" ID="5845a8de-3fdf-4680-b383-feaff37a0033" SourceId="1" SourceUrl="http://localhost:50081/Concrete/UserService.svc?xsd=xsd0" />
     <MetadataFile FileName="UserService.disco" MetadataType="Disco" ID="012f3fb7-f393-4366-85c6-a75b6e3a9233" SourceId="1" SourceUrl="http://localhost:50081/Concrete/UserService.svc?disco" />
   </Metadata>

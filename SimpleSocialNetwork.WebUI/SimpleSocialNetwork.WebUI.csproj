@@ -332,9 +332,6 @@
     <None Include="Service References\FriendServiceReference\FriendService.disco" />
     <None Include="Service References\FriendServiceReference\configuration91.svcinfo" />
     <None Include="Service References\FriendServiceReference\configuration.svcinfo" />
-    <None Include="Service References\FriendServiceReference\FriendService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\FriendServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -349,9 +346,6 @@
     <None Include="Service References\MessageServiceReference\MessageService.disco" />
     <None Include="Service References\MessageServiceReference\configuration91.svcinfo" />
     <None Include="Service References\MessageServiceReference\configuration.svcinfo" />
-    <None Include="Service References\MessageServiceReference\MessageService3.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\MessageServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -490,9 +484,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\UserServiceReference\UserService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\UserServiceReference\UserService3.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>

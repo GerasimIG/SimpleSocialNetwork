@@ -32,6 +32,9 @@ namespace SimpleSocialNetwork.Sandbox.UserServiceReference {
         private string FirstNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string FullLocationField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private byte GenderField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -57,6 +60,9 @@ namespace SimpleSocialNetwork.Sandbox.UserServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int RoleIdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string RoleNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string SkypeField;
@@ -106,6 +112,19 @@ namespace SimpleSocialNetwork.Sandbox.UserServiceReference {
                 if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
                     this.FirstNameField = value;
                     this.RaisePropertyChanged("FirstName");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string FullLocation {
+            get {
+                return this.FullLocationField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.FullLocationField, value) != true)) {
+                    this.FullLocationField = value;
+                    this.RaisePropertyChanged("FullLocation");
                 }
             }
         }
@@ -223,6 +242,19 @@ namespace SimpleSocialNetwork.Sandbox.UserServiceReference {
                 if ((this.RoleIdField.Equals(value) != true)) {
                     this.RoleIdField = value;
                     this.RaisePropertyChanged("RoleId");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string RoleName {
+            get {
+                return this.RoleNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.RoleNameField, value) != true)) {
+                    this.RoleNameField = value;
+                    this.RaisePropertyChanged("RoleName");
                 }
             }
         }

@@ -161,12 +161,6 @@ namespace SimpleSocialNetwork.Sandbox.CommentServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommentService/GetByPostId", ReplyAction="http://tempuri.org/ICommentService/GetByPostIdResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto>> GetByPostIdAsync(int postId);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommentService/GetCount", ReplyAction="http://tempuri.org/ICommentService/GetCountResponse")]
-        int GetCount();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ICommentService/GetCount", ReplyAction="http://tempuri.org/ICommentService/GetCountResponse")]
-        System.Threading.Tasks.Task<int> GetCountAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -242,14 +236,6 @@ namespace SimpleSocialNetwork.Sandbox.CommentServiceReference {
         
         public System.Threading.Tasks.Task<System.Collections.Generic.List<SimpleSocialNetwork.Sandbox.CommentServiceReference.CommentDto>> GetByPostIdAsync(int postId) {
             return base.Channel.GetByPostIdAsync(postId);
-        }
-        
-        public int GetCount() {
-            return base.Channel.GetCount();
-        }
-        
-        public System.Threading.Tasks.Task<int> GetCountAsync() {
-            return base.Channel.GetCountAsync();
         }
     }
 }

@@ -35,6 +35,5 @@ namespace SimpleSocialNetwork.BusinessServices
         public string RegionName { get; set; }
         [DataMember]
         public string CityName { get; set; }
-        
     }
 }

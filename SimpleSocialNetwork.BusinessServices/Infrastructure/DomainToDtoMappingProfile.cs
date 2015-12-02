@@ -16,7 +16,10 @@ namespace SimpleSocialNetwork.BusinessServices.Infrastructure
             Mapper.CreateMap<Location, LocationDto>();
             Mapper.CreateMap<Message, MessageDto>();
             Mapper.CreateMap<Post, PostDto>();
-            Mapper.CreateMap<User, UserDto>();
+            Mapper.CreateMap<User, UserDto>()
+                .ForMember(dest => dest.RoleName, opt => opt.MapFrom(src => src.Role.Name))
+                .ForMember(dest => dest.FullLocation,
+                opt => opt.MapFrom(o => o.Location.CityName + ", " + o.Location.RegionName + ", " + o.Location.CountryCode)); ;
         }
     }
 }

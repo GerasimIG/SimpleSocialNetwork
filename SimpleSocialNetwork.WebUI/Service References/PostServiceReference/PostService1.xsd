@@ -3,29 +3,12 @@
   <xs:complexType name="PostDto">
     <xs:sequence>
       <xs:element minOccurs="0" name="AuthorId" type="xs:int" />
-      <xs:element minOccurs="0" name="Comments" nillable="true" type="tns:ArrayOfCommentDto" />
       <xs:element minOccurs="0" name="DatePosted" type="xs:dateTime" />
       <xs:element minOccurs="0" name="Id" type="xs:int" />
       <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:element name="PostDto" nillable="true" type="tns:PostDto" />
-  <xs:complexType name="ArrayOfCommentDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="CommentDto" nillable="true" type="tns:CommentDto" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="ArrayOfCommentDto" nillable="true" type="tns:ArrayOfCommentDto" />
-  <xs:complexType name="CommentDto">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="AuthorId" type="xs:int" />
-      <xs:element minOccurs="0" name="DatePosted" type="xs:dateTime" />
-      <xs:element minOccurs="0" name="Id" type="xs:int" />
-      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
-      <xs:element minOccurs="0" name="PostId" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:element name="CommentDto" nillable="true" type="tns:CommentDto" />
   <xs:complexType name="ArrayOfPostDto">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="PostDto" nillable="true" type="tns:PostDto" />
