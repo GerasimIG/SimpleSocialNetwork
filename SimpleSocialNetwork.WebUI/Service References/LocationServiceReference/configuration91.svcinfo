@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="pwd+v/TB9vZJynkL6yaC2LC9/e4=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="UjdDjtxThlanu3hJX5DVxJh79ag=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ILocationService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ILocationService" contract="LocationServiceReference.ILocationService" bindingType="basicHttpBinding" address="http://localhost:50081/Concrete/LocationService.svc" bindingConfiguration="BasicHttpBinding_ILocationService">
+    <endpoint name="BasicHttpBinding_ILocationService" contract="LocationServiceReference.ILocationService" bindingType="basicHttpBinding" address="http://vm02wsih.cloudapp.net/Concrete/LocationService.svc" bindingConfiguration="BasicHttpBinding_ILocationService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:50081/Concrete/LocationService.svc</serializedValue>
+          <serializedValue>http://vm02wsih.cloudapp.net/Concrete/LocationService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

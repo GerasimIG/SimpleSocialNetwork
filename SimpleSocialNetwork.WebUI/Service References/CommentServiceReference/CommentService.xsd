@@ -1,80 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:50081/Concrete/CommentService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" />
-  <xs:element name="Add">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="entity" nillable="true" type="q1:CommentDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Remove">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="entity" nillable="true" type="q2:CommentDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Update">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="entity" nillable="true" type="q3:CommentDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetById">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetByIdResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="GetByIdResult" nillable="true" type="q4:CommentDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetAll">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetAllResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="GetAllResult" nillable="true" type="q5:ArrayOfCommentDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetByPostId">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="postId" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetByPostIdResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="GetByPostIdResult" nillable="true" type="q6:ArrayOfCommentDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="CommentDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthorFirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AuthorId" type="xs:int" />
+      <xs:element minOccurs="0" name="AuthorLastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DatePosted" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommentDto" nillable="true" type="tns:CommentDto" />
+  <xs:complexType name="ArrayOfCommentDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CommentDto" nillable="true" type="tns:CommentDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCommentDto" nillable="true" type="tns:ArrayOfCommentDto" />
 </xs:schema>

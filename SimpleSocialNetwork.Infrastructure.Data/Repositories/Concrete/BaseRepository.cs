@@ -25,6 +25,13 @@ namespace SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete
             dbContext.SaveChanges();
         }
 
+        public void Remove(int entityId)
+        {
+            TEntity student = dbContext.Set<TEntity>().Find(entityId);
+            dbContext.Set<TEntity>().Remove(student);
+            dbContext.SaveChanges();
+        }
+
         public void Update(TEntity entity)
         {
             dbContext.Entry(entity).State = EntityState.Modified;
@@ -60,5 +67,6 @@ namespace SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete
             Dispose(true);
             GC.SuppressFinalize(this);
         }
+
     }
 }

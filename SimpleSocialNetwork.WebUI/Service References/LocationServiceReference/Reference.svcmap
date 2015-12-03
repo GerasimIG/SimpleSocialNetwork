@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="127478c5-3f0c-43d8-b6f5-84c1610d4f70" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="cc633062-0203-48e8-b9f0-109df654b4ff" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -21,15 +21,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:50081/Concrete/LocationService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://vm02wsih.cloudapp.net//concrete/LocationService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="LocationService.disco" MetadataType="Disco" ID="a749ce54-5046-4203-a311-c5d364f270e7" SourceId="1" SourceUrl="http://localhost:50081/Concrete/LocationService.svc?disco" />
-    <MetadataFile FileName="LocationService.wsdl" MetadataType="Wsdl" ID="fb6552b0-f599-42b5-8caa-fefa445b596d" SourceId="1" SourceUrl="http://localhost:50081/Concrete/LocationService.svc?wsdl" />
-    <MetadataFile FileName="LocationService.xsd" MetadataType="Schema" ID="d6500a93-9c4c-467d-a37e-af0e005ff559" SourceId="1" SourceUrl="http://localhost:50081/Concrete/LocationService.svc?xsd=xsd1" />
-    <MetadataFile FileName="LocationService1.xsd" MetadataType="Schema" ID="26a869b7-5e9c-45df-9edc-b654c38fe5d8" SourceId="1" SourceUrl="http://localhost:50081/Concrete/LocationService.svc?xsd=xsd3" />
-    <MetadataFile FileName="LocationService2.xsd" MetadataType="Schema" ID="1de08217-500b-452a-a20a-0220aea69a1e" SourceId="1" SourceUrl="http://localhost:50081/Concrete/LocationService.svc?xsd=xsd0" />
-    <MetadataFile FileName="LocationService3.xsd" MetadataType="Schema" ID="e87c63e0-ecf9-4f91-9664-7acc8ac47ffa" SourceId="1" SourceUrl="http://localhost:50081/Concrete/LocationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LocationService.disco" MetadataType="Disco" ID="58a370dc-1ced-4aa5-bf41-fad8a1f61df1" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/LocationService.svc?disco" />
+    <MetadataFile FileName="LocationService.wsdl" MetadataType="Wsdl" ID="eb53c38e-6e2d-414b-8c7b-43f3c6bfe48e" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/LocationService.svc?wsdl" />
+    <MetadataFile FileName="LocationService.xsd" MetadataType="Schema" ID="c0651349-6cbe-4d9a-a990-4fa91cbf7b87" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/LocationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="LocationService1.xsd" MetadataType="Schema" ID="e5174537-3125-420d-b64b-fb2bfa9a7452" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/LocationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="LocationService2.xsd" MetadataType="Schema" ID="2b9ce62c-c03e-46b4-87b8-569761b943e8" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/LocationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="LocationService3.xsd" MetadataType="Schema" ID="f2863a1a-8a7a-43bb-aa92-4fbaf2ea68ff" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/LocationService.svc?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

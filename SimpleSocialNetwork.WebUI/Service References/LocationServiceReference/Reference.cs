@@ -138,6 +138,12 @@ namespace SimpleSocialNetwork.WebUI.LocationServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Location_LocationDto/Remove", ReplyAction="http://tempuri.org/IBaseServiceOf_Location_LocationDto/RemoveResponse")]
         System.Threading.Tasks.Task RemoveAsync(SimpleSocialNetwork.WebUI.LocationServiceReference.LocationDto entity);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Location_LocationDto/RemoveById", ReplyAction="http://tempuri.org/IBaseServiceOf_Location_LocationDto/RemoveByIdResponse")]
+        void RemoveById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Location_LocationDto/RemoveById", ReplyAction="http://tempuri.org/IBaseServiceOf_Location_LocationDto/RemoveByIdResponse")]
+        System.Threading.Tasks.Task RemoveByIdAsync(int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Location_LocationDto/Update", ReplyAction="http://tempuri.org/IBaseServiceOf_Location_LocationDto/UpdateResponse")]
         void Update(SimpleSocialNetwork.WebUI.LocationServiceReference.LocationDto entity);
         
@@ -222,6 +228,14 @@ namespace SimpleSocialNetwork.WebUI.LocationServiceReference {
         
         public System.Threading.Tasks.Task RemoveAsync(SimpleSocialNetwork.WebUI.LocationServiceReference.LocationDto entity) {
             return base.Channel.RemoveAsync(entity);
+        }
+        
+        public void RemoveById(int id) {
+            base.Channel.RemoveById(id);
+        }
+        
+        public System.Threading.Tasks.Task RemoveByIdAsync(int id) {
+            return base.Channel.RemoveByIdAsync(id);
         }
         
         public void Update(SimpleSocialNetwork.WebUI.LocationServiceReference.LocationDto entity) {

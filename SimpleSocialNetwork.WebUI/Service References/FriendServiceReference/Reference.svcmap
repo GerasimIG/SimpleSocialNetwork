@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="546d2668-9a3a-41cb-9f36-d4ca0ddecaed" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="58b25b3e-fbbc-443b-945c-ae0df20d48b8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -21,14 +21,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:50081/Concrete/FriendService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://vm02wsih.cloudapp.net//concrete/FriendService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="FriendService.disco" MetadataType="Disco" ID="bee7947a-f2aa-4555-a6d1-0c1ac2c9c8cd" SourceId="1" SourceUrl="http://localhost:50081/Concrete/FriendService.svc?disco" />
-    <MetadataFile FileName="FriendService.xsd" MetadataType="Schema" ID="5ab2844f-5478-4ecc-aaea-dfed1cbdc9e1" SourceId="1" SourceUrl="http://localhost:50081/Concrete/FriendService.svc?xsd=xsd0" />
-    <MetadataFile FileName="FriendService.wsdl" MetadataType="Wsdl" ID="eb506d39-d8fb-4517-a4c6-8e924a42fd83" SourceId="1" SourceUrl="http://localhost:50081/Concrete/FriendService.svc?wsdl" />
-    <MetadataFile FileName="FriendService1.xsd" MetadataType="Schema" ID="e08855b6-c8f4-44c6-9806-2e9269aad748" SourceId="1" SourceUrl="http://localhost:50081/Concrete/FriendService.svc?xsd=xsd2" />
-    <MetadataFile FileName="FriendService2.xsd" MetadataType="Schema" ID="b2b81275-bb0b-4364-a9e2-71b5f3894cfa" SourceId="1" SourceUrl="http://localhost:50081/Concrete/FriendService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FriendService.xsd" MetadataType="Schema" ID="9953f327-4295-43ba-8b4d-905ab84d5d48" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/FriendService.svc?xsd=xsd2" />
+    <MetadataFile FileName="FriendService.disco" MetadataType="Disco" ID="3383e6d7-d606-4478-b86b-aa0e865859d9" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/FriendService.svc?disco" />
+    <MetadataFile FileName="FriendService.wsdl" MetadataType="Wsdl" ID="38eb6154-ad2c-4674-84f1-09fba200046a" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/FriendService.svc?wsdl" />
+    <MetadataFile FileName="FriendService1.xsd" MetadataType="Schema" ID="027e3206-9301-4dcf-a052-9ea13968bdef" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/FriendService.svc?xsd=xsd1" />
+    <MetadataFile FileName="FriendService2.xsd" MetadataType="Schema" ID="1f230d29-2715-46f3-93bd-67fda23194dc" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/FriendService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

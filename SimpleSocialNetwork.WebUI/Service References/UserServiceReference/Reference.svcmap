@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="079d6a28-3714-4f8a-8c20-03b3e5214cbb" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="0ed501e6-f9a0-45a7-85c6-d3f1ff67c33d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -21,14 +21,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:50081/Concrete/UserService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://vm02wsih.cloudapp.net//concrete/UserService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="UserService.xsd" MetadataType="Schema" ID="f4b52188-9a05-4f3e-a931-b0c8deea920c" SourceId="1" SourceUrl="http://localhost:50081/Concrete/UserService.svc?xsd=xsd1" />
-    <MetadataFile FileName="UserService.wsdl" MetadataType="Wsdl" ID="f2a6d0ad-b638-4568-96ad-4354ae8e912d" SourceId="1" SourceUrl="http://localhost:50081/Concrete/UserService.svc?wsdl" />
-    <MetadataFile FileName="UserService1.xsd" MetadataType="Schema" ID="a5cc7197-234e-4f96-9f61-bd1693a07575" SourceId="1" SourceUrl="http://localhost:50081/Concrete/UserService.svc?xsd=xsd2" />
-    <MetadataFile FileName="UserService2.xsd" MetadataType="Schema" ID="5845a8de-3fdf-4680-b383-feaff37a0033" SourceId="1" SourceUrl="http://localhost:50081/Concrete/UserService.svc?xsd=xsd0" />
-    <MetadataFile FileName="UserService.disco" MetadataType="Disco" ID="012f3fb7-f393-4366-85c6-a75b6e3a9233" SourceId="1" SourceUrl="http://localhost:50081/Concrete/UserService.svc?disco" />
+    <MetadataFile FileName="UserService.disco" MetadataType="Disco" ID="0e46c616-20df-49eb-b218-22c335bb06d6" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/UserService.svc?disco" />
+    <MetadataFile FileName="UserService.wsdl" MetadataType="Wsdl" ID="d9135204-26b8-4e5c-8d46-efc1b2101183" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/UserService.svc?wsdl" />
+    <MetadataFile FileName="UserService.xsd" MetadataType="Schema" ID="17e2b6bc-251e-4532-ab4d-a70e16503873" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/UserService.svc?xsd=xsd1" />
+    <MetadataFile FileName="UserService1.xsd" MetadataType="Schema" ID="f925bdf0-b098-4c7c-8a9f-8ea4fc992acf" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/UserService.svc?xsd=xsd0" />
+    <MetadataFile FileName="UserService2.xsd" MetadataType="Schema" ID="b663318e-f876-4a14-ae36-a1600e0b993e" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/UserService.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

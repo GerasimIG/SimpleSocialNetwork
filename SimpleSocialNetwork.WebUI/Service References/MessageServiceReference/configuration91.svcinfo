@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="NydSvZb7C4unGvRyiRAXIEif0Fw=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Wl+Bs3X6UhVml1HrTQobYLwH5ik=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IMessageService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IMessageService" contract="MessageServiceReference.IMessageService" bindingType="basicHttpBinding" address="http://localhost:50081/Concrete/MessageService.svc" bindingConfiguration="BasicHttpBinding_IMessageService">
+    <endpoint name="BasicHttpBinding_IMessageService" contract="MessageServiceReference.IMessageService" bindingType="basicHttpBinding" address="http://vm02wsih.cloudapp.net/Concrete/MessageService.svc" bindingConfiguration="BasicHttpBinding_IMessageService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:50081/Concrete/MessageService.svc</serializedValue>
+          <serializedValue>http://vm02wsih.cloudapp.net/Concrete/MessageService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

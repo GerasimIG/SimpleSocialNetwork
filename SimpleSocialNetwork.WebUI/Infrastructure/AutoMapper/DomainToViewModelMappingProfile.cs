@@ -6,6 +6,7 @@ using AutoMapper;
 using SimpleSocialNetwork.Domain;
 using SimpleSocialNetwork.WebUI.ViewModels;
 using SimpleSocialNetwork.WebUI.UserServiceReference;
+using SimpleSocialNetwork.WebUI.FriendServiceReference;
 using SimpleSocialNetwork.WebUI.LocationServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.AutoMapper
@@ -22,11 +23,12 @@ namespace SimpleSocialNetwork.WebUI.AutoMapper
         protected override void Configure()
         {
             Mapper.CreateMap<UserServiceReference.UserDto, LoginViewModel>();
-            Mapper.CreateMap<UserDto, UserViewModel>();
-            Mapper.CreateMap<UserDto, UpdateLoginViewModel>();
-            Mapper.CreateMap<UserDto, EditViewModel>();
-            Mapper.CreateMap<UserDto, UpdateProfileViewModel>();
-            Mapper.CreateMap<UserDto, UpdateProfileImageViewModel>();
+            Mapper.CreateMap<UserServiceReference.UserDto, UserViewModel>();
+            Mapper.CreateMap<UserServiceReference.UserDto, UpdateLoginViewModel>();
+            Mapper.CreateMap<UserServiceReference.UserDto, EditViewModel>();
+            Mapper.CreateMap<UserServiceReference.UserDto, UpdateProfileViewModel>();
+            Mapper.CreateMap<UserServiceReference.UserDto, UpdateProfileImageViewModel>();
+            Mapper.CreateMap<FriendServiceReference.UserDto, UserServiceReference.UserDto>();
         }
     }
 }

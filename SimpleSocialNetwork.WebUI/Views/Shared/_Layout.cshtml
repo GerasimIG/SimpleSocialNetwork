@@ -31,18 +31,20 @@
             @if (User.IsInRole("ApprovedMember"))
             {
                 <li>@Html.ActionLink("My page", "UserProfile", "User", new { id = Convert.ToInt32(HttpContext.Current.User.Identity.Name) }, null)</li>
-                <li><a href="#">Friends</a></li>
-                <!-- <li>@Html.ActionLink("Friends", "Index", "Friends")</li> -->  
+                <!-- <li><a href="#">Friends</a></li> -->
+                <li>@Html.ActionLink("Friends", "Index", "Friends")</li> 
                 <li><a href="#">Chats</a></li>
                 <!-- <li>@Html.ActionLink("Chats", "Index", "Chat")</li> -->
                 <li>@Html.ActionLink("News", "Index", "News")</li>
-                <li class="active">@Html.ActionLink("Search", "Index", "Search")</li>
+                <li><a href="#">Search</a></li> 
+                <!--<li class="active">@Html.ActionLink("Search", "Index", "Search")</li>-->
                 <li><a href="#">Settings</a></li>
                 <!-- <li>@Html.ActionLink("Settings", "Index", "Settings")</li> -->
             }
             else
             {
-                <li>@Html.ActionLink("Search", "Index", "Search")</li>
+                <li><a href="#">Search</a></li>
+               <!-- <li>@Html.ActionLink("Search", "Index", "Search")</li>-->
             }
         </ul>
         @RenderBody()

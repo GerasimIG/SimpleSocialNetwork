@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e1791e45-2574-4200-8c31-3ea9b96c0b0c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9ea160ec-0879-4bc2-b978-37547df4aa08" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -21,14 +21,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:50081/Concrete/PostService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://vm02wsih.cloudapp.net//concrete/PostService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="PostService.xsd" MetadataType="Schema" ID="ac8b4cd7-bc0b-4192-891c-6a398cce69b2" SourceId="1" SourceUrl="http://localhost:50081/Concrete/PostService.svc?xsd=xsd1" />
-    <MetadataFile FileName="PostService.disco" MetadataType="Disco" ID="816d99c6-499c-4f90-a307-21c151199f47" SourceId="1" SourceUrl="http://localhost:50081/Concrete/PostService.svc?disco" />
-    <MetadataFile FileName="PostService.wsdl" MetadataType="Wsdl" ID="49147f5d-4c0e-49a9-b703-b17b90c18511" SourceId="1" SourceUrl="http://localhost:50081/Concrete/PostService.svc?wsdl" />
-    <MetadataFile FileName="PostService1.xsd" MetadataType="Schema" ID="1032c310-20eb-4c2b-ac61-3767b01e4090" SourceId="1" SourceUrl="http://localhost:50081/Concrete/PostService.svc?xsd=xsd2" />
-    <MetadataFile FileName="PostService2.xsd" MetadataType="Schema" ID="b66a28e3-113a-4ff8-8322-d6b2420a04be" SourceId="1" SourceUrl="http://localhost:50081/Concrete/PostService.svc?xsd=xsd0" />
+    <MetadataFile FileName="PostService.wsdl" MetadataType="Wsdl" ID="487608dd-1e74-4d46-9f53-9ed3a5805e97" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/PostService.svc?wsdl" />
+    <MetadataFile FileName="PostService.xsd" MetadataType="Schema" ID="185feadc-c2af-4cad-96bc-30bb96fa5df4" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/PostService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PostService1.xsd" MetadataType="Schema" ID="c34bae49-fb9d-4d82-be22-41454b6d5a74" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/PostService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PostService.disco" MetadataType="Disco" ID="c9ee11f1-e516-4e35-a0da-dcb9e5c07907" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/PostService.svc?disco" />
+    <MetadataFile FileName="PostService2.xsd" MetadataType="Schema" ID="3ee40d46-d648-45d5-b093-1e941b853a5c" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/PostService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

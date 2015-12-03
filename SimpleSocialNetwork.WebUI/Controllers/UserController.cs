@@ -61,7 +61,7 @@ namespace SimpleSocialNetwork.WebUI.Controllers
             try
             {
                 var user = userId != 0 ? _userService.GetById(userId) : _userService.GetById(_authProvider.CurrentUserId);
-            
+
                 if (user != null)
                 {
                     return File(user.ImageData, user.ImageMimeType);
@@ -84,8 +84,7 @@ namespace SimpleSocialNetwork.WebUI.Controllers
             newPost.DatePosted = DateTime.Now;
             _postService.Add(newPost);
 
-            List<Domain.Post> userPosts = null;
-        //    var userPosts = _userService.GetById(_authProvider.CurrentUserId).Posts.Take(Config.PostsPerPage).ToList();
+            var userPosts = _postService.GetPosts(_authProvider.CurrentUserId);
             if (Request.IsAjaxRequest())
             {
                 return PartialView("UserPostsPartial", userPosts);
@@ -97,7 +96,7 @@ namespace SimpleSocialNetwork.WebUI.Controllers
         public ActionResult GetPostComments(int postId)
         {        
             var postCommentsViewModel = new PostCommentsViewModel();
-        //    postCommentsViewModel.PostComments = _postService.GetById(postId).Comments.Take(Config.CommentsPerPage).ToList();
+            postCommentsViewModel.PostComments = _commentService.GetByPostId(postId);
             postCommentsViewModel.PostId = postId;
 
             if (Request.IsAjaxRequest())
@@ -120,7 +119,7 @@ namespace SimpleSocialNetwork.WebUI.Controllers
             _commentService.Add(newComment);
 
             var postCommentsViewModel = new PostCommentsViewModel();
-         //   postCommentsViewModel.PostComments = _postService.GetById(postId).Comments.Take(Config.CommentsPerPage).ToList();
+            postCommentsViewModel.PostComments = _commentService.GetByPostId(postId);
             postCommentsViewModel.PostId = postId;
 
             if (Request.IsAjaxRequest())
@@ -139,13 +138,13 @@ namespace SimpleSocialNetwork.WebUI.Controllers
         [Authorize(Roles="ApprovedMember,Moderator")] 
         public ActionResult RemoveComment(int commentId)
         {
-            var comment = _commentService.GetById(commentId);
-            int postId = comment.PostId;
+           var comment = _commentService.GetById(commentId);
+           int postId = comment.PostId;
 
-            _commentService.Remove(comment);
+            _commentService.RemoveById(commentId);
 
             var postCommentsViewModel = new PostCommentsViewModel();
-          //  postCommentsViewModel.PostComments = _postService.GetById(postId).Comments.Take(Config.CommentsPerPage).ToList();
+            postCommentsViewModel.PostComments = _commentService.GetByPostId(postId);
             postCommentsViewModel.PostId = postId;
 
             if (Request.IsAjaxRequest())
@@ -159,12 +158,12 @@ namespace SimpleSocialNetwork.WebUI.Controllers
         [Authorize(Roles="ApprovedMember,Moderator")] 
         public ActionResult RemovePost(int postId)
         {
-            var post = _postService.GetById(postId);
-            int userId = post.AuthorId;
-            _postService.Remove(post);
+         //   var post = _postService.GetById(postId);
+          //  int userId = post.AuthorId;
+            //   _postService.Remove(post);
+            _postService.RemoveById(postId);
 
-            List<Domain.Post> userPosts = null;
-            //     var userPosts = _userService.GetById(userId).Posts.Take(Config.PostsPerPage).ToList();
+            var userPosts = _postService.GetPosts(_authProvider.CurrentUserId);
             if (Request.IsAjaxRequest())
             {
                 return PartialView("UserPostsPartial", userPosts);

@@ -25,6 +25,11 @@ namespace SimpleSocialNetwork.BusinessServices
             _repository.Remove(entity);
         }
 
+        public void RemoveById(int id)
+        {
+            _repository.Remove(id);
+        }
+
         public void Update(TEntityDto entityDto)
         {
             var entity = Mapper.Map<TEntity>(entityDto);
@@ -61,5 +66,7 @@ namespace SimpleSocialNetwork.BusinessServices
         {
             _repository.Dispose();
         }
+
+        
     }
 }

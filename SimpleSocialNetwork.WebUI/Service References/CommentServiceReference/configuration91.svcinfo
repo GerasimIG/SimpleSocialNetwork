@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="xLGW2FiVh+wElTY61oWeVg3s4JY=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="1rfvzfYVPGezHGUP9ejOmw8Easw=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_ICommentService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_ICommentService" contract="CommentServiceReference.ICommentService" bindingType="basicHttpBinding" address="http://localhost:50081/Concrete/CommentService.svc" bindingConfiguration="BasicHttpBinding_ICommentService">
+    <endpoint name="BasicHttpBinding_ICommentService" contract="CommentServiceReference.ICommentService" bindingType="basicHttpBinding" address="http://vm02wsih.cloudapp.net/Concrete/CommentService.svc" bindingConfiguration="BasicHttpBinding_ICommentService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:50081/Concrete/CommentService.svc</serializedValue>
+          <serializedValue>http://vm02wsih.cloudapp.net/Concrete/CommentService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

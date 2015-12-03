@@ -375,6 +375,12 @@ namespace SimpleSocialNetwork.WebUI.FriendServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Friend_FriendDto/Remove", ReplyAction="http://tempuri.org/IBaseServiceOf_Friend_FriendDto/RemoveResponse")]
         System.Threading.Tasks.Task RemoveAsync(SimpleSocialNetwork.WebUI.FriendServiceReference.FriendDto entity);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Friend_FriendDto/RemoveById", ReplyAction="http://tempuri.org/IBaseServiceOf_Friend_FriendDto/RemoveByIdResponse")]
+        void RemoveById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Friend_FriendDto/RemoveById", ReplyAction="http://tempuri.org/IBaseServiceOf_Friend_FriendDto/RemoveByIdResponse")]
+        System.Threading.Tasks.Task RemoveByIdAsync(int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Friend_FriendDto/Update", ReplyAction="http://tempuri.org/IBaseServiceOf_Friend_FriendDto/UpdateResponse")]
         void Update(SimpleSocialNetwork.WebUI.FriendServiceReference.FriendDto entity);
         
@@ -459,6 +465,14 @@ namespace SimpleSocialNetwork.WebUI.FriendServiceReference {
         
         public System.Threading.Tasks.Task RemoveAsync(SimpleSocialNetwork.WebUI.FriendServiceReference.FriendDto entity) {
             return base.Channel.RemoveAsync(entity);
+        }
+        
+        public void RemoveById(int id) {
+            base.Channel.RemoveById(id);
+        }
+        
+        public System.Threading.Tasks.Task RemoveByIdAsync(int id) {
+            return base.Channel.RemoveByIdAsync(id);
         }
         
         public void Update(SimpleSocialNetwork.WebUI.FriendServiceReference.FriendDto entity) {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="19f71237-5a99-4189-be6d-cd3c9906b56f" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="42964137-5b28-4016-a4a3-41dd616ffedc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -21,14 +21,14 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:50081/Concrete/CommentService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://vm02wsih.cloudapp.net//concrete/CommentService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CommentService.xsd" MetadataType="Schema" ID="a12cd3ce-b473-4c73-9b90-35f1e857c47d" SourceId="1" SourceUrl="http://localhost:50081/Concrete/CommentService.svc?xsd=xsd0" />
-    <MetadataFile FileName="CommentService.disco" MetadataType="Disco" ID="1f01ed69-cef2-4709-8c43-a140ab475d52" SourceId="1" SourceUrl="http://localhost:50081/Concrete/CommentService.svc?disco" />
-    <MetadataFile FileName="CommentService1.xsd" MetadataType="Schema" ID="54e44f83-5152-4a89-bb51-712705ee6f62" SourceId="1" SourceUrl="http://localhost:50081/Concrete/CommentService.svc?xsd=xsd1" />
-    <MetadataFile FileName="CommentService.wsdl" MetadataType="Wsdl" ID="2cf3b439-1b81-430d-9791-17948139d433" SourceId="1" SourceUrl="http://localhost:50081/Concrete/CommentService.svc?wsdl" />
-    <MetadataFile FileName="CommentService2.xsd" MetadataType="Schema" ID="2980765f-2a2b-4265-a757-e07c1a84d172" SourceId="1" SourceUrl="http://localhost:50081/Concrete/CommentService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CommentService.disco" MetadataType="Disco" ID="92e7f07f-d79b-4882-bc88-1fbe8f55fc94" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/CommentService.svc?disco" />
+    <MetadataFile FileName="CommentService.xsd" MetadataType="Schema" ID="0711568c-6cdd-4be9-8779-f6b56dc22cb1" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/CommentService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CommentService.wsdl" MetadataType="Wsdl" ID="214eecc2-18cb-4014-bd80-222647589ba9" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/CommentService.svc?wsdl" />
+    <MetadataFile FileName="CommentService1.xsd" MetadataType="Schema" ID="4f681ed4-6672-4774-be52-0b626745b171" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/CommentService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CommentService2.xsd" MetadataType="Schema" ID="052ba1c8-470c-4ad9-ac9a-a542bd0fc248" SourceId="1" SourceUrl="http://vm02wsih.cloudapp.net/Concrete/CommentService.svc?xsd=xsd0" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

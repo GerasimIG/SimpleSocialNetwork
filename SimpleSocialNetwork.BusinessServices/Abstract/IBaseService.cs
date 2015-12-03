@@ -16,6 +16,8 @@ namespace SimpleSocialNetwork.BusinessServices
         [OperationContract]
         void Remove(TEntityDto entity);
         [OperationContract]
+        void RemoveById(int id);
+        [OperationContract]
         void Update(TEntityDto entity);
         [OperationContract]
         TEntityDto GetById(int id);

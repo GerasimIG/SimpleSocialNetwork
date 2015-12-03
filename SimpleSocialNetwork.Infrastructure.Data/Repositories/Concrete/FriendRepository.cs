@@ -30,6 +30,7 @@ namespace SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete
         {
             //можна придумати оптимальніший запит
             List<User> userFriends = new List<User>();
+            List<int> friendsIds = new List<int>();
 
             foreach (var friendRelation in dbContext.Friends)
             {
@@ -47,12 +48,19 @@ namespace SimpleSocialNetwork.Infrastructure.Data.Repositories.Concrete
                 }
                 if (currFriendId != 0)
                 {
-                    var currFriend = (from user in dbContext.Users
+                    friendsIds.Add(currFriendId);
+              /*      var currFriend = (from user in dbContext.Users
                                       where user.Id == currFriendId
                                       select user).FirstOrDefault();
-                    userFriends.Add(currFriend);
+                    userFriends.Add(currFriend);*/
                 }
 
+            }
+
+            foreach(var id in friendsIds)
+            {
+                var friend = dbContext.Users.Where(x => x.Id == id).FirstOrDefault();
+                userFriends.Add(friend);
             }
 
             return userFriends;

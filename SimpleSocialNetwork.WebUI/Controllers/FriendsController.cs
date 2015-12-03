@@ -9,6 +9,7 @@ using SimpleSocialNetwork.Domain;
 using AutoMapper;
 using SimpleSocialNetwork.Domain.BL;
 using SimpleSocialNetwork.WebUI.FriendServiceReference;
+using SimpleSocialNetwork.WebUI.UserServiceReference;
 
 namespace SimpleSocialNetwork.WebUI.Controllers
 {
@@ -25,7 +26,10 @@ namespace SimpleSocialNetwork.WebUI.Controllers
         }
         public ActionResult Index()
         {
-            return View(_friendService.GetFriendsByUserId(_authProvider.CurrentUserId).Take(Config.UsersPerPage));
+            var result = _friendService.GetFriendsByUserId(_authProvider.CurrentUserId).Take(Config.UsersPerPage).ToList();
+            var viewModel = Mapper.Map< List<FriendServiceReference.UserDto>, List<UserServiceReference.UserDto>>(result);
+            
+            return View(viewModel);
         }
 
         [HttpPost]

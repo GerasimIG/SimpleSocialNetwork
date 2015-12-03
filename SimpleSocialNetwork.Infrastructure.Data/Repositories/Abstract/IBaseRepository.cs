@@ -11,6 +11,7 @@ namespace SimpleSocialNetwork.Infrastructure.Data.Repositories.Abstract
     {
         void Add(TEntity entity);
         void Remove(TEntity entity);
+        void Remove(int entityId);
         void Update(TEntity entity);
         TEntity GetById(int id);
         IQueryable<TEntity> GetAll();

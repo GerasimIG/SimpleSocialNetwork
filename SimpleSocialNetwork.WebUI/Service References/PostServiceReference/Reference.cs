@@ -154,6 +154,12 @@ namespace SimpleSocialNetwork.WebUI.PostServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Post_PostDto/Remove", ReplyAction="http://tempuri.org/IBaseServiceOf_Post_PostDto/RemoveResponse")]
         System.Threading.Tasks.Task RemoveAsync(SimpleSocialNetwork.WebUI.PostServiceReference.PostDto entity);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Post_PostDto/RemoveById", ReplyAction="http://tempuri.org/IBaseServiceOf_Post_PostDto/RemoveByIdResponse")]
+        void RemoveById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Post_PostDto/RemoveById", ReplyAction="http://tempuri.org/IBaseServiceOf_Post_PostDto/RemoveByIdResponse")]
+        System.Threading.Tasks.Task RemoveByIdAsync(int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBaseServiceOf_Post_PostDto/Update", ReplyAction="http://tempuri.org/IBaseServiceOf_Post_PostDto/UpdateResponse")]
         void Update(SimpleSocialNetwork.WebUI.PostServiceReference.PostDto entity);
         
@@ -226,6 +232,14 @@ namespace SimpleSocialNetwork.WebUI.PostServiceReference {
         
         public System.Threading.Tasks.Task RemoveAsync(SimpleSocialNetwork.WebUI.PostServiceReference.PostDto entity) {
             return base.Channel.RemoveAsync(entity);
+        }
+        
+        public void RemoveById(int id) {
+            base.Channel.RemoveById(id);
+        }
+        
+        public System.Threading.Tasks.Task RemoveByIdAsync(int id) {
+            return base.Channel.RemoveByIdAsync(id);
         }
         
         public void Update(SimpleSocialNetwork.WebUI.PostServiceReference.PostDto entity) {

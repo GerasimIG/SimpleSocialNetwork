@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="C3JHq4s8aric7pvLMM1+Y+N7uIs=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="Lwz24KhaJaXOCwpDp+XC7Uk0aqo=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IFriendService">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_IFriendService" contract="FriendServiceReference.IFriendService" bindingType="basicHttpBinding" address="http://localhost:50081/Concrete/FriendService.svc" bindingConfiguration="BasicHttpBinding_IFriendService">
+    <endpoint name="BasicHttpBinding_IFriendService" contract="FriendServiceReference.IFriendService" bindingType="basicHttpBinding" address="http://vm02wsih.cloudapp.net/Concrete/FriendService.svc" bindingConfiguration="BasicHttpBinding_IFriendService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://localhost:50081/Concrete/FriendService.svc</serializedValue>
+          <serializedValue>http://vm02wsih.cloudapp.net/Concrete/FriendService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

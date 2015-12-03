@@ -169,6 +169,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiControllers\CommentsController.cs" />
+    <Compile Include="ApiControllers\PostsController.cs" />
+    <Compile Include="ApiControllers\UsersController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\NinjectWebCommon.cs" />
@@ -301,6 +304,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <None Include="Properties\PublishProfiles\FoleSystem.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\filter.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
@@ -360,64 +364,6 @@
     <Content Include="Service References\UserServiceReference\SimpleSocialNetwork.WebUI.UserServiceReference.UserDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\UserServiceReference\UserService.disco" />
-    <None Include="Service References\UserServiceReference\configuration91.svcinfo" />
-    <None Include="Service References\UserServiceReference\configuration.svcinfo" />
-    <None Include="Service References\UserServiceReference\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Shared\_Auth.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\User\UserProfile.cshtml" />
-    <Content Include="Views\Account\Signup.cshtml" />
-    <Content Include="Views\Shared\PostPartial.cshtml" />
-    <Content Include="Views\Shared\PostCommentsPartial.cshtml" />
-    <Content Include="Views\Shared\CommentPartial.cshtml" />
-    <Content Include="Views\Search\Index.cshtml" />
-    <Content Include="Views\Shared\UserPartial.cshtml" />
-    <Content Include="Views\Friends\Index.cshtml" />
-    <Content Include="Views\News\Index.cshtml" />
-    <Content Include="Views\Chat\Chat.cshtml" />
-    <Content Include="Views\Settings\Index.cshtml" />
-    <Content Include="Views\Settings\UpdateLoginPartial.cshtml" />
-    <Content Include="Views\Settings\UpdatePasswordPartial.cshtml" />
-    <Content Include="Views\Settings\UpdateProfileImagePartial.cshtml" />
-    <Content Include="Views\Settings\UpdateProfilePartial.cshtml" />
-    <Content Include="Views\Chat\Index.cshtml" />
-    <Content Include="Views\Chat\ChatPartial.cshtml" />
-    <Content Include="Views\Shared\UserPostsPartial.cshtml" />
-    <Content Include="Views\Shared\_Admin.cshtml" />
-    <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Views\Admin\Edit.cshtml" />
-    <Content Include="Views\Admin\Add.cshtml" />
-    <Content Include="Views\Shared\NotFound.cshtml" />
-    <None Include="Service References\CommentServiceReference\CommentService.wsdl" />
-    <None Include="Service References\CommentServiceReference\CommentService.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CommentServiceReference\CommentService1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\CommentServiceReference\CommentService2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Service References\CommentServiceReference\SimpleSocialNetwork.WebUI.CommentServiceReference.CommentDto.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Service References\FriendServiceReference\FriendService.wsdl" />
     <None Include="Service References\FriendServiceReference\FriendService.xsd">
       <SubType>Designer</SubType>
@@ -474,6 +420,64 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Service References\PostServiceReference\SimpleSocialNetwork.WebUI.PostServiceReference.PostDto.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\UserServiceReference\UserService.disco" />
+    <None Include="Service References\UserServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\UserServiceReference\configuration.svcinfo" />
+    <None Include="Service References\UserServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Shared\_Auth.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\User\UserProfile.cshtml" />
+    <Content Include="Views\Account\Signup.cshtml" />
+    <Content Include="Views\Shared\PostPartial.cshtml" />
+    <Content Include="Views\Shared\PostCommentsPartial.cshtml" />
+    <Content Include="Views\Shared\CommentPartial.cshtml" />
+    <Content Include="Views\Search\Index.cshtml" />
+    <Content Include="Views\Shared\UserPartial.cshtml" />
+    <Content Include="Views\Friends\Index.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
+    <Content Include="Views\Chat\Chat.cshtml" />
+    <Content Include="Views\Settings\Index.cshtml" />
+    <Content Include="Views\Settings\UpdateLoginPartial.cshtml" />
+    <Content Include="Views\Settings\UpdatePasswordPartial.cshtml" />
+    <Content Include="Views\Settings\UpdateProfileImagePartial.cshtml" />
+    <Content Include="Views\Settings\UpdateProfilePartial.cshtml" />
+    <Content Include="Views\Chat\Index.cshtml" />
+    <Content Include="Views\Chat\ChatPartial.cshtml" />
+    <Content Include="Views\Shared\UserPostsPartial.cshtml" />
+    <Content Include="Views\Shared\_Admin.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Admin\Add.cshtml" />
+    <Content Include="Views\Shared\NotFound.cshtml" />
+    <None Include="Service References\CommentServiceReference\CommentService.wsdl" />
+    <None Include="Service References\CommentServiceReference\CommentService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommentServiceReference\CommentService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CommentServiceReference\CommentService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\CommentServiceReference\SimpleSocialNetwork.WebUI.CommentServiceReference.CommentDto.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Service References\UserServiceReference\UserService.wsdl" />

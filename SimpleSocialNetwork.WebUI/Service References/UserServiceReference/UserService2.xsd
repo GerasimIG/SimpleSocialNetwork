@@ -1,204 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import schemaLocation="http://localhost:50081/Concrete/UserService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" />
-  <xs:import schemaLocation="http://localhost:50081/Concrete/UserService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-  <xs:element name="Add">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="entity" nillable="true" type="q1:UserDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="AddResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Remove">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="entity" nillable="true" type="q2:UserDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="RemoveResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="Update">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="entity" nillable="true" type="q3:UserDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateResponse">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetById">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="id" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetByIdResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="GetByIdResult" nillable="true" type="q4:UserDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetAll">
-    <xs:complexType>
-      <xs:sequence />
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetAllResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="GetAllResult" nillable="true" type="q5:ArrayOfUserDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserByEmail">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserByEmailResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="GetUserByEmailResult" nillable="true" type="q6:UserDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CreateUser">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="newUser" nillable="true" type="q7:UserDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="CreateUserResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="CreateUserResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUsersByParams">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="country" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="region" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="gender" type="xs:int" />
-        <xs:element minOccurs="0" name="birthDateFrom" nillable="true" type="xs:dateTime" />
-        <xs:element minOccurs="0" name="birthDateTo" nillable="true" type="xs:dateTime" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUsersByParamsResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="GetUsersByParamsResult" nillable="true" type="q8:ArrayOfUserDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateEmail">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="newEmail" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="userId" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateEmailResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="UpdateEmailResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdatePassword">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="newPassword" type="q9:guid" />
-        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="oldPassword" type="q10:guid" />
-        <xs:element minOccurs="0" name="userId" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdatePasswordResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="UpdatePasswordResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateImage">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="imageData" nillable="true" type="xs:base64Binary" />
-        <xs:element minOccurs="0" name="imageMimeType" nillable="true" type="xs:string" />
-        <xs:element minOccurs="0" name="userId" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateImageResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="UpdateImageResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetRandomUsers">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="quantity" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetRandomUsersResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="GetRandomUsersResult" nillable="true" type="q11:ArrayOfUserDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserByRoleId">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="roleId" type="xs:int" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="GetUserByRoleIdResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="GetUserByRoleIdResult" nillable="true" type="q12:ArrayOfUserDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateUser">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" minOccurs="0" name="user" nillable="true" type="q13:UserDto" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
-  <xs:element name="UpdateUserResponse">
-    <xs:complexType>
-      <xs:sequence>
-        <xs:element minOccurs="0" name="UpdateUserResult" type="xs:boolean" />
-      </xs:sequence>
-    </xs:complexType>
-  </xs:element>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SimpleSocialNetwork.BusinessServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vm02wsih.cloudapp.net/Concrete/UserService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="UserDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Birthday" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullLocation" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Gender" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageData" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ImageMimeType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocationId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Password" type="ser:guid" />
+      <xs:element minOccurs="0" name="PhoneNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RoleId" type="xs:int" />
+      <xs:element minOccurs="0" name="RoleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Skype" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserDto" nillable="true" type="tns:UserDto" />
+  <xs:complexType name="ArrayOfUserDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserDto" nillable="true" type="tns:UserDto" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserDto" nillable="true" type="tns:ArrayOfUserDto" />
 </xs:schema>

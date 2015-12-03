@@ -1,14 +1,14 @@
 ﻿@model SimpleSocialNetwork.WebUI.CommentServiceReference.CommentDto
 
 <li>
-    @if (Model.User != null)
+    @if (Model != null)
     {
         <div class="author">By <a href="@Url.Action("UserProfile", "User", new { postId = Model.AuthorId })">@Model.AuthorFirstName @Model.AuthorLastName</a></div>
     }
     @MvcHtmlString.Create(Model.Message.Replace(Environment.NewLine, "<br />"))
     <time>@Model.DatePosted</time> 
     @if (@Model.AuthorId == Convert.ToInt32(User.Identity.Name) 
-        || @Model.Post.AuthorId == Convert.ToInt32(User.Identity.Name)
+      //  || @Model.Post.AuthorId == Convert.ToInt32(User.Identity.Name)
         || @User.IsInRole("Moderator"))
     { 
     <div>
